@@ -87,7 +87,7 @@ def scan(source_id: str, table_filter: Optional[str], parallel: int = 1):
     tables = list(scanner.scan_tables(table_filter=table_filter))
 
     if len(tables) == 0:
-        print('No tables have been found')
+        echo_info('No tables have been found')
         return
 
     refresher = Refresher(company_slug, source_id)
@@ -130,7 +130,7 @@ def pull():
     actions = reconcile(local_state, remote_state)
 
     if len(actions.actions) == 0:
-        print('No configuration has been published')
+        echo_info('No configuration has been published')
         return
 
     executor = LocalExecutor()
@@ -155,7 +155,7 @@ def push():
     actions = reconcile(remote_state, local_state)
 
     if len(actions.actions) == 0:
-        print('No configuration to publish')
+        echo_info('No configuration to publish')
         return
 
     executor = RemoteExecutor(company_slug)
