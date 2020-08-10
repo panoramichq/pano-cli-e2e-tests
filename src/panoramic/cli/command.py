@@ -62,7 +62,7 @@ def list_connections():
 
     sources = client.get_sources(get_company_slug())
     if len(sources) == 0:
-        echo_error('No data connections found')
+        echo_error('No data connections have been found')
     else:
         for source in client.get_sources(get_company_slug()):
             echo_info(source['source_name'])
@@ -72,7 +72,7 @@ def list_companies():
     client = CompaniesClient()
     companies = client.get_companies()
     if len(companies) == 0:
-        echo_error('No companies found')
+        echo_error('No companies have been found')
     else:
         for company in companies:
             echo_info(company)
@@ -83,11 +83,17 @@ def scan(source_id: str, table_filter: Optional[str], parallel: int = 1):
     company_slug = get_company_slug()
     scanner = Scanner(company_slug, source_id)
     scanner.fetch_token()
+
+    tables = list(scanner.scan_tables(table_filter=table_filter))
+
+    if len(tables) == 0:
+        print('No tables have been found')
+        return
+
     refresher = Refresher(company_slug, source_id)
     refresher.fetch_token()
     writer = FileWriter()
 
-    tables = list(scanner.scan_tables(table_filter=table_filter))
     progress_bar = tqdm(total=len(tables))
 
     def _process_table(table: Dict[str, Any]):
@@ -112,6 +118,8 @@ def scan(source_id: str, table_filter: Optional[str], parallel: int = 1):
     for _ in executor.map(_process_table, tables):
         pass
 
+    progress_bar.write(f'Scanned {progress_bar.total} tables')
+
 
 def pull():
     """Pull models and data sources from remote."""
@@ -120,7 +128,13 @@ def pull():
     local_state = get_local_state()
 
     actions = reconcile(local_state, remote_state)
+
+    if len(actions.actions) == 0:
+        print('No configuration has been published')
+        return
+
     executor = LocalExecutor()
+
     with tqdm(actions.actions) as bar:
         for action in bar:
             try:
@@ -129,6 +143,7 @@ def pull():
                 error_msg = f'Failed to execute action {action.description}'
                 echo_error(error_msg)
                 logger.debug(error_msg, exc_info=True)
+        bar.write(f'Pulled {bar.total} configurations')
 
 
 def push():
@@ -138,7 +153,13 @@ def push():
     local_state = get_local_state()
 
     actions = reconcile(remote_state, local_state)
+
+    if len(actions.actions) == 0:
+        print('No configuration to publish')
+        return
+
     executor = RemoteExecutor(company_slug)
+
     with tqdm(actions.actions) as bar:
         for action in bar:
             try:
@@ -147,3 +168,4 @@ def push():
                 error_msg = f'Failed to execute action {action.description}'
                 echo_error(error_msg)
                 logger.debug(error_msg, exc_info=True)
+        bar.write(f'Updated {bar.total} configurations')
