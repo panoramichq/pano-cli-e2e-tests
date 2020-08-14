@@ -8,6 +8,9 @@ from panoramic.cli.__version__ import __version__
 from panoramic.cli.context import ContextAwareCommand
 from panoramic.cli.errors import handle_exception
 from panoramic.cli.local.file_utils import Paths
+from panoramic.cli.signal_handler import setup_exit_signal_handler
+
+setup_exit_signal_handler()
 
 
 @click.group(context_settings={'help_option_names': ["-h", "--help"]})
