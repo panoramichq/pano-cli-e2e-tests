@@ -1,5 +1,5 @@
-import signal
 import os
+import signal
 
 
 def _exit(signum: int, frame):
