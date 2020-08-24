@@ -8,9 +8,7 @@ from panoramic.cli.__version__ import __version__
 from panoramic.cli.context import ContextAwareCommand
 from panoramic.cli.errors import handle_exception
 from panoramic.cli.local.file_utils import Paths
-from panoramic.cli.signal_handler import setup_exit_signal_handler
-
-setup_exit_signal_handler()
+from panoramic.cli.signal_handler import handle_interrupt
 
 
 @click.group(context_settings={'help_option_names': ["-h", "--help"]})
@@ -39,7 +37,8 @@ def cli(debug):
 def scan(source_id: str, filter: Optional[str], parallel: int, generate_identifiers: bool):
     from panoramic.cli.command import scan as scan_command
 
-    scan_command(source_id, filter, parallel, generate_identifiers)
+    with handle_interrupt():
+        scan_command(source_id, filter, parallel, generate_identifiers)
 
 
 @cli.command(help='Pull models from remote', cls=ContextAwareCommand)
@@ -47,7 +46,8 @@ def scan(source_id: str, filter: Optional[str], parallel: int, generate_identifi
 def pull():
     from panoramic.cli.command import pull as pull_command
 
-    pull_command()
+    with handle_interrupt():
+        pull_command()
 
 
 @cli.command(help='Push models to remote', cls=ContextAwareCommand)
@@ -55,7 +55,8 @@ def pull():
 def push():
     from panoramic.cli.command import push as push_command
 
-    push_command()
+    with handle_interrupt():
+        push_command()
 
 
 @cli.command(help='Configure pano CLI options')
@@ -63,7 +64,8 @@ def push():
 def configure():
     from panoramic.cli.command import configure as config_command
 
-    config_command()
+    with handle_interrupt():
+        config_command()
 
 
 @cli.command(help='Initialize metadata repository')
@@ -79,7 +81,8 @@ def init():
 def list_connections():
     from panoramic.cli.command import list_connections as list_connections_command
 
-    list_connections_command()
+    with handle_interrupt():
+        list_connections_command()
 
 
 @cli.command(help='List available data connections')
@@ -87,4 +90,5 @@ def list_connections():
 def list_companies():
     from panoramic.cli.command import list_companies as list_companies_command
 
-    list_companies_command()
+    with handle_interrupt():
+        list_companies_command()
