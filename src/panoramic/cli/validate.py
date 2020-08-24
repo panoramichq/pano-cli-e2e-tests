@@ -1,5 +1,6 @@
 import functools
 import json
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import Any, Dict, List
 
@@ -9,7 +10,7 @@ from jsonschema.exceptions import ValidationError as JsonSchemaValidationError
 from panoramic.cli.config.auth import get_client_id_env_var, get_client_secret_env_var
 from panoramic.cli.errors import InvalidYamlFile, JsonSchemaError, ValidationError
 from panoramic.cli.local.file_utils import read_yaml
-from panoramic.cli.local.reader import FileReader
+from panoramic.cli.local.reader import FilePackage, FileReader
 from panoramic.cli.paths import Paths
 
 
@@ -51,21 +52,30 @@ def _validate_file(fp: Path, schema: Dict[str, Any]):
         raise JsonSchemaError(path=fp, error=e)
 
 
+def _validate_package(package: FilePackage) -> List[ValidationError]:
+    """Validate all files in a given package."""
+    errors = []
+    try:
+        _validate_file(package.data_source_file, JsonSchemas.dataset())
+    except (ValidationError, InvalidYamlFile) as e:
+        errors.append(e)
+
+    for model_file in package.model_files:
+        try:
+            _validate_file(model_file, JsonSchemas.model())
+        except (ValidationError, InvalidYamlFile) as e:
+            errors.append(e)
+
+    return errors
+
+
 def validate_local_state() -> List[ValidationError]:
     """Check local state against defined schemas."""
     packages = FileReader().get_packages()
     errors = []
-    for package in packages:
-        try:
-            _validate_file(package.data_source_file, JsonSchemas.dataset())
-        except (ValidationError, InvalidYamlFile) as e:
-            errors.append(e)
-
-        for model_file in package.model_files:
-            try:
-                _validate_file(model_file, JsonSchemas.model())
-            except (ValidationError, InvalidYamlFile) as e:
-                errors.append(e)
+    executor = ThreadPoolExecutor(max_workers=4)
+    for package_errors in executor.map(_validate_package, packages):
+        errors.extend(package_errors)
 
     return errors
 
