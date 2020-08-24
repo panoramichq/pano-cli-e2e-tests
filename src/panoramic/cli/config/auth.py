@@ -1,27 +1,18 @@
 import os
-from pathlib import Path
 
-from panoramic.cli.errors import MissingConfigFileException
-from panoramic.cli.local.file_utils import Paths
-from panoramic.cli.util import get_yaml_value
-
-
-def _get_config_yaml_value(file_path: Path, value_path: str):
-    try:
-        return get_yaml_value(file_path, value_path)
-    except FileNotFoundError:
-        raise MissingConfigFileException()
+from panoramic.cli.local.file_utils import read_yaml
+from panoramic.cli.paths import Paths
 
 
 def get_client_id() -> str:
     try:
         return os.environ['PANO_CLIENT_ID']
     except KeyError:
-        return _get_config_yaml_value(Paths.config_file(), 'client_id')
+        return read_yaml(Paths.config_file())['client_id']
 
 
 def get_client_secret() -> str:
     try:
         return os.environ['PANO_CLIENT_SECRET']
     except KeyError:
-        return _get_config_yaml_value(Paths.config_file(), 'client_secret')
+        return read_yaml(Paths.config_file())['client_secret']
