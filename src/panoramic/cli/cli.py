@@ -46,7 +46,7 @@ class LocalStateAwareCommand(ConfigAwareCommand):
     """Perform config, context, and local state files validation before running command."""
 
     def invoke(self, ctx: Context):
-        from panoramic.cli.command import validate_local_state
+        from panoramic.cli.validate import validate_local_state
 
         errors = validate_local_state()
         if len(errors) > 0:

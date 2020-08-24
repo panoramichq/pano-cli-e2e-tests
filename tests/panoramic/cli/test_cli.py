@@ -18,8 +18,6 @@ def test_context_aware_command_invalid(_, __):
     with pytest.raises(SystemExit):
         ContextAwareCommand(name='test-command').invoke(Mock())
 
-    # TODO: check that correct exception was raised
-
 
 @patch('panoramic.cli.validate.validate_config')
 @patch('panoramic.cli.validate.validate_context')
@@ -40,8 +38,6 @@ def test_config_aware_command_invalid(_):
     """Check command fails when no context."""
     with pytest.raises(SystemExit):
         ConfigAwareCommand(name='test-command').invoke(Mock())
-
-    # TODO: check that correct exception was raised
 
 
 @patch('panoramic.cli.validate.validate_config')
@@ -64,8 +60,6 @@ def test_local_state_aware_command_invalid(_, __, ___):
     """Check command fails when no context."""
     with pytest.raises(SystemExit):
         LocalStateAwareCommand(name='test-command').invoke(Mock())
-
-    # TODO: check that correct exception was raised
 
 
 @patch('panoramic.cli.validate.validate_config')
