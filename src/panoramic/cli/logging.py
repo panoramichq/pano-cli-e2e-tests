@@ -6,7 +6,7 @@ import traceback
 from tqdm import tqdm
 
 
-def echo_error(msg: str, exc_info: bool = False):
+def echo_error(msg: str, *, exc_info: bool = False):
     tqdm.write(f'Error: {msg}')
 
     if exc_info:

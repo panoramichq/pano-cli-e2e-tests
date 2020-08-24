@@ -1,13 +1,8 @@
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional
 
-from panoramic.cli.errors import InvalidYamlFile
-from panoramic.cli.local.file_utils import (
-    FileExtension,
-    PresetFileName,
-    SystemDirectory,
-    read_yaml,
-)
+from panoramic.cli.local.file_utils import read_yaml
+from panoramic.cli.paths import FileExtension, PresetFileName, SystemDirectory
 
 
 class FilePackage:
@@ -23,18 +18,12 @@ class FilePackage:
 
     def read_data_source(self) -> Dict[str, Any]:
         """Parse data source file."""
-        try:
-            return read_yaml(self.data_source_file)
-        except Exception:
-            raise InvalidYamlFile(self.data_source_file)
+        return read_yaml(self.data_source_file)
 
     def read_models(self) -> Iterable[Dict[str, Any]]:
         """Parse model files."""
         for f in self.model_files:
-            try:
-                yield read_yaml(f)
-            except Exception:
-                raise InvalidYamlFile(f)
+            yield read_yaml(f)
 
 
 class FileReader:
