@@ -7,9 +7,8 @@ from dotenv import load_dotenv
 
 from panoramic.cli.__version__ import __version__
 from panoramic.cli.errors import ValidationError, handle_exception
-from panoramic.cli.logging import echo_error
+from panoramic.cli.logging import echo_error, echo_errors
 from panoramic.cli.paths import Paths
-from panoramic.cli.validate import validate_config, validate_context
 
 
 class ConfigAwareCommand(Command):
@@ -17,6 +16,8 @@ class ConfigAwareCommand(Command):
     """Perform config file validation before running command."""
 
     def invoke(self, ctx: Context):
+        from panoramic.cli.validate import validate_config
+
         try:
             validate_config()
             return super().invoke(ctx)
@@ -30,12 +31,29 @@ class ContextAwareCommand(ConfigAwareCommand):
     """Perform config and context file validation before running command."""
 
     def invoke(self, ctx: Context):
+        from panoramic.cli.validate import validate_context
+
         try:
             validate_context()
             return super().invoke(ctx)
         except ValidationError as e:
             echo_error(str(e))
             exit(1)
+
+
+class LocalStateAwareCommand(ConfigAwareCommand):
+
+    """Perform config, context, and local state files validation before running command."""
+
+    def invoke(self, ctx: Context):
+        from panoramic.cli.command import validate_local_state
+
+        errors = validate_local_state()
+        if len(errors) > 0:
+            echo_errors(errors)
+            exit(1)
+
+        return super().invoke(ctx)
 
 
 @click.group(context_settings={'help_option_names': ["-h", "--help"]})
@@ -68,7 +86,7 @@ def scan(source_id: str, filter: Optional[str], parallel: int, generate_identifi
     scan_command(source_id, filter, parallel, generate_identifiers)
 
 
-@cli.command(help='Pull models from remote', cls=ContextAwareCommand)
+@cli.command(help='Pull models from remote', cls=LocalStateAwareCommand)
 @handle_exception
 def pull():
     from panoramic.cli.command import pull as pull_command
@@ -76,7 +94,7 @@ def pull():
     pull_command()
 
 
-@cli.command(help='Push models to remote', cls=ContextAwareCommand)
+@cli.command(help='Push models to remote', cls=LocalStateAwareCommand)
 @handle_exception
 def push():
     from panoramic.cli.command import push as push_command

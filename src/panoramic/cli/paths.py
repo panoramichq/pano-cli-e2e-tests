@@ -1,4 +1,3 @@
-import logging
 import sys
 
 import panoramic.cli.schemas
@@ -10,10 +9,6 @@ else:
 
 from enum import Enum
 from pathlib import Path
-
-logger = logging.getLogger(__name__)
-
-API_VERSION_ATTRIBUTE = 'api_version'
 
 
 class Paths:

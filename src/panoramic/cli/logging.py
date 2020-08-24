@@ -2,6 +2,7 @@ import logging
 import os
 import sys
 import traceback
+from typing import Any, List
 
 from tqdm import tqdm
 
@@ -28,3 +29,9 @@ def configure_logging():
 def log_error(logger: logging.Logger, message, exc: Exception):
     tqdm.write(f'Error: {message}')
     logger.debug(message, exc_info=exc)
+
+
+def echo_errors(errors: List[Any]):
+    for error in errors:
+        echo_info('')  # visually separate errors
+        echo_error(str(error))

@@ -8,8 +8,6 @@ from panoramic.cli.errors import FileMissingError, InvalidYamlFile
 
 logger = logging.getLogger(__name__)
 
-API_VERSION_ATTRIBUTE = 'api_version'
-
 
 def ensure_dir(abs_filepath: Path):
     """

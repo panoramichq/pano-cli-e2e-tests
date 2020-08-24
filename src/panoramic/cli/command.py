@@ -14,7 +14,7 @@ from panoramic.cli.local import get_state as get_local_state
 from panoramic.cli.local.executor import LocalExecutor
 from panoramic.cli.local.file_utils import write_yaml
 from panoramic.cli.local.writer import FileWriter
-from panoramic.cli.logging import echo_error, echo_info
+from panoramic.cli.logging import echo_error, echo_errors, echo_info
 from panoramic.cli.paths import Paths
 from panoramic.cli.physical_data_source.client import PhysicalDataSourceClient
 from panoramic.cli.refresh import Refresher
@@ -106,9 +106,7 @@ def validate(target: Optional[str] = None) -> bool:
         return True
 
     try:
-        for error in errors:
-            echo_info('')  # visually separate errors
-            echo_error(error.message)
+        echo_errors(errors)
     except Exception:
         # Ignore any errors in error reporting
         logger.debug('Error when logging errros', exc_info=True)
