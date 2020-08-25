@@ -69,11 +69,12 @@ def _validate_package(package: FilePackage) -> List[ValidationError]:
     return errors
 
 
-def validate_local_state(parallel: int = 4) -> List[ValidationError]:
+def validate_local_state() -> List[ValidationError]:
     """Check local state against defined schemas."""
     packages = FileReader().get_packages()
     errors = []
-    executor = ThreadPoolExecutor(max_workers=parallel)
+
+    executor = ThreadPoolExecutor(max_workers=4)
     for package_errors in executor.map(_validate_package, packages):
         errors.extend(package_errors)
 

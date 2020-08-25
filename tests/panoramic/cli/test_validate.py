@@ -5,7 +5,7 @@ import yaml
 
 from panoramic.cli.errors import FileMissingError, InvalidYamlFile, JsonSchemaError
 from panoramic.cli.local.get import get_state
-from panoramic.cli.paths import Paths
+from panoramic.cli.paths import Paths, PresetFileName
 from panoramic.cli.validate import (
     validate_config,
     validate_context,
@@ -31,8 +31,8 @@ INVALID_CONTEXTS = [
 
 
 @pytest.mark.parametrize('context', INVALID_CONTEXTS)
-def test_validate_context_invalid(tmpdir, monkeypatch, context):
-    monkeypatch.chdir(tmpdir)
+def test_validate_context_invalid(tmp_path, monkeypatch, context):
+    monkeypatch.chdir(tmp_path)
     with Paths.context_file().open('w') as f:
         f.write(yaml.dump(context))
 
@@ -40,8 +40,8 @@ def test_validate_context_invalid(tmpdir, monkeypatch, context):
         validate_context()
 
 
-def test_validate_context_invalid_yaml(tmpdir, monkeypatch):
-    monkeypatch.chdir(tmpdir)
+def test_validate_context_invalid_yaml(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
     with Paths.context_file().open('w') as f:
         f.write('not:\nyaml')
 
@@ -49,15 +49,15 @@ def test_validate_context_invalid_yaml(tmpdir, monkeypatch):
         validate_context()
 
 
-def test_validate_context_missing_file(tmpdir, monkeypatch):
-    monkeypatch.chdir(tmpdir)
+def test_validate_context_missing_file(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
 
     with pytest.raises(FileMissingError):
         validate_context()
 
 
-def test_validate_context_valid(tmpdir, monkeypatch):
-    monkeypatch.chdir(tmpdir)
+def test_validate_context_valid(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
     with Paths.context_file().open('w') as f:
         f.write(yaml.dump(VALID_CONTEXT))
 
@@ -83,10 +83,10 @@ INVALID_CONFIGS = [
 
 
 @pytest.mark.parametrize('config', INVALID_CONFIGS)
-def test_validate_config_invalid_env_var_set(tmpdir, monkeypatch, config):
+def test_validate_config_invalid_env_var_set(tmp_path, monkeypatch, config):
     monkeypatch.setenv('PANO_CLIENT_ID', 'test-client_id')
     monkeypatch.setenv('PANO_CLIENT_SECRET', 'test-client-secret')
-    monkeypatch.setenv('HOME', str(tmpdir))
+    monkeypatch.setenv('HOME', str(tmp_path))
 
     Paths.config_dir().mkdir()
     with Paths.config_file().open('w') as f:
@@ -96,10 +96,10 @@ def test_validate_config_invalid_env_var_set(tmpdir, monkeypatch, config):
 
 
 @pytest.mark.parametrize('config', INVALID_CONFIGS)
-def test_validate_config_invalid(tmpdir, monkeypatch, config):
+def test_validate_config_invalid(tmp_path, monkeypatch, config):
     monkeypatch.delenv('PANO_CLIENT_ID', raising=False)
     monkeypatch.delenv('PANO_CLIENT_SECRET', raising=False)
-    monkeypatch.setenv('HOME', str(tmpdir))
+    monkeypatch.setenv('HOME', str(tmp_path))
 
     Paths.config_dir().mkdir()
     with Paths.config_file().open('w') as f:
@@ -109,10 +109,10 @@ def test_validate_config_invalid(tmpdir, monkeypatch, config):
         validate_config()
 
 
-def test_validate_config_invalid_yaml(tmpdir, monkeypatch):
+def test_validate_config_invalid_yaml(tmp_path, monkeypatch):
     monkeypatch.delenv('PANO_CLIENT_ID', raising=False)
     monkeypatch.delenv('PANO_CLIENT_SECRET', raising=False)
-    monkeypatch.setenv('HOME', str(tmpdir))
+    monkeypatch.setenv('HOME', str(tmp_path))
 
     Paths.config_dir().mkdir()
     with Paths.config_file().open('w') as f:
@@ -122,17 +122,17 @@ def test_validate_config_invalid_yaml(tmpdir, monkeypatch):
         validate_config()
 
 
-def test_validate_config_missing_file(tmpdir, monkeypatch):
+def test_validate_config_missing_file(tmp_path, monkeypatch):
     monkeypatch.delenv('PANO_CLIENT_ID', raising=False)
     monkeypatch.delenv('PANO_CLIENT_SECRET', raising=False)
-    monkeypatch.setenv('HOME', str(tmpdir))
+    monkeypatch.setenv('HOME', str(tmp_path))
 
     with pytest.raises(FileMissingError):
         validate_config()
 
 
-def test_validate_config_valid(tmpdir, monkeypatch):
-    monkeypatch.setenv('HOME', str(tmpdir))
+def test_validate_config_valid(tmp_path, monkeypatch):
+    monkeypatch.setenv('HOME', str(tmp_path))
 
     Paths.config_dir().mkdir()
     with Paths.config_file().open('w') as f:
@@ -276,22 +276,22 @@ INVALID_MODELS = [
 ]
 
 
-def test_validate_local_state_valid(tmpdir, monkeypatch):
-    monkeypatch.chdir(tmpdir)
+def test_validate_local_state_valid(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
 
-    dataset_dir = tmpdir.join('test_dataset')
+    dataset_dir = tmp_path / 'test_dataset'
     dataset_dir.mkdir()
 
-    with dataset_dir.join('Dataset.yaml').open('w') as f:
+    with (dataset_dir / PresetFileName.DATASET_YAML.value).open('w') as f:
         f.write(yaml.dump(VALID_DATASET))
 
-    with dataset_dir.join('test_model-1.model.yaml').open('w') as f:
+    with (dataset_dir / 'test_model-1.model.yaml').open('w') as f:
         f.write(yaml.dump(VALID_MODEL_MINIMAL))
 
-    with dataset_dir.join('test_model-2.model.yaml').open('w') as f:
+    with (dataset_dir / 'test_model-2.model.yaml').open('w') as f:
         f.write(yaml.dump(VALID_MODEL_MINIMAL))
 
-    errors = validate_local_state(parallel=1)
+    errors = validate_local_state()
     assert len(errors) == 0
 
     state = get_state()
@@ -300,31 +300,31 @@ def test_validate_local_state_valid(tmpdir, monkeypatch):
 
 
 @pytest.mark.parametrize('dataset', INVALID_DATASETS)
-def test_validate_local_state_invalid_dataset(tmpdir, monkeypatch, dataset):
-    monkeypatch.chdir(tmpdir)
+def test_validate_local_state_invalid_dataset(tmp_path, monkeypatch, dataset):
+    monkeypatch.chdir(tmp_path)
 
-    dataset_dir = tmpdir.join('test_dataset')
+    dataset_dir = tmp_path / 'test_dataset'
     dataset_dir.mkdir()
 
-    with dataset_dir.join('Dataset.yaml').open('w') as f:
+    with (dataset_dir / PresetFileName.DATASET_YAML.value).open('w') as f:
         f.write(yaml.dump(dataset))
 
-    errors = validate_local_state(parallel=1)
+    errors = validate_local_state()
     assert len(errors) == 1
 
 
 @pytest.mark.parametrize('model', INVALID_MODELS)
-def test_validate_local_state_invalid_models(tmpdir, monkeypatch, model):
-    monkeypatch.chdir(tmpdir)
+def test_validate_local_state_invalid_models(tmp_path, monkeypatch, model):
+    monkeypatch.chdir(tmp_path)
 
-    dataset_dir = tmpdir.join('test_dataset')
+    dataset_dir = tmp_path / 'test_dataset'
     dataset_dir.mkdir()
 
-    with dataset_dir.join('Dataset.yaml').open('w') as f:
+    with (dataset_dir / PresetFileName.DATASET_YAML.value).open('w') as f:
         f.write(yaml.dump(VALID_DATASET))
 
-    with dataset_dir.join('test_model.model.yaml').open('w') as f:
+    with (dataset_dir / 'test_model.model.yaml').open('w') as f:
         f.write(yaml.dump(model))
 
-    errors = validate_local_state(parallel=1)
+    errors = validate_local_state()
     assert len(errors) == 1
