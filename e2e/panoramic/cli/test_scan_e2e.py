@@ -24,6 +24,22 @@ def handle_scanned_dir(monkeypatch):
         f.unlink()
 
 
+def _drop_running_status(response):
+    """Speed up execution of e2e by dropping status=RUNNING responses."""
+    if b'RUNNING' in response['body']['string'] or b'METADATA_RETRIEVAL' in response['body']['string']:
+        return None
+
+    return response
+
+
+@pytest.fixture(scope='module')
+def vcr_config(vcr_config):
+    def before_record_response(response):
+        return _drop_running_status(vcr_config['before_record_response'](response))
+
+    return {**vcr_config, 'before_record_response': before_record_response}
+
+
 @pytest.mark.vcr
 def test_scan_e2e():
     runner = CliRunner()
