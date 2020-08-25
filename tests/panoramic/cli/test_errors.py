@@ -32,7 +32,7 @@ def test_no_request_id_request_exception():
 def test_valid_request_id_request_exception():
     with pytest.raises(
         RefreshException,
-        match='^Metadata could not be refreshed for table some_table in data connection some_source \(RequestId\: some_request_id\)$',
+        match=r'^Metadata could not be refreshed for table some_table in data connection some_source \(RequestId\: some_request_id\)$',
     ):
         response = Response()
         response.headers['x-diesel-request-id'] = 'some_request_id'
