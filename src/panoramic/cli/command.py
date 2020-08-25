@@ -85,7 +85,7 @@ def list_companies():
             echo_info(company)
 
 
-def validate(target: Optional[str] = None) -> bool:
+def validate() -> bool:
     """Check local files against schema."""
     errors = []
 
