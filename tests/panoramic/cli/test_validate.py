@@ -291,9 +291,10 @@ def test_validate_local_state_valid(tmpdir, monkeypatch):
     with dataset_dir.join('test_model-2.model.yaml').open('w') as f:
         f.write(yaml.dump(VALID_MODEL_MINIMAL))
 
-    validate_local_state(parallel=1)
-    state = get_state()
+    errors = validate_local_state(parallel=1)
+    assert len(errors) == 0
 
+    state = get_state()
     assert len(state.models) == 2
     assert len(state.data_sources) == 1
 
