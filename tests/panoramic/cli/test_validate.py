@@ -110,6 +110,8 @@ def test_validate_config_invalid(tmpdir, monkeypatch, config):
 
 
 def test_validate_config_invalid_yaml(tmpdir, monkeypatch):
+    monkeypatch.delenv('PANO_CLIENT_ID', raising=False)
+    monkeypatch.delenv('PANO_CLIENT_SECRET', raising=False)
     monkeypatch.setenv('HOME', str(tmpdir))
 
     Paths.config_dir().mkdir()
@@ -121,6 +123,8 @@ def test_validate_config_invalid_yaml(tmpdir, monkeypatch):
 
 
 def test_validate_config_missing_file(tmpdir, monkeypatch):
+    monkeypatch.delenv('PANO_CLIENT_ID', raising=False)
+    monkeypatch.delenv('PANO_CLIENT_SECRET', raising=False)
     monkeypatch.setenv('HOME', str(tmpdir))
 
     with pytest.raises(FileMissingError):
@@ -287,7 +291,7 @@ def test_validate_local_state_valid(tmpdir, monkeypatch):
     with dataset_dir.join('test_model-2.model.yaml').open('w') as f:
         f.write(yaml.dump(VALID_MODEL_MINIMAL))
 
-    validate_local_state()
+    validate_local_state(parallel=1)
     state = get_state()
 
     assert len(state.models) == 2
@@ -304,7 +308,7 @@ def test_validate_local_state_invalid_dataset(tmpdir, monkeypatch, dataset):
     with dataset_dir.join('Dataset.yaml').open('w') as f:
         f.write(yaml.dump(dataset))
 
-    errors = validate_local_state()
+    errors = validate_local_state(parallel=1)
     assert len(errors) == 1
 
 
@@ -321,5 +325,5 @@ def test_validate_local_state_invalid_models(tmpdir, monkeypatch, model):
     with dataset_dir.join('test_model.model.yaml').open('w') as f:
         f.write(yaml.dump(model))
 
-    errors = validate_local_state()
+    errors = validate_local_state(parallel=1)
     assert len(errors) == 1
