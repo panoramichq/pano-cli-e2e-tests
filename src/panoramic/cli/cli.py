@@ -42,7 +42,7 @@ class ContextAwareCommand(ConfigAwareCommand):
             sys.exit(1)
 
 
-class LocalStateAwareCommand(ConfigAwareCommand):
+class LocalStateAwareCommand(ContextAwareCommand):
 
     """Perform config, context, and local state files validation before running command."""
 
