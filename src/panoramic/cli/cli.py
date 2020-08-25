@@ -1,4 +1,5 @@
 import logging
+import sys
 from typing import Optional
 
 import click
@@ -23,7 +24,7 @@ class ConfigAwareCommand(Command):
             return super().invoke(ctx)
         except ValidationError as e:
             echo_error(str(e))
-            exit(1)
+            sys.exit(1)
 
 
 class ContextAwareCommand(ConfigAwareCommand):
@@ -38,7 +39,7 @@ class ContextAwareCommand(ConfigAwareCommand):
             return super().invoke(ctx)
         except ValidationError as e:
             echo_error(str(e))
-            exit(1)
+            sys.exit(1)
 
 
 class LocalStateAwareCommand(ConfigAwareCommand):
@@ -51,7 +52,7 @@ class LocalStateAwareCommand(ConfigAwareCommand):
         errors = validate_local_state()
         if len(errors) > 0:
             echo_errors(errors)
-            exit(1)
+            sys.exit(1)
 
         return super().invoke(ctx)
 
@@ -71,7 +72,7 @@ def cli(debug):
     from panoramic.cli.supported_version import is_version_supported
 
     if not is_version_supported(__version__):
-        exit(1)
+        sys.exit(1)
 
 
 @cli.command(help='Scan models from source', cls=ContextAwareCommand)
@@ -140,4 +141,4 @@ def validate():
     from panoramic.cli.command import validate as validate_command
 
     if not validate_command():
-        exit(1)
+        sys.exit(1)
