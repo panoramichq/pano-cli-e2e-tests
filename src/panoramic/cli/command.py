@@ -65,6 +65,7 @@ def initialize():
 
 
 def list_connections():
+    """List available data connections for company from context."""
     client = PhysicalDataSourceClient()
 
     sources = client.get_sources(get_company_slug())
@@ -76,6 +77,7 @@ def list_connections():
 
 
 def list_companies():
+    """List available companies for user."""
     client = CompaniesClient()
     companies = client.get_companies()
     if len(companies) == 0:
