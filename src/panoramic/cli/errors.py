@@ -2,12 +2,16 @@ import functools
 import os
 import signal
 import sys
+from abc import ABC
 from pathlib import Path
 from typing import Callable, Optional
 
+from jsonschema.exceptions import ValidationError as JsonSchemaValidationError
 from requests.exceptions import RequestException
+from yaml.error import MarkedYAMLError
 
 from panoramic.cli.logging import echo_error
+from panoramic.cli.paths import Paths
 
 DIESEL_REQUEST_ID_HEADER = 'x-diesel-request-id'
 
@@ -37,24 +41,6 @@ class CliBaseException(Exception):
 class TimeoutException(CliBaseException):
 
     """Thrown when a remote operation times out."""
-
-
-class MissingContextFileException(CliBaseException):
-
-    """Generic missing context file error."""
-
-
-class MissingConfigFileException(CliBaseException):
-
-    """Generic missing config file error."""
-
-
-class MissingValueException(CliBaseException):
-
-    """Missing value in Yaml file"""
-
-    def __init__(self, value_name: str):
-        super().__init__(f'Missing value: {value_name}')
 
 
 class IdentifierException(CliBaseException):
@@ -106,12 +92,48 @@ class ModelException(CliBaseException):
         super().__init__(f'Error fetching models for company {company_slug} and dataset {dataset_name}')
 
 
-class InvalidYamlFile(CliBaseException):
+class ValidationError(CliBaseException, ABC):
+
+    """Abstract error raised during validation step."""
+
+
+class FileMissingError(ValidationError):
+
+    """File that should exist didn't."""
+
+    def __init__(self, *, path: Path):
+        if path == Paths.context_file():
+            msg = f'Context file ({path.name}) not found in current working directory. Run pano init to create it.'
+        elif path == Paths.config_file():
+            msg = f'Config file ({path.absolute()}) not found. Run pano configure to create it.'
+        else:
+            # Should not happen => we only check above files exist explicitly
+            msg = f'File Missing - {path}'
+
+        super().__init__(msg)
+
+
+class InvalidYamlFile(ValidationError):
 
     """YAML syntax error."""
 
-    def __init__(self, path: Path):
-        super().__init__(f'Error parsing YAML from file {path.absolute}')
+    def __init__(self, *, path: Path, error: MarkedYAMLError):
+        try:
+            path = path.relative_to(Path.cwd())
+        except ValueError:
+            pass  # Use relative path when possible
+
+        super().__init__(f'Invalid YAML file - {error.problem}\n  on line {error.problem_mark.line}\n  in {path}')
+
+
+class JsonSchemaError(ValidationError):
+    def __init__(self, *, path: Path, error: JsonSchemaValidationError):
+        try:
+            path = path.relative_to(Path.cwd())
+        except ValueError:
+            pass  # Use relative path when possible
+
+        super().__init__(f'{error.message}\n  in {path}')
 
 
 def handle_exception(f: Callable):

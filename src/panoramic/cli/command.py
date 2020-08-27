@@ -8,17 +8,24 @@ from tqdm import tqdm
 from panoramic.cli.companies.client import CompaniesClient
 from panoramic.cli.context import get_company_slug
 from panoramic.cli.controller import reconcile
+from panoramic.cli.errors import ValidationError
 from panoramic.cli.identifier_generator import IdentifierGenerator
 from panoramic.cli.local import get_state as get_local_state
 from panoramic.cli.local.executor import LocalExecutor
-from panoramic.cli.local.file_utils import Paths, write_yaml
+from panoramic.cli.local.file_utils import write_yaml
 from panoramic.cli.local.writer import FileWriter
-from panoramic.cli.logging import echo_error, echo_info
+from panoramic.cli.logging import echo_error, echo_errors, echo_info
+from panoramic.cli.paths import Paths
 from panoramic.cli.physical_data_source.client import PhysicalDataSourceClient
 from panoramic.cli.refresh import Refresher
 from panoramic.cli.remote import get_state as get_remote_state
 from panoramic.cli.remote.executor import RemoteExecutor
 from panoramic.cli.scan import Scanner
+from panoramic.cli.validate import (
+    validate_config,
+    validate_context,
+    validate_local_state,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -76,6 +83,35 @@ def list_companies():
     else:
         for company in companies:
             echo_info(company)
+
+
+def validate() -> bool:
+    """Check local files against schema."""
+    errors = []
+
+    try:
+        validate_config()
+    except ValidationError as e:
+        errors.append(e)
+
+    try:
+        validate_context()
+    except ValidationError as e:
+        errors.append(e)
+
+    errors.extend(validate_local_state())
+
+    if len(errors) == 0:
+        echo_info("Success: All files are valid.")
+        return True
+
+    try:
+        echo_errors(errors)
+    except Exception:
+        # Ignore any errors in error reporting
+        logger.debug('Error when logging errros', exc_info=True)
+
+    return False
 
 
 def scan(source_id: str, table_filter: Optional[str], parallel: int = 1, generate_identifiers: bool = False):

@@ -9,12 +9,12 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
     uri: https://a1.panocdn.com/updates/pano-cli/versions.json
   response:
     body:
-      string: '{"latest_version": "0.9.0b1", "minimum_supported_version": "0.7.4"}'
+      string: '{"latest_version": "0.9.0", "minimum_supported_version": "0.9.0"}'
     headers:
       Accept-Ranges:
       - bytes
@@ -23,29 +23,29 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '67'
+      - '65'
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:11 GMT
+      - Tue, 25 Aug 2020 08:16:12 GMT
       ETag:
-      - '"c8894d51d78140d55b9cb6b3e6b2807e"'
+      - '"8c5a0073438008aa2d82a4ee0ec798e5"'
       Last-Modified:
-      - Thu, 06 Aug 2020 14:41:08 GMT
+      - Tue, 18 Aug 2020 13:25:54 GMT
       Server:
       - AmazonS3
       Via:
-      - 1.1 a776ddd883fba0ca203b52822fb50572.cloudfront.net (CloudFront)
+      - 1.1 216b2e0a8a27f8fca1b540a1c4ea6922.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - laYeZea8xsuCHHv7exZJPr1kvDZn_Qp6v5UNQk-jcuDgfwz3mcVaew==
+      - GwE2j-u84u1KeWGaniya3_KU86GCQhUI9U_7wU55KeBAcwWN26KOGw==
       X-Amz-Cf-Pop:
-      - VIE50-C1
+      - FRA2-C2
       X-Cache:
-      - RefreshHit from cloudfront
+      - Miss from cloudfront
       x-amz-replication-status:
       - COMPLETED
       x-amz-version-id:
-      - xJNGkCdg_MF7RA9MPWscU1tH6Gil2TfD
+      - mqWuRCF5yzdAU.xDZMdGap6_or4wJXu0
     status:
       code: 200
       message: OK
@@ -63,7 +63,7 @@ interactions:
       Content-Type:
       - application/x-www-form-urlencoded;charset=UTF-8
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: POST
     uri: https://id.panoramichq.com/oauth2/aus5iy3utLXi3Ez4A4x6/v1/token
   response:
@@ -76,7 +76,7 @@ interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Tue, 18 Aug 2020 12:06:11 GMT
+      - Tue, 25 Aug 2020 08:16:13 GMT
       Keep-Alive:
       - timeout=5, max=100
       Server:
@@ -97,17 +97,17 @@ interactions:
       - no-cache
       set-cookie:
       - sid=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
-      - JSESSIONID=867FC7005900837AC44D3908770D2DE5; Path=/; Secure; HttpOnly
+      - JSESSIONID=D5C0E65D8DEB9482E916E3114F2F2C36; Path=/; Secure; HttpOnly
       x-content-type-options:
       - nosniff
       x-okta-request-id:
-      - XzvEM3AbPwwztxnQvkmihQAABO8
+      - X0TIzVLv90FWf7SiCHOO4AAACNE
       x-rate-limit-limit:
       - '600'
       x-rate-limit-remaining:
       - '599'
       x-rate-limit-reset:
-      - '1597752431'
+      - '1598343433'
       x-xss-protection:
       - 1; mode=block; report=https://okta.report-uri.com/r/d/xss/enforce
     status:
@@ -127,7 +127,7 @@ interactions:
       Content-Type:
       - application/x-www-form-urlencoded;charset=UTF-8
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: POST
     uri: https://id.panoramichq.com/oauth2/aus5iy3utLXi3Ez4A4x6/v1/token
   response:
@@ -140,7 +140,7 @@ interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Tue, 18 Aug 2020 12:06:12 GMT
+      - Tue, 25 Aug 2020 08:16:14 GMT
       Keep-Alive:
       - timeout=5, max=100
       Server:
@@ -161,17 +161,17 @@ interactions:
       - no-cache
       set-cookie:
       - sid=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
-      - JSESSIONID=A295361C654ADE55B237964CDD58128B; Path=/; Secure; HttpOnly
+      - JSESSIONID=0CF2C98CFD551C57867B6977F9A8E8EE; Path=/; Secure; HttpOnly
       x-content-type-options:
       - nosniff
       x-okta-request-id:
-      - XzvENDoAmPG9sQqaNL9lnwAAAyw
+      - X0TIzlLv90FWf7SiCHOO5gAACKI
       x-rate-limit-limit:
       - '600'
       x-rate-limit-remaining:
       - '598'
       x-rate-limit-reset:
-      - '1597752431'
+      - '1598343433'
       x-xss-protection:
       - 1; mode=block; report=https://okta.report-uri.com/r/d/xss/enforce
     status:
@@ -189,12 +189,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: POST
     uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/SF/tables?company_slug=operam&table_filter=METRICS3_STG.ADWORDS_VIEWS.ENTITY%25
   response:
     body:
-      string: '{"data":{"job_id":"20c43bca-7384-333f-e8b5-9da575e63b00"}}
+      string: '{"data":{"job_id":"20bb372f-59de-c9c8-5f62-9bdc40372300"}}
 
         '
     headers:
@@ -205,7 +205,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:13 GMT
+      - Tue, 25 Aug 2020 08:16:16 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -213,9 +213,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '228'
+      - '782'
       x-diesel-request-id:
-      - 4f4e9478-79b4-4ebe-9f22-df56d55e3715
+      - e26cd22a-131e-4619-b195-eda5610f5a4d
     status:
       code: 200
       message: OK
@@ -229,9 +229,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bca-7384-333f-e8b5-9da575e63b00
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb372f-59de-c9c8-5f62-9bdc40372300
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -245,17 +245,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:13 GMT
+      - Tue, 25 Aug 2020 08:16:18 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '0'
+      - '1'
       X-Kong-Upstream-Latency:
-      - '128'
+      - '26'
       x-diesel-request-id:
-      - 69fdfe47-fc5c-4cd1-946a-5bb054605133
+      - ffe182c4-3166-4a3f-bc96-8a1a886b6ccf
     status:
       code: 200
       message: OK
@@ -269,9 +269,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bca-7384-333f-e8b5-9da575e63b00/results?offset=0&limit=500
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb372f-59de-c9c8-5f62-9bdc40372300/results?offset=0&limit=500
   response:
     body:
       string: '{"data":[{"data_source":"SF.METRICS3_STG.ADWORDS_VIEWS.ENTITY_ACCOUNTS","model_name":"sf.metrics3_stg.adwords_views.entity_accounts"},{"data_source":"SF.METRICS3_STG.ADWORDS_VIEWS.ENTITY_ADGROUPS","model_name":"sf.metrics3_stg.adwords_views.entity_adgroups"},{"data_source":"SF.METRICS3_STG.ADWORDS_VIEWS.ENTITY_ADGROUPS_FROM_SERVICE","model_name":"sf.metrics3_stg.adwords_views.entity_adgroups_from_service"},{"data_source":"SF.METRICS3_STG.ADWORDS_VIEWS.ENTITY_ADS","model_name":"sf.metrics3_stg.adwords_views.entity_ads"},{"data_source":"SF.METRICS3_STG.ADWORDS_VIEWS.ENTITY_ADS_FROM_SERVICE","model_name":"sf.metrics3_stg.adwords_views.entity_ads_from_service"},{"data_source":"SF.METRICS3_STG.ADWORDS_VIEWS.ENTITY_ADVIDEOS","model_name":"sf.metrics3_stg.adwords_views.entity_advideos"},{"data_source":"SF.METRICS3_STG.ADWORDS_VIEWS.ENTITY_CAMPAIGNS","model_name":"sf.metrics3_stg.adwords_views.entity_campaigns"},{"data_source":"SF.METRICS3_STG.ADWORDS_VIEWS.ENTITY_CAMPAIGNS_CRITERION","model_name":"sf.metrics3_stg.adwords_views.entity_campaigns_criterion"},{"data_source":"SF.METRICS3_STG.ADWORDS_VIEWS.ENTITY_CAMPAIGNS_FROM_SERVICE","model_name":"sf.metrics3_stg.adwords_views.entity_campaigns_from_service"},{"data_source":"SF.METRICS3_STG.ADWORDS_VIEWS.ENTITY_USER_LISTS","model_name":"sf.metrics3_stg.adwords_views.entity_user_lists"}]}
@@ -285,7 +285,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:13 GMT
+      - Tue, 25 Aug 2020 08:16:18 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -295,7 +295,7 @@ interactions:
       X-Kong-Upstream-Latency:
       - '29'
       x-diesel-request-id:
-      - b8958c3b-1ac0-40cc-be1f-1d07402934df
+      - 4600dacc-aec0-4c20-98af-2865dd95919f
     status:
       code: 200
       message: OK
@@ -311,12 +311,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: POST
     uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/SF/refresh?table_name=METRICS3_STG.ADWORDS_VIEWS.ENTITY_ACCOUNTS&company_slug=operam
   response:
     body:
-      string: '{"data":{"job_id":"20c43bc8-bfe2-e931-1c6e-8156549bc900"}}
+      string: '{"data":{"job_id":"20bb372c-13ec-91ae-1207-4594d9525f00"}}
 
         '
     headers:
@@ -327,7 +327,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:14 GMT
+      - Tue, 25 Aug 2020 08:16:19 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -335,9 +335,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '526'
+      - '295'
       x-diesel-request-id:
-      - 1b0a5421-f442-4b35-b1d8-783f80fc33bb
+      - bbf99a42-2176-48d8-a8d3-3e3dc41d0a5a
     status:
       code: 200
       message: OK
@@ -351,23 +351,65 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bc8-bfe2-e931-1c6e-8156549bc900
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb372c-13ec-91ae-1207-4594d9525f00
   response:
     body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
+      string: '{"data":{"job_status":"COMPLETED"}}
 
         '
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '45'
+      - '36'
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:15 GMT
+      - Tue, 25 Aug 2020 08:16:22 GMT
+      Via:
+      - kong/2.0.3
+      X-Amzn-Trace-Id:
+      - None
+      X-Kong-Proxy-Latency:
+      - '0'
+      X-Kong-Upstream-Latency:
+      - '31'
+      x-diesel-request-id:
+      - 3cee114c-cfeb-4e0c-9b49-aba67855cca0
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      User-Agent:
+      - pano-cli/0.9.0
+    method: POST
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/SF/columns?company_slug=operam&table_filter=METRICS3_STG.ADWORDS_VIEWS.ENTITY_ACCOUNTS
+  response:
+    body:
+      string: '{"data":{"job_id":"20bb3728-cb3f-7923-a1c1-905c5984f500"}}
+
+        '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '59'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 25 Aug 2020 08:16:22 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -375,49 +417,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '1'
       X-Kong-Upstream-Latency:
-      - '26'
-      x-diesel-request-id:
-      - 9ac8e193-077e-4ca2-b3fd-574cd68513a7
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bc8-bfe2-e931-1c6e-8156549bc900
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:16 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
       - '30'
       x-diesel-request-id:
-      - 93ccba9e-07de-45a5-9e4a-2cdff336e5cb
+      - 7833aa75-5b0a-4321-a160-52b0ee540992
     status:
       code: 200
       message: OK
@@ -431,23 +433,23 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bc8-bfe2-e931-1c6e-8156549bc900
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb3728-cb3f-7923-a1c1-905c5984f500
   response:
     body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
+      string: '{"data":{"job_status":"COMPLETED"}}
 
         '
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '45'
+      - '36'
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:17 GMT
+      - Tue, 25 Aug 2020 08:16:23 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -457,7 +459,7 @@ interactions:
       X-Kong-Upstream-Latency:
       - '25'
       x-diesel-request-id:
-      - 4c6abd97-6fe3-4288-8df6-95b5b80689a5
+      - f16498ae-7c4e-46d1-aa4b-d5479288ce55
     status:
       code: 200
       message: OK
@@ -471,211 +473,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bc8-bfe2-e931-1c6e-8156549bc900
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:18 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '1'
-      X-Kong-Upstream-Latency:
-      - '24'
-      x-diesel-request-id:
-      - 1d9b7395-c8af-4b07-94bb-3f1abf2f8607
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bc8-bfe2-e931-1c6e-8156549bc900
-  response:
-    body:
-      string: '{"data":{"job_status":"COMPLETED"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '36'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:19 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '1'
-      X-Kong-Upstream-Latency:
-      - '26'
-      x-diesel-request-id:
-      - d7ef88dd-31d0-4f15-a70e-2f3b13672708
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '0'
-      User-Agent:
-      - pano-cli/0.8.3
-    method: POST
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/SF/columns?company_slug=operam&table_filter=METRICS3_STG.ADWORDS_VIEWS.ENTITY_ACCOUNTS
-  response:
-    body:
-      string: '{"data":{"job_id":"20c43bc3-db3f-4b9e-84b0-148d38953200"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '59'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:19 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '1'
-      X-Kong-Upstream-Latency:
-      - '31'
-      x-diesel-request-id:
-      - f26a722c-83c5-4c0a-ac34-68bf7f7ff5fa
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bc3-db3f-4b9e-84b0-148d38953200
-  response:
-    body:
-      string: '{"data":{"job_status":"RUNNING"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '34'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:20 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '27'
-      x-diesel-request-id:
-      - a95bf629-982a-4ae2-80a8-a9736cd2376f
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bc3-db3f-4b9e-84b0-148d38953200
-  response:
-    body:
-      string: '{"data":{"job_status":"COMPLETED"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '36'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:21 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '28'
-      x-diesel-request-id:
-      - b745ff2d-3258-4b15-be02-c16306e82afc
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bc3-db3f-4b9e-84b0-148d38953200/results?offset=0&limit=500
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb3728-cb3f-7923-a1c1-905c5984f500/results?offset=0&limit=500
   response:
     body:
       string: '{"data":[{"data_reference":"\"__API_VERSION\"","data_source":"SF.METRICS3_STG.ADWORDS_VIEWS.ENTITY_ACCOUNTS","data_type":"CHARACTER
@@ -701,7 +501,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:21 GMT
+      - Tue, 25 Aug 2020 08:16:24 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -709,9 +509,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '33'
+      - '34'
       x-diesel-request-id:
-      - 2b60271e-594f-4ad4-bc5a-087997718f64
+      - 89d1b5d0-f97e-4331-b3ec-6d8b129c910e
     status:
       code: 200
       message: OK
@@ -727,12 +527,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: POST
     uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/SF/refresh?table_name=METRICS3_STG.ADWORDS_VIEWS.ENTITY_ADGROUPS&company_slug=operam
   response:
     body:
-      string: '{"data":{"job_id":"20c43bc2-2ed3-cc20-6aa7-5a2e4c624600"}}
+      string: '{"data":{"job_id":"20bb3726-9780-b786-af66-3f869f91b700"}}
 
         '
     headers:
@@ -743,7 +543,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:21 GMT
+      - Tue, 25 Aug 2020 08:16:24 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -751,9 +551,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '31'
+      - '35'
       x-diesel-request-id:
-      - 87129f6d-a8bb-497d-9701-834d38468739
+      - aca9c5cf-769b-457c-84e8-bf7191556a76
     status:
       code: 200
       message: OK
@@ -767,23 +567,105 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bc2-2ed3-cc20-6aa7-5a2e4c624600
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb3726-9780-b786-af66-3f869f91b700
   response:
     body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
+      string: '{"data":{"job_status":"COMPLETED"}}
 
         '
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '45'
+      - '36'
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:21 GMT
+      - Tue, 25 Aug 2020 08:16:25 GMT
+      Via:
+      - kong/2.0.3
+      X-Amzn-Trace-Id:
+      - None
+      X-Kong-Proxy-Latency:
+      - '1'
+      X-Kong-Upstream-Latency:
+      - '27'
+      x-diesel-request-id:
+      - 94154372-8857-4d1a-b419-c9d8dd52b8b5
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      User-Agent:
+      - pano-cli/0.9.0
+    method: POST
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/SF/columns?company_slug=operam&table_filter=METRICS3_STG.ADWORDS_VIEWS.ENTITY_ADGROUPS
+  response:
+    body:
+      string: '{"data":{"job_id":"20bb3725-0d1e-339a-acbb-d1db79ee4f00"}}
+
+        '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '59'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 25 Aug 2020 08:16:26 GMT
+      Via:
+      - kong/2.0.3
+      X-Amzn-Trace-Id:
+      - None
+      X-Kong-Proxy-Latency:
+      - '0'
+      X-Kong-Upstream-Latency:
+      - '389'
+      x-diesel-request-id:
+      - be367ed5-946e-4d8d-9b1a-e912e88d700c
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - pano-cli/0.9.0
+    method: GET
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb3725-0d1e-339a-acbb-d1db79ee4f00
+  response:
+    body:
+      string: '{"data":{"job_status":"COMPLETED"}}
+
+        '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '36'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 25 Aug 2020 08:16:27 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -793,7 +675,7 @@ interactions:
       X-Kong-Upstream-Latency:
       - '26'
       x-diesel-request-id:
-      - e678cdd6-51c6-4923-864a-13fc86324392
+      - 76778fdb-1252-408f-b3d0-f9bf17150875
     status:
       code: 200
       message: OK
@@ -807,291 +689,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bc2-2ed3-cc20-6aa7-5a2e4c624600
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:22 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '1'
-      X-Kong-Upstream-Latency:
-      - '25'
-      x-diesel-request-id:
-      - e63240f8-d74d-4379-ac8e-21bce25557e7
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bc2-2ed3-cc20-6aa7-5a2e4c624600
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:24 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '30'
-      x-diesel-request-id:
-      - 506a56c5-4349-4614-99ff-48a2328e7d19
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bc2-2ed3-cc20-6aa7-5a2e4c624600
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:25 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '1'
-      X-Kong-Upstream-Latency:
-      - '25'
-      x-diesel-request-id:
-      - d0ecb6d5-ad58-4eaa-9704-76293ea3cbc6
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bc2-2ed3-cc20-6aa7-5a2e4c624600
-  response:
-    body:
-      string: '{"data":{"job_status":"COMPLETED"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '36'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:26 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '1'
-      X-Kong-Upstream-Latency:
-      - '25'
-      x-diesel-request-id:
-      - fbf9d2de-fe21-4cd1-847a-23edaa068355
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '0'
-      User-Agent:
-      - pano-cli/0.8.3
-    method: POST
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/SF/columns?company_slug=operam&table_filter=METRICS3_STG.ADWORDS_VIEWS.ENTITY_ADGROUPS
-  response:
-    body:
-      string: '{"data":{"job_id":"20c43bbd-0814-e023-c736-fd34a9244600"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '59'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:26 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '1'
-      X-Kong-Upstream-Latency:
-      - '30'
-      x-diesel-request-id:
-      - 45545b50-e947-4ef1-ab9e-b136b64b9ec0
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bbd-0814-e023-c736-fd34a9244600
-  response:
-    body:
-      string: '{"data":{"job_status":"RUNNING"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '34'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:26 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '25'
-      x-diesel-request-id:
-      - 20a4bc6d-1513-4b44-9037-ed1faa36bf21
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bbd-0814-e023-c736-fd34a9244600
-  response:
-    body:
-      string: '{"data":{"job_status":"COMPLETED"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '36'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:28 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '1'
-      X-Kong-Upstream-Latency:
-      - '31'
-      x-diesel-request-id:
-      - d0d06bc0-a2a4-4f00-87f0-f197ab1ebbbb
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bbd-0814-e023-c736-fd34a9244600/results?offset=0&limit=500
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb3725-0d1e-339a-acbb-d1db79ee4f00/results?offset=0&limit=500
   response:
     body:
       string: '{"data":[{"data_reference":"\"__RECORD_ID\"","data_source":"SF.METRICS3_STG.ADWORDS_VIEWS.ENTITY_ADGROUPS","data_type":"CHARACTER
@@ -1115,7 +715,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:28 GMT
+      - Tue, 25 Aug 2020 08:16:27 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -1123,9 +723,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '31'
+      - '32'
       x-diesel-request-id:
-      - df09528c-d001-4485-aa6b-93ce28e3f182
+      - e9810eda-56b2-4693-86ea-a49f41444fd3
     status:
       code: 200
       message: OK
@@ -1141,12 +741,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: POST
     uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/SF/refresh?table_name=METRICS3_STG.ADWORDS_VIEWS.ENTITY_ADGROUPS_FROM_SERVICE&company_slug=operam
   response:
     body:
-      string: '{"data":{"job_id":"20c43bbb-1916-e53c-91c4-5050c650f200"}}
+      string: '{"data":{"job_id":"20bb3722-9f75-7174-2cd4-004485a10600"}}
 
         '
     headers:
@@ -1157,47 +757,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:28 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '1'
-      X-Kong-Upstream-Latency:
-      - '30'
-      x-diesel-request-id:
-      - ae85cc76-955a-406e-bed7-f564b5605056
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bbb-1916-e53c-91c4-5050c650f200
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:28 GMT
+      - Tue, 25 Aug 2020 08:16:28 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -1205,9 +765,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '26'
+      - '31'
       x-diesel-request-id:
-      - a734ba05-5733-4d7e-8d76-bb1d79c4800b
+      - 238a48a6-8979-446b-964c-d222d2a450c2
     status:
       code: 200
       message: OK
@@ -1221,129 +781,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bbb-1916-e53c-91c4-5050c650f200
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:29 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '26'
-      x-diesel-request-id:
-      - 1a8d2266-63d5-4bf0-8b43-f42ae5744bb4
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bbb-1916-e53c-91c4-5050c650f200
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:31 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '1'
-      X-Kong-Upstream-Latency:
-      - '26'
-      x-diesel-request-id:
-      - 3033f174-3b46-4d9d-9e6b-606a21df82ed
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bbb-1916-e53c-91c4-5050c650f200
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:32 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '25'
-      x-diesel-request-id:
-      - 1b686682-b3b7-4ac4-a8aa-c04ac0f175d5
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bbb-1916-e53c-91c4-5050c650f200
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb3722-9f75-7174-2cd4-004485a10600
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -1357,7 +797,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:33 GMT
+      - Tue, 25 Aug 2020 08:16:30 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -1365,9 +805,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '26'
+      - '29'
       x-diesel-request-id:
-      - 90d73f1a-8bf5-4702-a580-dc9259682af6
+      - b423dcff-ea0b-48cf-a0ba-7c0dce7dff15
     status:
       code: 200
       message: OK
@@ -1383,12 +823,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: POST
     uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/SF/columns?company_slug=operam&table_filter=METRICS3_STG.ADWORDS_VIEWS.ENTITY_ADGROUPS_FROM_SERVICE
   response:
     body:
-      string: '{"data":{"job_id":"20c43bb6-0137-8ffe-0d7d-7208eff08400"}}
+      string: '{"data":{"job_id":"20bb371f-cff9-9b2c-38a9-75b421f97600"}}
 
         '
     headers:
@@ -1399,17 +839,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:33 GMT
+      - Tue, 25 Aug 2020 08:16:31 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '1'
+      - '0'
       X-Kong-Upstream-Latency:
-      - '31'
+      - '37'
       x-diesel-request-id:
-      - dbcc537f-8c2e-4908-8131-f2522c8e639f
+      - 84747884-f33e-4bbd-b2cd-bef38df8bd29
     status:
       code: 200
       message: OK
@@ -1423,49 +863,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bb6-0137-8ffe-0d7d-7208eff08400
-  response:
-    body:
-      string: '{"data":{"job_status":"RUNNING"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '34'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:33 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '1'
-      X-Kong-Upstream-Latency:
-      - '23'
-      x-diesel-request-id:
-      - 78663744-c431-4f6d-b116-95889789059c
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bb6-0137-8ffe-0d7d-7208eff08400
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb371f-cff9-9b2c-38a9-75b421f97600
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -1479,17 +879,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:34 GMT
+      - Tue, 25 Aug 2020 08:16:31 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '0'
+      - '1'
       X-Kong-Upstream-Latency:
-      - '24'
+      - '26'
       x-diesel-request-id:
-      - 31141b1f-df0f-4c1c-aa9a-52b1bad8f3c2
+      - 16fef2fa-233e-4eb2-91a1-49584bc5be62
     status:
       code: 200
       message: OK
@@ -1503,9 +903,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bb6-0137-8ffe-0d7d-7208eff08400/results?offset=0&limit=500
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb371f-cff9-9b2c-38a9-75b421f97600/results?offset=0&limit=500
   response:
     body:
       string: '{"data":[{"data_reference":"\"__RECORD_ID\"","data_source":"SF.METRICS3_STG.ADWORDS_VIEWS.ENTITY_ADGROUPS_FROM_SERVICE","data_type":"CHARACTER
@@ -1539,7 +939,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:35 GMT
+      - Tue, 25 Aug 2020 08:16:31 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -1547,9 +947,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '32'
+      - '29'
       x-diesel-request-id:
-      - 32f2f1e2-c163-4c81-bceb-1320a4bb73c9
+      - 8bb39cff-33af-4414-a8da-f33f21e44876
     status:
       code: 200
       message: OK
@@ -1565,12 +965,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: POST
     uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/SF/refresh?table_name=METRICS3_STG.ADWORDS_VIEWS.ENTITY_ADS&company_slug=operam
   response:
     body:
-      string: '{"data":{"job_id":"20c43bb4-6b91-0ec1-c3f6-7db780c19a00"}}
+      string: '{"data":{"job_id":"20bb371e-970f-66d3-ef1e-1674f38e3400"}}
 
         '
     headers:
@@ -1581,47 +981,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:35 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '36'
-      x-diesel-request-id:
-      - 8532a0b7-5936-4f21-b373-504d53fdb425
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bb4-6b91-0ec1-c3f6-7db780c19a00
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:35 GMT
+      - Tue, 25 Aug 2020 08:16:32 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -1629,9 +989,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '1'
       X-Kong-Upstream-Latency:
-      - '25'
+      - '36'
       x-diesel-request-id:
-      - be32e6a9-1545-46d5-ba97-54da4dc26c80
+      - 8982eb8d-0e3d-4066-9e21-ba1acdfdc1b6
     status:
       code: 200
       message: OK
@@ -1645,49 +1005,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bb4-6b91-0ec1-c3f6-7db780c19a00
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:36 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '25'
-      x-diesel-request-id:
-      - f5a6c816-01b9-4764-a1e5-91cbe6707833
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bb4-6b91-0ec1-c3f6-7db780c19a00
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb371e-970f-66d3-ef1e-1674f38e3400
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -1701,7 +1021,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:37 GMT
+      - Tue, 25 Aug 2020 08:16:33 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -1711,7 +1031,7 @@ interactions:
       X-Kong-Upstream-Latency:
       - '26'
       x-diesel-request-id:
-      - 85682a6b-d8b4-4600-8570-bfc5cfa5e0dd
+      - 00ab9972-0c0f-48e2-b515-0e8e165795e3
     status:
       code: 200
       message: OK
@@ -1727,12 +1047,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: POST
     uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/SF/columns?company_slug=operam&table_filter=METRICS3_STG.ADWORDS_VIEWS.ENTITY_ADS
   response:
     body:
-      string: '{"data":{"job_id":"20c43bb0-fce8-a701-313f-9350c1fd7100"}}
+      string: '{"data":{"job_id":"20bb371e-5133-fa57-aabc-e2999f226a00"}}
 
         '
     headers:
@@ -1743,47 +1063,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:38 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '34'
-      x-diesel-request-id:
-      - 126ed2e4-0719-4582-8c66-ffaee9610763
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bb0-fce8-a701-313f-9350c1fd7100
-  response:
-    body:
-      string: '{"data":{"job_status":"RUNNING"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '34'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:38 GMT
+      - Tue, 25 Aug 2020 08:16:33 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -1791,9 +1071,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '1'
       X-Kong-Upstream-Latency:
-      - '26'
+      - '31'
       x-diesel-request-id:
-      - f0c66720-cbcc-4e51-b8fa-1a28b92959b9
+      - 6a669947-4b98-490a-8de4-9c96b80deb15
     status:
       code: 200
       message: OK
@@ -1807,9 +1087,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bb0-fce8-a701-313f-9350c1fd7100
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb371e-5133-fa57-aabc-e2999f226a00
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -1823,17 +1103,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:39 GMT
+      - Tue, 25 Aug 2020 08:16:35 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '1'
+      - '0'
       X-Kong-Upstream-Latency:
-      - '55'
+      - '26'
       x-diesel-request-id:
-      - 7a4476c7-b169-4386-a2d6-30837cc0cb81
+      - 3eb3fd17-1bb2-48c4-b155-b1af0166a3e6
     status:
       code: 200
       message: OK
@@ -1847,9 +1127,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43bb0-fce8-a701-313f-9350c1fd7100/results?offset=0&limit=500
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb371e-5133-fa57-aabc-e2999f226a00/results?offset=0&limit=500
   response:
     body:
       string: '{"data":[{"data_reference":"\"AD_ID\"","data_source":"SF.METRICS3_STG.ADWORDS_VIEWS.ENTITY_ADS","data_type":"CHARACTER
@@ -1879,7 +1159,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:39 GMT
+      - Tue, 25 Aug 2020 08:16:35 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -1887,9 +1167,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '1'
       X-Kong-Upstream-Latency:
-      - '32'
+      - '30'
       x-diesel-request-id:
-      - 195642bb-4597-4885-9e61-07751292b274
+      - fbf26e55-dfbe-4350-93b4-05e2f990f4ce
     status:
       code: 200
       message: OK
@@ -1905,12 +1185,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: POST
     uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/SF/refresh?table_name=METRICS3_STG.ADWORDS_VIEWS.ENTITY_ADS_FROM_SERVICE&company_slug=operam
   response:
     body:
-      string: '{"data":{"job_id":"20c43baf-b529-f6e2-8e3e-66d563b61000"}}
+      string: '{"data":{"job_id":"20bb371c-6573-de8d-e52b-9e568c135500"}}
 
         '
     headers:
@@ -1921,289 +1201,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:39 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '1'
-      X-Kong-Upstream-Latency:
-      - '33'
-      x-diesel-request-id:
-      - 879cd673-a025-447d-9279-fb4fdfde1389
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43baf-b529-f6e2-8e3e-66d563b61000
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:40 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '25'
-      x-diesel-request-id:
-      - 7907ff84-6dbc-4ecb-b2e7-e7d1e28fc911
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43baf-b529-f6e2-8e3e-66d563b61000
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:41 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '25'
-      x-diesel-request-id:
-      - 8e9c001c-ee4f-41e6-9872-4d87f6aefb5e
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43baf-b529-f6e2-8e3e-66d563b61000
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:42 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '1'
-      X-Kong-Upstream-Latency:
-      - '25'
-      x-diesel-request-id:
-      - 07a88570-67fd-4523-9f5e-97490b60fb74
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43baf-b529-f6e2-8e3e-66d563b61000
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:43 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '1'
-      X-Kong-Upstream-Latency:
-      - '33'
-      x-diesel-request-id:
-      - 687f485b-7948-4f1f-ae8e-be434c6915e3
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43baf-b529-f6e2-8e3e-66d563b61000
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:44 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '26'
-      x-diesel-request-id:
-      - b73e9ca5-3407-48e0-bd44-1fdd8656ef18
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43baf-b529-f6e2-8e3e-66d563b61000
-  response:
-    body:
-      string: '{"data":{"job_status":"COMPLETED"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '36'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:46 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '25'
-      x-diesel-request-id:
-      - 145a86fc-c843-48c1-ab77-ae96c3111eb0
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '0'
-      User-Agent:
-      - pano-cli/0.8.3
-    method: POST
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/SF/columns?company_slug=operam&table_filter=METRICS3_STG.ADWORDS_VIEWS.ENTITY_ADS_FROM_SERVICE
-  response:
-    body:
-      string: '{"data":{"job_id":"20c43ba8-ae5b-4204-1707-7e95d64d8100"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '59'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:46 GMT
+      - Tue, 25 Aug 2020 08:16:35 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -2213,7 +1211,7 @@ interactions:
       X-Kong-Upstream-Latency:
       - '31'
       x-diesel-request-id:
-      - 386de6da-54eb-4583-b448-939ecce1b79c
+      - ced46148-a726-4d6e-a998-57c59ae45204
     status:
       code: 200
       message: OK
@@ -2227,49 +1225,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43ba8-ae5b-4204-1707-7e95d64d8100
-  response:
-    body:
-      string: '{"data":{"job_status":"RUNNING"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '34'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:46 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '24'
-      x-diesel-request-id:
-      - 15d22f45-93db-49ad-aab5-62417cc01f34
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43ba8-ae5b-4204-1707-7e95d64d8100
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb371c-6573-de8d-e52b-9e568c135500
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -2283,7 +1241,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:47 GMT
+      - Tue, 25 Aug 2020 08:16:38 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -2291,9 +1249,51 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '26'
+      - '27'
       x-diesel-request-id:
-      - 14d8283e-25e7-42f8-ac3a-f1219955baae
+      - 0f60c03b-53f1-4173-a820-ea57aeebd6e1
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      User-Agent:
+      - pano-cli/0.9.0
+    method: POST
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/SF/columns?company_slug=operam&table_filter=METRICS3_STG.ADWORDS_VIEWS.ENTITY_ADS_FROM_SERVICE
+  response:
+    body:
+      string: '{"data":{"job_id":"20bb3719-088f-92d0-7e2d-bfaad6537a00"}}
+
+        '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '59'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 25 Aug 2020 08:16:38 GMT
+      Via:
+      - kong/2.0.3
+      X-Amzn-Trace-Id:
+      - None
+      X-Kong-Proxy-Latency:
+      - '0'
+      X-Kong-Upstream-Latency:
+      - '30'
+      x-diesel-request-id:
+      - 162696f4-daa6-4259-9acb-a405bf323009
     status:
       code: 200
       message: OK
@@ -2307,9 +1307,49 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43ba8-ae5b-4204-1707-7e95d64d8100/results?offset=0&limit=500
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb3719-088f-92d0-7e2d-bfaad6537a00
+  response:
+    body:
+      string: '{"data":{"job_status":"COMPLETED"}}
+
+        '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '36'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 25 Aug 2020 08:16:39 GMT
+      Via:
+      - kong/2.0.3
+      X-Amzn-Trace-Id:
+      - None
+      X-Kong-Proxy-Latency:
+      - '1'
+      X-Kong-Upstream-Latency:
+      - '26'
+      x-diesel-request-id:
+      - 0e9f39ba-3185-4630-9177-9a9d5d1b9e94
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - pano-cli/0.9.0
+    method: GET
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb3719-088f-92d0-7e2d-bfaad6537a00/results?offset=0&limit=500
   response:
     body:
       string: '{"data":[{"data_reference":"\"AD_ID\"","data_source":"SF.METRICS3_STG.ADWORDS_VIEWS.ENTITY_ADS_FROM_SERVICE","data_type":"CHARACTER
@@ -2355,17 +1395,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:47 GMT
+      - Tue, 25 Aug 2020 08:16:39 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '0'
+      - '1'
       X-Kong-Upstream-Latency:
       - '33'
       x-diesel-request-id:
-      - 1184d9cd-5885-4dcc-bd2c-72959efadf2a
+      - 46af77d0-62dd-4de6-8879-7bbc483a6d59
     status:
       code: 200
       message: OK
@@ -2381,12 +1421,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: POST
     uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/SF/refresh?table_name=METRICS3_STG.ADWORDS_VIEWS.ENTITY_ADVIDEOS&company_slug=operam
   response:
     body:
-      string: '{"data":{"job_id":"20c43ba6-ce03-9978-11e5-322145600e00"}}
+      string: '{"data":{"job_id":"20bb3717-127e-bf74-c65e-665624c11400"}}
 
         '
     headers:
@@ -2397,7 +1437,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:48 GMT
+      - Tue, 25 Aug 2020 08:16:40 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -2405,9 +1445,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '1'
       X-Kong-Upstream-Latency:
-      - '30'
+      - '56'
       x-diesel-request-id:
-      - 589ca254-16ee-406a-a3cf-cd933cf6512a
+      - 128c7af0-5ae0-4ec7-b006-49f5116a8516
     status:
       code: 200
       message: OK
@@ -2421,129 +1461,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43ba6-ce03-9978-11e5-322145600e00
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:48 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '27'
-      x-diesel-request-id:
-      - 97e14dd2-b7f8-46d1-b0e2-4c89cd76c0ee
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43ba6-ce03-9978-11e5-322145600e00
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:49 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '1'
-      X-Kong-Upstream-Latency:
-      - '24'
-      x-diesel-request-id:
-      - 733da4a3-9dc4-4801-810b-6bfbc2fe376e
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43ba6-ce03-9978-11e5-322145600e00
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:50 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '1'
-      X-Kong-Upstream-Latency:
-      - '26'
-      x-diesel-request-id:
-      - c983fb7a-6696-4119-80b2-a0146f277c2a
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43ba6-ce03-9978-11e5-322145600e00
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb3717-127e-bf74-c65e-665624c11400
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -2557,7 +1477,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:51 GMT
+      - Tue, 25 Aug 2020 08:16:41 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -2567,7 +1487,7 @@ interactions:
       X-Kong-Upstream-Latency:
       - '26'
       x-diesel-request-id:
-      - 4ee72021-1e6e-4311-a5b7-25f30ca77d50
+      - 4e0575ea-4250-4605-a855-e8df993036a9
     status:
       code: 200
       message: OK
@@ -2583,12 +1503,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: POST
     uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/SF/columns?company_slug=operam&table_filter=METRICS3_STG.ADWORDS_VIEWS.ENTITY_ADVIDEOS
   response:
     body:
-      string: '{"data":{"job_id":"20c43ba3-57b0-1319-15f0-7ce221028c00"}}
+      string: '{"data":{"job_id":"20bb3716-5f12-98d8-445f-fd27f8f57d00"}}
 
         '
     headers:
@@ -2599,7 +1519,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:52 GMT
+      - Tue, 25 Aug 2020 08:16:41 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -2607,9 +1527,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '1'
       X-Kong-Upstream-Latency:
-      - '31'
+      - '35'
       x-diesel-request-id:
-      - 1a321338-1da6-4930-aa99-846a9b8f6e47
+      - 63b75492-adf3-4e44-a130-34944d14c234
     status:
       code: 200
       message: OK
@@ -2623,49 +1543,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43ba3-57b0-1319-15f0-7ce221028c00
-  response:
-    body:
-      string: '{"data":{"job_status":"RUNNING"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '34'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:52 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '27'
-      x-diesel-request-id:
-      - a78a5d72-872a-452f-b9a6-387b6534823f
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43ba3-57b0-1319-15f0-7ce221028c00
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb3716-5f12-98d8-445f-fd27f8f57d00
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -2679,7 +1559,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:53 GMT
+      - Tue, 25 Aug 2020 08:16:43 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -2689,7 +1569,7 @@ interactions:
       X-Kong-Upstream-Latency:
       - '26'
       x-diesel-request-id:
-      - d6df6b5a-3ea0-4b5e-81d1-0d358b822569
+      - 3aef4326-d8bb-4ca1-85ab-3a4dc8dfd47f
     status:
       code: 200
       message: OK
@@ -2703,9 +1583,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43ba3-57b0-1319-15f0-7ce221028c00/results?offset=0&limit=500
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb3716-5f12-98d8-445f-fd27f8f57d00/results?offset=0&limit=500
   response:
     body:
       string: '{"data":[{"data_reference":"\"__RECORD_ID\"","data_source":"SF.METRICS3_STG.ADWORDS_VIEWS.ENTITY_ADVIDEOS","data_type":"CHARACTER
@@ -2729,7 +1609,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:53 GMT
+      - Tue, 25 Aug 2020 08:16:43 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -2737,9 +1617,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '31'
+      - '30'
       x-diesel-request-id:
-      - 8484fa13-45e3-4edf-bba3-f4bba50eec66
+      - 6365bfeb-640a-48be-b3b7-c29b9ce3f312
     status:
       code: 200
       message: OK
@@ -2755,12 +1635,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: POST
     uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/SF/refresh?table_name=METRICS3_STG.ADWORDS_VIEWS.ENTITY_CAMPAIGNS&company_slug=operam
   response:
     body:
-      string: '{"data":{"job_id":"20c43ba1-fb3b-5f12-d3c4-01cdd5199800"}}
+      string: '{"data":{"job_id":"20bb3714-6071-2e7d-0eaa-85a2d115d000"}}
 
         '
     headers:
@@ -2771,7 +1651,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:53 GMT
+      - Tue, 25 Aug 2020 08:16:43 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -2779,9 +1659,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '32'
+      - '35'
       x-diesel-request-id:
-      - 7be5ccad-5334-464f-a10e-44a5c8d797ab
+      - 3c37d7ab-575e-44f0-aa6b-dad7ad85113a
     status:
       code: 200
       message: OK
@@ -2795,89 +1675,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43ba1-fb3b-5f12-d3c4-01cdd5199800
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:54 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '1'
-      X-Kong-Upstream-Latency:
-      - '27'
-      x-diesel-request-id:
-      - 4951bb78-2005-4f77-9134-754518210131
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43ba1-fb3b-5f12-d3c4-01cdd5199800
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:55 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '24'
-      x-diesel-request-id:
-      - 83d9b4b1-da09-4ef2-b5c2-e4fe0bec8649
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43ba1-fb3b-5f12-d3c4-01cdd5199800
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb3714-6071-2e7d-0eaa-85a2d115d000
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -2891,17 +1691,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:56 GMT
+      - Tue, 25 Aug 2020 08:16:54 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '1'
+      - '0'
       X-Kong-Upstream-Latency:
-      - '26'
+      - '319'
       x-diesel-request-id:
-      - fb9681e5-17ea-4f77-a421-9a73e43be0fd
+      - 88f8b73e-8e6c-4edc-abce-fa43a8eb5b5e
     status:
       code: 200
       message: OK
@@ -2917,12 +1717,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: POST
     uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/SF/columns?company_slug=operam&table_filter=METRICS3_STG.ADWORDS_VIEWS.ENTITY_CAMPAIGNS
   response:
     body:
-      string: '{"data":{"job_id":"20c43b9f-1a04-4241-0e62-605209479100"}}
+      string: '{"data":{"job_id":"20bb3709-68ef-e4cf-160c-a581c6a8c400"}}
 
         '
     headers:
@@ -2933,7 +1733,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:56 GMT
+      - Tue, 25 Aug 2020 08:16:54 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -2941,49 +1741,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '1'
       X-Kong-Upstream-Latency:
-      - '30'
-      x-diesel-request-id:
-      - e00d5254-7f0e-4f35-8cfd-8578412f1132
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43b9f-1a04-4241-0e62-605209479100
-  response:
-    body:
-      string: '{"data":{"job_status":"RUNNING"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
       - '34'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:56 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '25'
       x-diesel-request-id:
-      - 715b650d-6aae-4f47-a7c9-6ec20d64019c
+      - 23ef3796-c2c9-4d3d-86aa-e6f5d6cfb033
     status:
       code: 200
       message: OK
@@ -2997,9 +1757,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43b9f-1a04-4241-0e62-605209479100
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb3709-68ef-e4cf-160c-a581c6a8c400
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -3013,17 +1773,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:58 GMT
+      - Tue, 25 Aug 2020 08:16:54 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '1'
+      - '0'
       X-Kong-Upstream-Latency:
       - '26'
       x-diesel-request-id:
-      - 424cb830-f280-4013-aed2-ffdc589eef9a
+      - beb8ea05-7ef0-427e-9cc9-698ebcba5400
     status:
       code: 200
       message: OK
@@ -3037,9 +1797,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43b9f-1a04-4241-0e62-605209479100/results?offset=0&limit=500
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb3709-68ef-e4cf-160c-a581c6a8c400/results?offset=0&limit=500
   response:
     body:
       string: '{"data":[{"data_reference":"\"CAMPAIGN_ID\"","data_source":"SF.METRICS3_STG.ADWORDS_VIEWS.ENTITY_CAMPAIGNS","data_type":"CHARACTER
@@ -3063,7 +1823,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:58 GMT
+      - Tue, 25 Aug 2020 08:16:55 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -3071,9 +1831,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '30'
+      - '29'
       x-diesel-request-id:
-      - 00bb838b-1060-4d12-bc0a-62421db1139e
+      - 8ffe7b11-f036-4d71-92a2-08259cb3fb2f
     status:
       code: 200
       message: OK
@@ -3089,12 +1849,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: POST
     uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/SF/refresh?table_name=METRICS3_STG.ADWORDS_VIEWS.ENTITY_CAMPAIGNS_CRITERION&company_slug=operam
   response:
     body:
-      string: '{"data":{"job_id":"20c43b9d-18a2-00e2-21c7-2738bd04d900"}}
+      string: '{"data":{"job_id":"20bb3707-4ba3-e84d-a95d-240c03cef700"}}
 
         '
     headers:
@@ -3105,7 +1865,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:06:58 GMT
+      - Tue, 25 Aug 2020 08:16:56 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -3113,9 +1873,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '33'
+      - '35'
       x-diesel-request-id:
-      - 9845231f-12d9-435b-9889-7cf1c567291f
+      - 9d29f5ad-4665-4980-8172-b7fe7f84a982
     status:
       code: 200
       message: OK
@@ -3129,89 +1889,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43b9d-18a2-00e2-21c7-2738bd04d900
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:06:58 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '1'
-      X-Kong-Upstream-Latency:
-      - '24'
-      x-diesel-request-id:
-      - c4b57c0f-2ce6-45d2-a390-b583ac4bdf1d
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43b9d-18a2-00e2-21c7-2738bd04d900
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:07:00 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '1'
-      X-Kong-Upstream-Latency:
-      - '26'
-      x-diesel-request-id:
-      - e9a7fb1a-07df-4aca-be03-e771ef7d37f0
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43b9d-18a2-00e2-21c7-2738bd04d900
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb3707-4ba3-e84d-a95d-240c03cef700
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -3225,7 +1905,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:07:01 GMT
+      - Tue, 25 Aug 2020 08:16:58 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -3235,7 +1915,7 @@ interactions:
       X-Kong-Upstream-Latency:
       - '26'
       x-diesel-request-id:
-      - c0b7019b-7995-451f-a04b-a2bf47fddb09
+      - f8772242-2011-4803-bea5-7c60a54d76a3
     status:
       code: 200
       message: OK
@@ -3251,12 +1931,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: POST
     uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/SF/columns?company_slug=operam&table_filter=METRICS3_STG.ADWORDS_VIEWS.ENTITY_CAMPAIGNS_CRITERION
   response:
     body:
-      string: '{"data":{"job_id":"20c43b99-dab5-d171-2508-c842ec906100"}}
+      string: '{"data":{"job_id":"20bb3704-9db8-bc09-a2c8-0be4b39b9600"}}
 
         '
     headers:
@@ -3267,7 +1947,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:07:01 GMT
+      - Tue, 25 Aug 2020 08:16:58 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -3275,9 +1955,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '32'
+      - '31'
       x-diesel-request-id:
-      - f71e1880-d800-46a5-ad6e-c57bc342634c
+      - 6c18d84f-2694-424c-924f-cb7f0e725cfa
     status:
       code: 200
       message: OK
@@ -3291,49 +1971,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43b99-dab5-d171-2508-c842ec906100
-  response:
-    body:
-      string: '{"data":{"job_status":"RUNNING"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '34'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:07:01 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '1'
-      X-Kong-Upstream-Latency:
-      - '27'
-      x-diesel-request-id:
-      - 78685cac-d99d-49bf-bb2d-00153089812e
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43b99-dab5-d171-2508-c842ec906100
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb3704-9db8-bc09-a2c8-0be4b39b9600
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -3347,7 +1987,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:07:02 GMT
+      - Tue, 25 Aug 2020 08:16:59 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -3355,9 +1995,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '32'
+      - '27'
       x-diesel-request-id:
-      - 5c6a2682-4d33-4e3e-8ac2-8895b397bc3e
+      - 502077e4-1beb-481d-818f-7d3ddf1cf8b5
     status:
       code: 200
       message: OK
@@ -3371,9 +2011,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43b99-dab5-d171-2508-c842ec906100/results?offset=0&limit=500
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb3704-9db8-bc09-a2c8-0be4b39b9600/results?offset=0&limit=500
   response:
     body:
       string: '{"data":[{"data_reference":"\"__RECORD_ID\"","data_source":"SF.METRICS3_STG.ADWORDS_VIEWS.ENTITY_CAMPAIGNS_CRITERION","data_type":"CHARACTER
@@ -3401,17 +2041,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:07:03 GMT
+      - Tue, 25 Aug 2020 08:16:59 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '0'
+      - '1'
       X-Kong-Upstream-Latency:
-      - '31'
+      - '30'
       x-diesel-request-id:
-      - ff72e998-c7df-4219-a018-5e40a123127b
+      - 234d2f5d-e045-4ed0-9b20-c896f8bdd3cd
     status:
       code: 200
       message: OK
@@ -3427,12 +2067,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: POST
     uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/SF/refresh?table_name=METRICS3_STG.ADWORDS_VIEWS.ENTITY_CAMPAIGNS_FROM_SERVICE&company_slug=operam
   response:
     body:
-      string: '{"data":{"job_id":"20c43b97-c5e8-c943-89a9-374460af5200"}}
+      string: '{"data":{"job_id":"20bb3704-15c4-67ab-b4c0-1ac16310a800"}}
 
         '
     headers:
@@ -3443,127 +2083,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:07:03 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '1'
-      X-Kong-Upstream-Latency:
-      - '33'
-      x-diesel-request-id:
-      - c8211ee9-72df-4e64-9d3a-5396dd7c4d91
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43b97-c5e8-c943-89a9-374460af5200
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:07:03 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '1'
-      X-Kong-Upstream-Latency:
-      - '25'
-      x-diesel-request-id:
-      - 7d53cf69-edb7-4680-8e59-5370e5bc8aef
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43b97-c5e8-c943-89a9-374460af5200
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:07:04 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '1'
-      X-Kong-Upstream-Latency:
-      - '28'
-      x-diesel-request-id:
-      - a0801b2d-12d1-486c-9711-13b6e7c60cfe
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43b97-c5e8-c943-89a9-374460af5200
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:07:05 GMT
+      - Tue, 25 Aug 2020 08:16:59 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -3571,9 +2091,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '25'
+      - '32'
       x-diesel-request-id:
-      - 30ad5d50-ec03-4e3a-a85c-936ea2d830c6
+      - a45bc666-b9eb-4278-a3ac-c3748234f354
     status:
       code: 200
       message: OK
@@ -3587,9 +2107,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43b97-c5e8-c943-89a9-374460af5200
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb3704-15c4-67ab-b4c0-1ac16310a800
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -3603,17 +2123,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:07:07 GMT
+      - Tue, 25 Aug 2020 08:17:02 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '1'
+      - '0'
       X-Kong-Upstream-Latency:
       - '25'
       x-diesel-request-id:
-      - b15d6f90-9bd5-4e0c-9b02-829b6d288ec2
+      - 0943e98e-679f-4e0c-a938-e7a2803fcb0b
     status:
       code: 200
       message: OK
@@ -3629,12 +2149,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: POST
     uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/SF/columns?company_slug=operam&table_filter=METRICS3_STG.ADWORDS_VIEWS.ENTITY_CAMPAIGNS_FROM_SERVICE
   response:
     body:
-      string: '{"data":{"job_id":"20c43b94-00e3-fd06-2dfc-16ee74d84200"}}
+      string: '{"data":{"job_id":"20bb3701-4442-7df5-629d-c9f66999f700"}}
 
         '
     headers:
@@ -3645,17 +2165,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:07:07 GMT
+      - Tue, 25 Aug 2020 08:17:02 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '0'
+      - '1'
       X-Kong-Upstream-Latency:
-      - '33'
+      - '29'
       x-diesel-request-id:
-      - 9867b419-e7a5-493d-9f5d-283bdb4edfb4
+      - 6f342284-4cfb-4c77-86b4-976744dbd4eb
     status:
       code: 200
       message: OK
@@ -3669,49 +2189,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43b94-00e3-fd06-2dfc-16ee74d84200
-  response:
-    body:
-      string: '{"data":{"job_status":"RUNNING"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '34'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:07:07 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '27'
-      x-diesel-request-id:
-      - 6be0d66c-2499-4448-b900-9ca1e357bf9c
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43b94-00e3-fd06-2dfc-16ee74d84200
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb3701-4442-7df5-629d-c9f66999f700
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -3725,7 +2205,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:07:08 GMT
+      - Tue, 25 Aug 2020 08:17:04 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -3733,9 +2213,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '27'
+      - '28'
       x-diesel-request-id:
-      - 1cf99326-8a6f-48f1-b568-1531578fbea6
+      - 536dedf6-741a-476b-ab45-233e899d79c4
     status:
       code: 200
       message: OK
@@ -3749,9 +2229,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43b94-00e3-fd06-2dfc-16ee74d84200/results?offset=0&limit=500
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb3701-4442-7df5-629d-c9f66999f700/results?offset=0&limit=500
   response:
     body:
       string: '{"data":[{"data_reference":"\"__RECORD_ID\"","data_source":"SF.METRICS3_STG.ADWORDS_VIEWS.ENTITY_CAMPAIGNS_FROM_SERVICE","data_type":"CHARACTER
@@ -3785,7 +2265,89 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:07:09 GMT
+      - Tue, 25 Aug 2020 08:17:04 GMT
+      Via:
+      - kong/2.0.3
+      X-Amzn-Trace-Id:
+      - None
+      X-Kong-Proxy-Latency:
+      - '0'
+      X-Kong-Upstream-Latency:
+      - '35'
+      x-diesel-request-id:
+      - 6097816f-3650-4fe5-bb1b-be7c5cdd50ab
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      User-Agent:
+      - pano-cli/0.9.0
+    method: POST
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/SF/refresh?table_name=METRICS3_STG.ADWORDS_VIEWS.ENTITY_USER_LISTS&company_slug=operam
+  response:
+    body:
+      string: '{"data":{"job_id":"20bb36fe-fe79-1ecd-ab65-a7de2209c000"}}
+
+        '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '59'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 25 Aug 2020 08:17:04 GMT
+      Via:
+      - kong/2.0.3
+      X-Amzn-Trace-Id:
+      - None
+      X-Kong-Proxy-Latency:
+      - '0'
+      X-Kong-Upstream-Latency:
+      - '30'
+      x-diesel-request-id:
+      - 502b9270-68db-4435-8900-6c222c0b5845
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - pano-cli/0.9.0
+    method: GET
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb36fe-fe79-1ecd-ab65-a7de2209c000
+  response:
+    body:
+      string: '{"data":{"job_status":"COMPLETED"}}
+
+        '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '36'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 25 Aug 2020 08:17:07 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -3795,7 +2357,7 @@ interactions:
       X-Kong-Upstream-Latency:
       - '30'
       x-diesel-request-id:
-      - 84eff6b4-c8d7-4dc8-a26b-0b3a3bfba08e
+      - d576b52e-5f0b-4b3f-94f7-9dbd58bc7c43
     status:
       code: 200
       message: OK
@@ -3811,12 +2373,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: POST
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/SF/refresh?table_name=METRICS3_STG.ADWORDS_VIEWS.ENTITY_USER_LISTS&company_slug=operam
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/SF/columns?company_slug=operam&table_filter=METRICS3_STG.ADWORDS_VIEWS.ENTITY_USER_LISTS
   response:
     body:
-      string: '{"data":{"job_id":"20c43b91-faa0-60e3-8e4b-43faea130d00"}}
+      string: '{"data":{"job_id":"20bb36fb-92d8-d278-d312-e8d7dd75e500"}}
 
         '
     headers:
@@ -3827,7 +2389,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:07:09 GMT
+      - Tue, 25 Aug 2020 08:17:07 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -3835,9 +2397,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '1'
       X-Kong-Upstream-Latency:
-      - '556'
+      - '30'
       x-diesel-request-id:
-      - a8dd4da1-f542-4d2a-bfc4-77d0dd3ce1a8
+      - 1dc39558-74ad-40fc-b485-f7b27f6313e0
     status:
       code: 200
       message: OK
@@ -3851,103 +2413,23 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43b91-faa0-60e3-8e4b-43faea130d00
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb36fb-92d8-d278-d312-e8d7dd75e500
   response:
     body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
+      string: '{"data":{"job_status":"COMPLETED"}}
 
         '
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '45'
+      - '36'
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:07:09 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '25'
-      x-diesel-request-id:
-      - a98800df-ff5e-4c8f-b634-a974bfc71874
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43b91-faa0-60e3-8e4b-43faea130d00
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:07:11 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '27'
-      x-diesel-request-id:
-      - 7905fca2-bcdf-4c18-ad66-d96eef9a91de
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43b91-faa0-60e3-8e4b-43faea130d00
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:07:12 GMT
+      - Tue, 25 Aug 2020 08:17:08 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -3957,7 +2439,7 @@ interactions:
       X-Kong-Upstream-Latency:
       - '26'
       x-diesel-request-id:
-      - 9c22e430-8e94-46df-ad11-9abd75da3ca0
+      - 8ca590f7-acf0-40a5-854d-66d9ded99173
     status:
       code: 200
       message: OK
@@ -3971,211 +2453,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.8.3
+      - pano-cli/0.9.0
     method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43b91-faa0-60e3-8e4b-43faea130d00
-  response:
-    body:
-      string: '{"data":{"job_status":"METADATA_RETRIEVAL"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:07:13 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '27'
-      x-diesel-request-id:
-      - 53a7a3fc-d9b0-4418-b02d-52f01690287c
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43b91-faa0-60e3-8e4b-43faea130d00
-  response:
-    body:
-      string: '{"data":{"job_status":"COMPLETED"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '36'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:07:14 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '1'
-      X-Kong-Upstream-Latency:
-      - '59'
-      x-diesel-request-id:
-      - 0d86c835-5250-4ff4-822d-8cd532d110ec
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '0'
-      User-Agent:
-      - pano-cli/0.8.3
-    method: POST
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/SF/columns?company_slug=operam&table_filter=METRICS3_STG.ADWORDS_VIEWS.ENTITY_USER_LISTS
-  response:
-    body:
-      string: '{"data":{"job_id":"20c43b8c-1d47-2efd-925c-109f6252f400"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '59'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:07:15 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '93'
-      x-diesel-request-id:
-      - d08c9b3a-43fd-4ddc-b234-5b91220547af
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43b8c-1d47-2efd-925c-109f6252f400
-  response:
-    body:
-      string: '{"data":{"job_status":"RUNNING"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '34'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:07:15 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '27'
-      x-diesel-request-id:
-      - dcf6441c-2012-4d30-9c0f-394c70f51148
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43b8c-1d47-2efd-925c-109f6252f400
-  response:
-    body:
-      string: '{"data":{"job_status":"COMPLETED"}}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '36'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 18 Aug 2020 12:07:16 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '1'
-      X-Kong-Upstream-Latency:
-      - '27'
-      x-diesel-request-id:
-      - 553e03f9-9b53-4aa1-bb58-73b04a145a41
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.8.3
-    method: GET
-    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20c43b8c-1d47-2efd-925c-109f6252f400/results?offset=0&limit=500
+    uri: https://diesel.panoramicstg.com/api/v1/federated/metadata/job/20bb36fb-92d8-d278-d312-e8d7dd75e500/results?offset=0&limit=500
   response:
     body:
       string: '{"data":[{"data_reference":"\"__RECORD_ID\"","data_source":"SF.METRICS3_STG.ADWORDS_VIEWS.ENTITY_USER_LISTS","data_type":"CHARACTER
@@ -4205,7 +2485,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Aug 2020 12:07:16 GMT
+      - Tue, 25 Aug 2020 08:17:08 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -4213,9 +2493,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '1'
       X-Kong-Upstream-Latency:
-      - '31'
+      - '32'
       x-diesel-request-id:
-      - 91dc7aa4-5095-4d42-83c2-3d523253aecf
+      - add93fb7-e7bc-4ceb-a9af-2043417a9952
     status:
       code: 200
       message: OK

@@ -1,13 +1,60 @@
 import logging
+import sys
 from typing import Optional
 
 import click
+from click.core import Command, Context
 from dotenv import load_dotenv
 
 from panoramic.cli.__version__ import __version__
-from panoramic.cli.context import ContextAwareCommand
-from panoramic.cli.errors import handle_exception, handle_interrupt
-from panoramic.cli.local.file_utils import Paths
+from panoramic.cli.errors import ValidationError, handle_exception, handle_interrupt
+from panoramic.cli.logging import echo_error, echo_errors
+from panoramic.cli.paths import Paths
+
+
+class ConfigAwareCommand(Command):
+
+    """Perform config file validation before running command."""
+
+    def invoke(self, ctx: Context):
+        from panoramic.cli.validate import validate_config
+
+        try:
+            validate_config()
+            return super().invoke(ctx)
+        except ValidationError as e:
+            echo_error(str(e))
+            sys.exit(1)
+
+
+class ContextAwareCommand(ConfigAwareCommand):
+
+    """Perform config and context file validation before running command."""
+
+    def invoke(self, ctx: Context):
+        from panoramic.cli.validate import validate_context
+
+        try:
+            validate_context()
+            return super().invoke(ctx)
+        except ValidationError as e:
+            echo_error(str(e))
+            sys.exit(1)
+
+
+class LocalStateAwareCommand(ContextAwareCommand):
+
+    """Perform config, context, and local state files validation before running command."""
+
+    def invoke(self, ctx: Context):
+        from panoramic.cli.validate import validate_local_state
+
+        errors = validate_local_state()
+        if len(errors) > 0:
+            echo_errors(errors)
+            sys.exit(1)
+
+        return super().invoke(ctx)
 
 
 @click.group(context_settings={'help_option_names': ["-h", "--help"]})
@@ -15,6 +62,7 @@ from panoramic.cli.local.file_utils import Paths
 @click.version_option(__version__)
 @handle_exception
 def cli(debug):
+    """Run checks at the beginning of every command."""
     if debug:
         logger = logging.getLogger()
         logger.setLevel("DEBUG")
@@ -24,7 +72,7 @@ def cli(debug):
     from panoramic.cli.supported_version import is_version_supported
 
     if not is_version_supported(__version__):
-        exit(1)
+        sys.exit(1)
 
 
 @cli.command(help='Scan models from source', cls=ContextAwareCommand)
@@ -40,7 +88,7 @@ def scan(source_id: str, filter: Optional[str], parallel: int, generate_identifi
     scan_command(source_id, filter, parallel, generate_identifiers)
 
 
-@cli.command(help='Pull models from remote', cls=ContextAwareCommand)
+@cli.command(help='Pull models from remote', cls=LocalStateAwareCommand)
 @handle_exception
 def pull():
     from panoramic.cli.command import pull as pull_command
@@ -48,7 +96,7 @@ def pull():
     pull_command()
 
 
-@cli.command(help='Push models to remote', cls=ContextAwareCommand)
+@cli.command(help='Push models to remote', cls=LocalStateAwareCommand)
 @handle_exception
 def push():
     from panoramic.cli.command import push as push_command
@@ -64,7 +112,7 @@ def configure():
     config_command()
 
 
-@cli.command(help='Initialize metadata repository')
+@cli.command(help='Initialize metadata repository', cls=ConfigAwareCommand)
 @handle_exception
 def init():
     from panoramic.cli.command import initialize
@@ -80,9 +128,18 @@ def list_connections():
     list_connections_command()
 
 
-@cli.command(help='List available data connections')
+@cli.command(help='List available data connections', cls=ConfigAwareCommand)
 @handle_exception
 def list_companies():
     from panoramic.cli.command import list_companies as list_companies_command
 
     list_companies_command()
+
+
+@cli.command(help='Validate local files')
+@handle_exception
+def validate():
+    from panoramic.cli.command import validate as validate_command
+
+    if not validate_command():
+        sys.exit(1)

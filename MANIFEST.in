@@ -2,6 +2,7 @@ include *.toml *.ini *.md *.yaml .flake8 Makefile
 include src/panoramic/cli/py.typed
 recursive-include tests *.py
 recursive-include e2e *.py *.yaml
+include src/panoramic/cli/schemas/*.json
 graft examples
 prune shipping
 prune .vscode

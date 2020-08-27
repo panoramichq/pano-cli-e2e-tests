@@ -5,7 +5,7 @@ import yaml
 from click.testing import CliRunner
 
 from panoramic.cli import cli
-from panoramic.cli.local.file_utils import Paths
+from panoramic.cli.paths import Paths
 
 
 @pytest.mark.vcr

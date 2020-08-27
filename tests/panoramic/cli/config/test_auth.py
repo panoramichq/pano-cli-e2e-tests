@@ -4,12 +4,7 @@ import pytest
 import yaml
 
 from panoramic.cli.config.auth import get_client_id, get_client_secret
-from panoramic.cli.errors import (
-    InvalidYamlFile,
-    MissingConfigFileException,
-    MissingValueException,
-)
-from panoramic.cli.local.file_utils import Paths
+from panoramic.cli.paths import Paths
 
 
 @pytest.fixture(autouse=True)
@@ -18,52 +13,19 @@ def remove_client_creds_env(monkeypatch):
     monkeypatch.delenv('PANO_CLIENT_SECRET', raising=False)
 
 
-def test_no_config_file(monkeypatch):
-    with tempfile.TemporaryDirectory() as tmpdirname:
-        monkeypatch.setenv('HOME', tmpdirname)
-
-        with pytest.raises(MissingConfigFileException):
-            get_client_id()
-
-        with pytest.raises(MissingConfigFileException):
-            get_client_secret()
-
-
-def test_invalid_config_file(monkeypatch):
+def test_env_vars(monkeypatch):
     with tempfile.TemporaryDirectory() as tmpdirname:
         monkeypatch.setenv('HOME', tmpdirname)
         Paths.config_dir().mkdir()
 
-        with open(Paths.config_file(), 'w') as f:
-            f.write('client_id: some_value\nclient_secret slug_but_missing_colon\n')
+        with Paths.config_file().open('w') as f:
+            f.write(yaml.dump(dict(client_id='some_random_id', client_secret='some_random_secret')))
 
-        with pytest.raises(InvalidYamlFile):
-            assert get_client_id()
+        monkeypatch.setenv('PANO_CLIENT_ID', 'test_client_id')
+        monkeypatch.setenv('PANO_CLIENT_SECRET', 'test_client_secret')
 
-        with pytest.raises(InvalidYamlFile):
-            assert get_client_secret()
-
-
-def test_missing_value_config_file(monkeypatch):
-    with tempfile.TemporaryDirectory() as tmpdirname:
-        monkeypatch.setenv('HOME', tmpdirname)
-        Paths.config_dir().mkdir()
-
-        with open(Paths.config_file(), 'w') as f:
-            f.write(yaml.dump(dict(client_secret='some_random_value')))
-
-        with pytest.raises(MissingValueException):
-            get_client_id()
-
-    with tempfile.TemporaryDirectory() as tmpdirname:
-        monkeypatch.setenv('HOME', tmpdirname)
-        Paths.config_dir().mkdir()
-
-        with open(Paths.config_file(), 'w') as f:
-            f.write(yaml.dump(dict(client_id='another_random_value')))
-
-        with pytest.raises(MissingValueException):
-            get_client_secret()
+        assert get_client_id() == 'test_client_id'
+        assert get_client_secret() == 'test_client_secret'
 
 
 def test_config_file(monkeypatch):
@@ -71,7 +33,7 @@ def test_config_file(monkeypatch):
         monkeypatch.setenv('HOME', tmpdirname)
         Paths.config_dir().mkdir()
 
-        with open(Paths.config_file(), 'w') as f:
+        with Paths.config_file().open('w') as f:
             f.write(yaml.dump(dict(client_id='some_random_id', client_secret='some_random_secret')))
 
         assert get_client_id() == 'some_random_id'
