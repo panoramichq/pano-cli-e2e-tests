@@ -2,14 +2,9 @@ import logging
 from pathlib import Path
 from typing import Optional
 
-from panoramic.cli.local.file_utils import (
-    FileExtension,
-    Paths,
-    PresetFileName,
-    delete_file,
-    write_yaml,
-)
+from panoramic.cli.local.file_utils import delete_file, write_yaml
 from panoramic.cli.pano_model import Actionable, PanoModel, PanoVirtualDataSource
+from panoramic.cli.paths import FileExtension, Paths, PresetFileName
 
 logger = logging.getLogger(__name__)
 

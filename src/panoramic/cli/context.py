@@ -1,35 +1,7 @@
-from pathlib import Path
-
-from click.core import Command, Context
-
-from panoramic.cli.errors import MissingContextFileException
-from panoramic.cli.local.file_utils import Paths
-from panoramic.cli.util import get_yaml_value
-
-
-class ContextAwareCommand(Command):
-
-    """Perform context file check before running command."""
-
-    def invoke(self, ctx: Context):
-        context_file = Paths.context_file()
-        if not context_file.exists():
-            raise MissingContextFileException(f'Context file ({context_file.name}) not found in working directory.')
-        return super().invoke(ctx)
-
-
-def _get_context_yaml_value(file_path: Path, value_path: str):
-    try:
-        return get_yaml_value(file_path, value_path)
-    except FileNotFoundError:
-        raise MissingContextFileException()
-
-
-def get_api_version() -> str:
-    """Return api version from context."""
-    return _get_context_yaml_value(Paths.context_file(), 'api_version')
+from panoramic.cli.local.file_utils import read_yaml
+from panoramic.cli.paths import Paths
 
 
 def get_company_slug() -> str:
     """Return company slug from context."""
-    return _get_context_yaml_value(Paths.context_file(), 'company_slug')
+    return read_yaml(Paths.context_file())['company_slug']

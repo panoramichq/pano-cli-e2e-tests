@@ -35,6 +35,8 @@ setup(
         'packaging>=20.4',
         'tqdm>=4.47.0.',
         'python-dotenv>=0.14.0',
+        'jsonschema>=3.2.0',
+        "importlib_resources ; python_version<'3.7'",
     ],
     extras_require={"tests": TEST_REQUIRES, "dev": TEST_REQUIRES + DEV_REQUIRES},
     include_package_data=True,

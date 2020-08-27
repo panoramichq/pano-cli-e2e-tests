@@ -1,59 +1,12 @@
 import logging
-from enum import Enum
 from pathlib import Path
 from typing import Any, Dict
 
 import yaml
 
+from panoramic.cli.errors import FileMissingError, InvalidYamlFile
+
 logger = logging.getLogger(__name__)
-
-API_VERSION_ATTRIBUTE = 'api_version'
-
-
-class Paths:
-    @staticmethod
-    def context_file() -> Path:
-        return Path.cwd() / PresetFileName.CONTEXT.value
-
-    @staticmethod
-    def dotenv_file() -> Path:
-        return Path.cwd() / PresetFileName.DOTENV.value
-
-    @staticmethod
-    def config_dir() -> Path:
-        return Path.home() / PresetFileName.CONFIG_DIR.value
-
-    @classmethod
-    def config_file(cls) -> Path:
-        return cls.config_dir() / PresetFileName.CONFIG.value
-
-    @staticmethod
-    def scanned_dir() -> Path:
-        return Path.cwd() / SystemDirectory.SCANNED.value
-
-
-class FileExtension(Enum):
-    """
-    Enumeration with all available file extensions
-    """
-
-    MODEL_YAML = '.model.yaml'
-
-
-class PresetFileName(Enum):
-
-    """Enumeration with all available preset file names."""
-
-    DATASET_YAML = 'dataset.yaml'
-    CONTEXT = 'pano.yaml'
-    DOTENV = '.env'
-    CONFIG_DIR = '.pano'
-    CONFIG = 'config'
-
-
-class SystemDirectory(Enum):
-
-    SCANNED = 'scanned'
 
 
 def ensure_dir(abs_filepath: Path):
@@ -74,13 +27,18 @@ def write_yaml(abs_filepath: Path, yaml_dict: Dict[str, Any]):
         yaml.dump(yaml_dict, f, default_flow_style=False)
 
 
-def read_yaml(abs_filepath: Path) -> Dict[str, Any]:
+def read_yaml(path: Path) -> Dict[str, Any]:
     """
     Reads yaml dict from path
     """
-    logger.debug(f'Read yaml {abs_filepath}')
-    with open(abs_filepath, 'r') as f:
-        return yaml.safe_load(f)
+    logger.debug(f'Read yaml {path}')
+    try:
+        with open(path, 'r') as f:
+            return yaml.safe_load(f)
+    except FileNotFoundError:
+        raise FileMissingError(path=path)
+    except yaml.MarkedYAMLError as e:
+        raise InvalidYamlFile(path=path, error=e)
 
 
 def delete_file(abs_filepath: Path):

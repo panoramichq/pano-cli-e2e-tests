@@ -8,17 +8,24 @@ from tqdm import tqdm
 from panoramic.cli.companies.client import CompaniesClient
 from panoramic.cli.context import get_company_slug
 from panoramic.cli.controller import reconcile
+from panoramic.cli.errors import ValidationError
+from panoramic.cli.identifier_generator import IdentifierGenerator
 from panoramic.cli.local import get_state as get_local_state
 from panoramic.cli.local.executor import LocalExecutor
-from panoramic.cli.local.file_utils import Paths, write_yaml
+from panoramic.cli.local.file_utils import write_yaml
 from panoramic.cli.local.writer import FileWriter
-from panoramic.cli.logging import echo_error, echo_info
-from panoramic.cli.parser import load_scanned_tables
+from panoramic.cli.logging import echo_error, echo_errors, echo_info
+from panoramic.cli.paths import Paths
 from panoramic.cli.physical_data_source.client import PhysicalDataSourceClient
 from panoramic.cli.refresh import Refresher
 from panoramic.cli.remote import get_state as get_remote_state
 from panoramic.cli.remote.executor import RemoteExecutor
 from panoramic.cli.scan import Scanner
+from panoramic.cli.validate import (
+    validate_config,
+    validate_context,
+    validate_local_state,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -78,7 +85,36 @@ def list_companies():
             echo_info(company)
 
 
-def scan(source_id: str, table_filter: Optional[str], parallel: int = 1):
+def validate() -> bool:
+    """Check local files against schema."""
+    errors = []
+
+    try:
+        validate_config()
+    except ValidationError as e:
+        errors.append(e)
+
+    try:
+        validate_context()
+    except ValidationError as e:
+        errors.append(e)
+
+    errors.extend(validate_local_state())
+
+    if len(errors) == 0:
+        echo_info("Success: All files are valid.")
+        return True
+
+    try:
+        echo_errors(errors)
+    except Exception:
+        # Ignore any errors in error reporting
+        logger.debug('Error when logging errros', exc_info=True)
+
+    return False
+
+
+def scan(source_id: str, table_filter: Optional[str], parallel: int = 1, generate_identifiers: bool = False):
     """Scan all metadata for given source and filter."""
     company_slug = get_company_slug()
     scanner = Scanner(company_slug, source_id)
@@ -92,19 +128,27 @@ def scan(source_id: str, table_filter: Optional[str], parallel: int = 1):
 
     refresher = Refresher(company_slug, source_id)
     refresher.fetch_token()
+
+    if generate_identifiers:
+        id_generator = IdentifierGenerator(company_slug, source_id)
+        id_generator.fetch_token()
+
     writer = FileWriter()
 
     progress_bar = tqdm(total=len(tables))
 
     def _process_table(table: Dict[str, Any]):
-        # drop source name from schema
-        sourceless_schema = table['table_schema'].split('.', 1)[1]
-        table_name = f'{sourceless_schema}.{table["table_name"]}'
+        # drop source name from table name
+        table_name = table['data_source'].split('.', 1)[1]
 
         try:
             refresher.refresh_table(table_name)
-            raw_columns = scanner.scan_columns(table_filter=table_name)
-            for model in load_scanned_tables(raw_columns):
+            if generate_identifiers:
+                identifiers = id_generator.generate(table_name)
+            else:
+                identifiers = []
+            for model in scanner.scan_columns_grouped(table_filter=table_name):
+                model.identifiers = identifiers
                 writer.write_scanned_model(model)
                 echo_info(f'Discovered model {model.model_name}')
         except Exception:
