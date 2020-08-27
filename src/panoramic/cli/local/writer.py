@@ -53,6 +53,12 @@ class FileWriter:
         logger.debug(f'About to delete data source {data_source.id}')
         delete_file(path)
 
+    def write_empty_model(self, model_name: str):
+        """Create an empty model file."""
+        path = Paths.scanned_dir() / f'{model_name}{FileExtension.MODEL_YAML.value}'
+        logger.debug(f'About to create an empty model {model_name}')
+        path.touch()
+
     def write_scanned_model(self, model: PanoModel):
         """Write scanned model to local filesystem."""
         path = Paths.scanned_dir() / f'{model.model_name}{FileExtension.MODEL_YAML.value}'

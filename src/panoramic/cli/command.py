@@ -155,6 +155,8 @@ def scan(source_id: str, table_filter: Optional[str], parallel: int = 1, generat
             error_msg = f'Metadata could not be scanned for table {table_name}'
             echo_error(error_msg)
             logger.debug(error_msg, exc_info=True)
+            # Create an empty model file even when scan fails
+            writer.write_empty_model(table['model_name'])
         finally:
             progress_bar.update()
 
