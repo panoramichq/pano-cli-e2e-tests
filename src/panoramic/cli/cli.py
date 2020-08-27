@@ -7,7 +7,13 @@ from click.core import Command, Context
 from dotenv import load_dotenv
 
 from panoramic.cli.__version__ import __version__
-from panoramic.cli.errors import ValidationError, handle_exception, handle_interrupt
+from panoramic.cli.errors import (
+    CompanyNotFoundException,
+    SourceNotFoundException,
+    ValidationError,
+    handle_exception,
+    handle_interrupt,
+)
 from panoramic.cli.logging import echo_error, echo_errors
 from panoramic.cli.paths import Paths
 
@@ -29,7 +35,16 @@ class ConfigAwareCommand(Command):
 
 class ContextAwareCommand(ConfigAwareCommand):
 
-    """Perform config and context file validation before running command."""
+    """
+    Perform config and context file validation before running command.
+
+    Failure scenarios we handle:
+      * Invalid config/context/local state - ValidationError
+      * Company not found for user - CompanyNotFoundException
+      * Source not found for company - SourceNotFoundException
+
+    Any other error - we show stack trace.
+    """
 
     def invoke(self, ctx: Context):
         from panoramic.cli.validate import validate_context
@@ -37,7 +52,7 @@ class ContextAwareCommand(ConfigAwareCommand):
         try:
             validate_context()
             return super().invoke(ctx)
-        except ValidationError as e:
+        except (ValidationError, SourceNotFoundException, CompanyNotFoundException) as e:
             echo_error(str(e))
             sys.exit(1)
 

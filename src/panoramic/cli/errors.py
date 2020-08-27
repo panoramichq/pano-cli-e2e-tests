@@ -59,6 +59,14 @@ class RefreshException(CliBaseException):
         super().__init__(f'Metadata could not be refreshed for table {table_name} in data connection {source_name}')
 
 
+class CompanyNotFoundException(CliBaseException):
+
+    """Error when company not found for user (either no access or doesn't exist)."""
+
+    def __init__(self, company_slug: str):
+        super().__init__(f'Company {company_slug} not found. Do you have access to it?')
+
+
 class SourceNotFoundException(CliBaseException):
 
     """Thrown when a source cannot be found."""

@@ -1,9 +1,14 @@
 import itertools
 from typing import Iterable
 
+import requests
 from requests.exceptions import RequestException
 
-from panoramic.cli.errors import ModelException, VirtualDataSourceException
+from panoramic.cli.errors import (
+    CompanyNotFoundException,
+    ModelException,
+    VirtualDataSourceException,
+)
 from panoramic.cli.mapper import map_data_source_from_remote, map_model_from_remote
 from panoramic.cli.model import ModelClient
 from panoramic.cli.pano_model import PanoModel, PanoVirtualDataSource
@@ -19,6 +24,8 @@ def get_data_sources(company_slug: str, *, limit: int = 100) -> Iterable[PanoVir
         try:
             sources = client.get_all_virtual_data_sources(company_slug, offset=offset, limit=limit)
         except RequestException as e:
+            if e.response is not None and e.response.status_code == requests.codes.not_found:
+                raise CompanyNotFoundException(company_slug).extract_request_id(e)
             raise VirtualDataSourceException(company_slug).extract_request_id(e)
 
         yield from (map_data_source_from_remote(s) for s in sources)
@@ -37,6 +44,8 @@ def get_models(data_source: str, company_slug: str, *, limit: int = 100) -> Iter
         try:
             models = client.get_models(data_source, company_slug, offset=offset, limit=limit)
         except RequestException as e:
+            if e.response is not None and e.response.status_code == requests.codes.not_found:
+                raise CompanyNotFoundException(company_slug).extract_request_id(e)
             raise ModelException(company_slug, data_source).extract_request_id(e)
 
         yield from (map_model_from_remote(m) for m in models)
