@@ -174,7 +174,7 @@ def pull():
     actions = reconcile(local_state, remote_state)
 
     if len(actions.actions) == 0:
-        echo_info('No configuration has been published')
+        echo_info('No models has been published')
         return
 
     executor = LocalExecutor()
@@ -187,7 +187,7 @@ def pull():
                 error_msg = f'Failed to execute action {action.description}'
                 echo_error(error_msg)
                 logger.debug(error_msg, exc_info=True)
-        bar.write(f'Pulled {bar.total} configurations')
+        bar.write(f'Pulled {bar.total} models')
 
 
 def push():
@@ -199,7 +199,7 @@ def push():
     actions = reconcile(remote_state, local_state)
 
     if len(actions.actions) == 0:
-        echo_info('No configuration to publish')
+        echo_info('No models to publish')
         return
 
     executor = RemoteExecutor(company_slug)
@@ -212,4 +212,4 @@ def push():
                 error_msg = f'Failed to execute action {action.description}'
                 echo_error(error_msg)
                 logger.debug(error_msg, exc_info=True)
-        bar.write(f'Updated {bar.total} configurations')
+        bar.write(f'Updated {bar.total} models')
