@@ -1,8 +1,9 @@
-from unittest.mock import call, patch
+from unittest.mock import Mock, call, patch
 
 import pytest
 
-from panoramic.cli.command import list_connections, scan
+from panoramic.cli.command import list_connections, push, scan
+from panoramic.cli.errors import InvalidDatasetException, InvalidModelException
 from panoramic.cli.pano_model import PanoModel
 
 
@@ -76,3 +77,29 @@ def mock_physical_data_source_client():
 def test_list_connections(mock_physical_data_source_client):
     list_connections()
     mock_physical_data_source_client.get_sources.assert_called_with('test-company')
+
+
+@patch('panoramic.cli.command.get_company_slug')
+@patch('panoramic.cli.command.get_remote_state')
+@patch('panoramic.cli.command.get_local_state')
+@patch('panoramic.cli.command.reconcile')
+@patch('panoramic.cli.command.RemoteExecutor')
+def test_push_single_error(mock_executor, mock_reconcile, _, __, ___, capsys):
+    mock_reconcile.return_value = Mock(
+        actions=[Mock(description='test-description-1'), Mock(description='test-description-2'), Mock()]
+    )
+    mock_executor.return_value.execute.side_effect = [
+        InvalidDatasetException(Mock()),
+        InvalidModelException(Mock()),
+        None,
+    ]
+
+    push()
+
+    assert mock_executor.return_value.execute.call_count == 3
+    assert capsys.readouterr().out == (
+        "Error: Failed to execute action test-description-1:\n"
+        "  Invalid dataset submitted\n"
+        "Error: Failed to execute action test-description-2:\n"
+        "  Invalid model submitted\n"
+    )

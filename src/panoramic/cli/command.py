@@ -8,7 +8,11 @@ from tqdm import tqdm
 from panoramic.cli.companies.client import CompaniesClient
 from panoramic.cli.context import get_company_slug
 from panoramic.cli.controller import reconcile
-from panoramic.cli.errors import ValidationError
+from panoramic.cli.errors import (
+    InvalidDatasetException,
+    InvalidModelException,
+    ValidationError,
+)
 from panoramic.cli.identifier_generator import IdentifierGenerator
 from panoramic.cli.local import get_state as get_local_state
 from panoramic.cli.local.executor import LocalExecutor
@@ -188,9 +192,7 @@ def pull():
             try:
                 executor.execute(action)
             except Exception:
-                error_msg = f'Failed to execute action {action.description}'
-                echo_error(error_msg)
-                logger.debug(error_msg, exc_info=True)
+                echo_error(f'Failed to execute action {action.description}')
         bar.write(f'Pulled {bar.total} models')
 
 
@@ -212,8 +214,9 @@ def push():
         for action in bar:
             try:
                 executor.execute(action)
-            except Exception:
-                error_msg = f'Failed to execute action {action.description}'
-                echo_error(error_msg)
-                logger.debug(error_msg, exc_info=True)
+            except (InvalidModelException, InvalidDatasetException) as e:
+                messages_concat = '\n  '.join(e.messages)
+                echo_error(f'Failed to execute action {action.description}:\n  {messages_concat}')
+            except Exception as e:
+                echo_error(f'Failed to execute action {action.description}:\n  {str(e)}')
         bar.write(f'Updated {bar.total} models')
