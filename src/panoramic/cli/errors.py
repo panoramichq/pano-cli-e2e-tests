@@ -1,4 +1,6 @@
 import functools
+import os
+import signal
 import sys
 from abc import ABC
 from pathlib import Path
@@ -144,5 +146,18 @@ def handle_exception(f: Callable):
         except Exception:
             echo_error('Internal error occurred', exc_info=True)
             sys.exit(1)
+
+    return wrapped
+
+
+def handle_interrupt(f: Callable):
+    """Exit app on keyboard interrupt."""
+
+    @functools.wraps(f)
+    def wrapped(*args, **kwargs):
+        try:
+            return f(*args, **kwargs)
+        except KeyboardInterrupt:
+            os._exit(128 + signal.SIGINT)
 
     return wrapped

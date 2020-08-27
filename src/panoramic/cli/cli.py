@@ -7,7 +7,7 @@ from click.core import Command, Context
 from dotenv import load_dotenv
 
 from panoramic.cli.__version__ import __version__
-from panoramic.cli.errors import ValidationError, handle_exception
+from panoramic.cli.errors import ValidationError, handle_exception, handle_interrupt
 from panoramic.cli.logging import echo_error, echo_errors
 from panoramic.cli.paths import Paths
 
@@ -81,6 +81,7 @@ def cli(debug):
 @click.option('--generate-identifiers', '-i', is_flag=True, help='Generate identifiers for models')
 @click.option('--parallel', '-p', type=int, default=8, help='Parallelize metadata scan')
 @handle_exception
+@handle_interrupt
 def scan(source_id: str, filter: Optional[str], parallel: int, generate_identifiers: bool):
     from panoramic.cli.command import scan as scan_command
 
