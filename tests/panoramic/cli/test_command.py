@@ -102,4 +102,5 @@ def test_push_single_error(mock_executor, mock_reconcile, _, __, ___, capsys):
         "  Invalid dataset submitted\n"
         "Error: Failed to execute action test-description-2:\n"
         "  Invalid model submitted\n"
+        "Updated 3 models\n"
     )
