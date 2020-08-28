@@ -24,8 +24,9 @@ def test_env_vars(monkeypatch):
         monkeypatch.setenv('PANO_CLIENT_ID', 'test_client_id')
         monkeypatch.setenv('PANO_CLIENT_SECRET', 'test_client_secret')
 
-        assert get_client_id() == 'test_client_id'
-        assert get_client_secret() == 'test_client_secret'
+        # Use __wrapped__ to avoid cache
+        assert get_client_id.__wrapped__() == 'test_client_id'
+        assert get_client_secret.__wrapped__() == 'test_client_secret'
 
 
 def test_config_file(monkeypatch):
@@ -36,5 +37,6 @@ def test_config_file(monkeypatch):
         with Paths.config_file().open('w') as f:
             f.write(yaml.dump(dict(client_id='some_random_id', client_secret='some_random_secret')))
 
-        assert get_client_id() == 'some_random_id'
-        assert get_client_secret() == 'some_random_secret'
+        # Use __wrapped__ to avoid cache
+        assert get_client_id.__wrapped__() == 'some_random_id'
+        assert get_client_secret.__wrapped__() == 'some_random_secret'

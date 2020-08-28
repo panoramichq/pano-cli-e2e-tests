@@ -8,7 +8,11 @@ from tqdm import tqdm
 from panoramic.cli.companies.client import CompaniesClient
 from panoramic.cli.context import get_company_slug
 from panoramic.cli.controller import reconcile
-from panoramic.cli.errors import ValidationError
+from panoramic.cli.errors import (
+    InvalidDatasetException,
+    InvalidModelException,
+    ValidationError,
+)
 from panoramic.cli.identifier_generator import IdentifierGenerator
 from panoramic.cli.local import get_state as get_local_state
 from panoramic.cli.local.executor import LocalExecutor
@@ -65,6 +69,7 @@ def initialize():
 
 
 def list_connections():
+    """List available data connections for company from context."""
     client = PhysicalDataSourceClient()
 
     sources = client.get_sources(get_company_slug())
@@ -76,6 +81,7 @@ def list_connections():
 
 
 def list_companies():
+    """List available companies for user."""
     client = CompaniesClient()
     companies = client.get_companies()
     if len(companies) == 0:
@@ -155,6 +161,8 @@ def scan(source_id: str, table_filter: Optional[str], parallel: int = 1, generat
             error_msg = f'Metadata could not be scanned for table {table_name}'
             echo_error(error_msg)
             logger.debug(error_msg, exc_info=True)
+            # Create an empty model file even when scan fails
+            writer.write_empty_model(table['model_name'])
         finally:
             progress_bar.update()
 
@@ -184,9 +192,7 @@ def pull():
             try:
                 executor.execute(action)
             except Exception:
-                error_msg = f'Failed to execute action {action.description}'
-                echo_error(error_msg)
-                logger.debug(error_msg, exc_info=True)
+                echo_error(f'Failed to execute action {action.description}')
         bar.write(f'Pulled {bar.total} models')
 
 
@@ -208,8 +214,9 @@ def push():
         for action in bar:
             try:
                 executor.execute(action)
-            except Exception:
-                error_msg = f'Failed to execute action {action.description}'
-                echo_error(error_msg)
-                logger.debug(error_msg, exc_info=True)
+            except (InvalidModelException, InvalidDatasetException) as e:
+                messages_concat = '\n  '.join(e.messages)
+                echo_error(f'Failed to execute action {action.description}:\n  {messages_concat}')
+            except Exception as e:
+                echo_error(f'Failed to execute action {action.description}:\n  {str(e)}')
         bar.write(f'Updated {bar.total} models')

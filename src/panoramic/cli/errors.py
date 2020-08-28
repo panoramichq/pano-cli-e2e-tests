@@ -4,7 +4,7 @@ import signal
 import sys
 from abc import ABC
 from pathlib import Path
-from typing import Callable, Optional
+from typing import Callable, List, Optional
 
 from jsonschema.exceptions import ValidationError as JsonSchemaValidationError
 from requests.exceptions import RequestException
@@ -59,6 +59,14 @@ class RefreshException(CliBaseException):
         super().__init__(f'Metadata could not be refreshed for table {table_name} in data connection {source_name}')
 
 
+class CompanyNotFoundException(CliBaseException):
+
+    """Error when company not found for user (either no access or doesn't exist)."""
+
+    def __init__(self, company_slug: str):
+        super().__init__(f'Company {company_slug} not found. Do you have access to it?')
+
+
 class SourceNotFoundException(CliBaseException):
 
     """Thrown when a source cannot be found."""
@@ -76,7 +84,7 @@ class ScanException(CliBaseException):
         super().__init__(f'Metadata could not be scanned for table(s){table_msg}in data counnection: {source_name}')
 
 
-class VirtualDataSourceException(CliBaseException):
+class DatasetReadException(CliBaseException):
 
     """Error fetching virtual data sources."""
 
@@ -84,9 +92,55 @@ class VirtualDataSourceException(CliBaseException):
         super().__init__(f'Error fetching datasets for company {company_slug}')
 
 
-class ModelException(CliBaseException):
+class InvalidModelException(CliBaseException):
 
-    """Error fetching models."""
+    """Invalid model submitted to remote."""
+
+    messages: List[str]
+
+    def __init__(self, error: RequestException):
+        try:
+            self.messages = [
+                error['msg'] for error in error.response.json()['error']['extra_data']['validation_errors']
+            ]
+        except Exception:
+            self.messages = ['Invalid model submitted']
+
+
+class InvalidDatasetException(CliBaseException):
+
+    """Invalid model submitted to remote."""
+
+    messages: List[str]
+
+    def __init__(self, error: RequestException):
+        try:
+            self.messages = [
+                error['msg'] for error in error.response.json()['error']['extra_data']['validation_errors']
+            ]
+        except Exception:
+            self.messages = ['Invalid dataset submitted']
+
+
+class DatasetWriteException(CliBaseException):
+
+    """Error writing dataset to remote state."""
+
+    def __init__(self, dataset_name: str):
+        super().__init__(f'Error writing dataset {dataset_name}')
+
+
+class ModelWriteException(CliBaseException):
+
+    """Error writing dataset to remote state."""
+
+    def __init__(self, dataset_name: str, model_name: str):
+        super().__init__(f'Error writing model {model_name} in dataset {dataset_name}')
+
+
+class ModelReadException(CliBaseException):
+
+    """Error reading model(s) from remote state."""
 
     def __init__(self, company_slug: str, dataset_name: str):
         super().__init__(f'Error fetching models for company {company_slug} and dataset {dataset_name}')
