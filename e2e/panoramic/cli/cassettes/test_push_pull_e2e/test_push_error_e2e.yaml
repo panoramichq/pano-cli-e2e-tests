@@ -27,7 +27,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:16:34 GMT
+      - Mon, 31 Aug 2020 11:24:40 GMT
       ETag:
       - '"8c5a0073438008aa2d82a4ee0ec798e5"'
       Last-Modified:
@@ -35,13 +35,13 @@ interactions:
       Server:
       - AmazonS3
       Via:
-      - 1.1 19e8b9893b6330d5d62599a448aea7db.cloudfront.net (CloudFront)
+      - 1.1 f8895de4463e8d120a0f4b4a1f7703e4.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - bMKcgk4uB75CAN-_-7qWD4CTKIV344B2LAHxSSwkxUh9-BCgdIOi-A==
+      - ayROxE5rbFjyvsim8Kta3EoiU5G7Xb7VwWt70FRGHFjh9KfaDTeIHA==
       X-Amz-Cf-Pop:
-      - VIE50-C1
+      - FRA53-C1
       X-Cache:
-      - RefreshHit from cloudfront
+      - Miss from cloudfront
       x-amz-replication-status:
       - COMPLETED
       x-amz-version-id:

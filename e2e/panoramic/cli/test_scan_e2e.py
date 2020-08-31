@@ -44,20 +44,20 @@ def vcr_config(vcr_config):
 def test_scan_e2e():
     runner = CliRunner()
 
-    result = runner.invoke(cli, ['scan', 'SF', '--parallel', '1', '--filter', 'METRICS3_STG.ADWORDS_VIEWS.ENTITY%'])
+    result = runner.invoke(
+        cli, ['scan', 'pano_snowflake_66', '--parallel', '1', '--filter', 'SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.%']
+    )
 
     assert result.exit_code == 0
     assert {f.name for f in Paths.scanned_dir().iterdir()} == {
-        'sf.metrics3_stg.adwords_views.entity_accounts.model.yaml',
-        'sf.metrics3_stg.adwords_views.entity_adgroups.model.yaml',
-        'sf.metrics3_stg.adwords_views.entity_adgroups_from_service.model.yaml',
-        'sf.metrics3_stg.adwords_views.entity_ads.model.yaml',
-        'sf.metrics3_stg.adwords_views.entity_ads_from_service.model.yaml',
-        'sf.metrics3_stg.adwords_views.entity_advideos.model.yaml',
-        'sf.metrics3_stg.adwords_views.entity_campaigns.model.yaml',
-        'sf.metrics3_stg.adwords_views.entity_campaigns_criterion.model.yaml',
-        'sf.metrics3_stg.adwords_views.entity_campaigns_from_service.model.yaml',
-        'sf.metrics3_stg.adwords_views.entity_user_lists.model.yaml',
+        'pano_snowflake_66.snowflake_sample_data.tpch_sf1.nation.model.yaml',
+        'pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders.model.yaml',
+        'pano_snowflake_66.snowflake_sample_data.tpch_sf1.supplier.model.yaml',
+        'pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem.model.yaml',
+        'pano_snowflake_66.snowflake_sample_data.tpch_sf1.partsupp.model.yaml',
+        'pano_snowflake_66.snowflake_sample_data.tpch_sf1.region.model.yaml',
+        'pano_snowflake_66.snowflake_sample_data.tpch_sf1.part.model.yaml',
+        'pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer.model.yaml',
     }
 
 
@@ -67,21 +67,27 @@ def test_scan_id_generator_e2e():
 
     result = runner.invoke(
         cli,
-        ['scan', 'SF', '--generate-identifiers', '--parallel', '1', '--filter', 'METRICS3_STG.ADWORDS_VIEWS.ENTITY%'],
+        [
+            'scan',
+            'pano_snowflake_66',
+            '--generate-identifiers',
+            '--parallel',
+            '1',
+            '--filter',
+            'SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.%',
+        ],
     )
 
     assert result.exit_code == 0
     assert {f.name for f in Paths.scanned_dir().iterdir()} == {
-        'sf.metrics3_stg.adwords_views.entity_accounts.model.yaml',
-        'sf.metrics3_stg.adwords_views.entity_adgroups.model.yaml',
-        'sf.metrics3_stg.adwords_views.entity_adgroups_from_service.model.yaml',
-        'sf.metrics3_stg.adwords_views.entity_ads.model.yaml',
-        'sf.metrics3_stg.adwords_views.entity_ads_from_service.model.yaml',
-        'sf.metrics3_stg.adwords_views.entity_advideos.model.yaml',
-        'sf.metrics3_stg.adwords_views.entity_campaigns.model.yaml',
-        'sf.metrics3_stg.adwords_views.entity_campaigns_criterion.model.yaml',
-        'sf.metrics3_stg.adwords_views.entity_campaigns_from_service.model.yaml',
-        'sf.metrics3_stg.adwords_views.entity_user_lists.model.yaml',
+        'pano_snowflake_66.snowflake_sample_data.tpch_sf1.nation.model.yaml',
+        'pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders.model.yaml',
+        'pano_snowflake_66.snowflake_sample_data.tpch_sf1.supplier.model.yaml',
+        'pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem.model.yaml',
+        'pano_snowflake_66.snowflake_sample_data.tpch_sf1.partsupp.model.yaml',
+        'pano_snowflake_66.snowflake_sample_data.tpch_sf1.region.model.yaml',
+        'pano_snowflake_66.snowflake_sample_data.tpch_sf1.part.model.yaml',
+        'pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer.model.yaml',
     }
 
 
@@ -91,7 +97,7 @@ def test_scan_error_e2e(mock_scan):
     mock_scan.side_effect = Exception('Test Exception')
     runner = CliRunner()
 
-    result = runner.invoke(cli, ['scan', 'SF', '--filter', 'METRICS3_STG.ADWORDS_VIEWS.ENTITY%'])
+    result = runner.invoke(cli, ['scan', 'pano_snowflake_66', '--filter', 'SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.%'])
 
     assert result.exit_code == 1
     assert result.stdout.startswith('Error: Internal error occurred\nTraceback (most recent call last):\n')

@@ -82,7 +82,7 @@ class RemoteWriter:
             )
             if e.response is not None and e.response.status_code == requests.codes.bad_request:
                 raise InvalidModelException(e).extract_request_id(e)
-            raise ModelWriteException(self.company_name, model.virtual_data_source).extract_request_id(e)
+            raise ModelWriteException(model.virtual_data_source, model.model_name).extract_request_id(e)
 
     def delete_model(self, model: PanoModel):
         """Delete model from remote API."""
@@ -95,4 +95,4 @@ class RemoteWriter:
             logger.debug(
                 f'Failed to delete model {model.model_name} in dataset {model.virtual_data_source}', exc_info=True
             )
-            raise ModelWriteException(model.data_source, model.model_name).extract_request_id(e)
+            raise ModelWriteException(model.virtual_data_source, model.model_name).extract_request_id(e)

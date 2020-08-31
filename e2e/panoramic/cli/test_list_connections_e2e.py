@@ -15,7 +15,7 @@ def test_list_connections_e2e(monkeypatch):
     result = runner.invoke(cli, ['list-connections'])
 
     assert result.exit_code == 0
-    assert set(result.stdout.strip().split('\n')) == {'SF', 'all_hands_demo_1_1'}
+    assert set(result.stdout.strip().split('\n')) == {'pano_snowflake_66'}
 
 
 @patch('panoramic.cli.command.list_connections')

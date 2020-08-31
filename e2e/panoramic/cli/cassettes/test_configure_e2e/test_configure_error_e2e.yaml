@@ -9,17 +9,15 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.7.4
+      - pano-cli/0.9.0
     method: GET
     uri: https://a1.panocdn.com/updates/pano-cli/versions.json
   response:
     body:
-      string: '{"latest_version": "0.7.4", "minimum_supported_version": "0.7.4"}'
+      string: '{"latest_version": "0.9.0", "minimum_supported_version": "0.9.0"}'
     headers:
       Accept-Ranges:
       - bytes
-      Age:
-      - '1'
       Cache-Control:
       - max-age=60
       Connection:
@@ -29,25 +27,25 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 24 Jul 2020 08:58:06 GMT
+      - Mon, 31 Aug 2020 11:26:06 GMT
       ETag:
-      - '"6867b00a67be82dc6de1129f91a96f9f"'
+      - '"8c5a0073438008aa2d82a4ee0ec798e5"'
       Last-Modified:
-      - Thu, 23 Jul 2020 14:02:32 GMT
+      - Tue, 18 Aug 2020 13:25:54 GMT
       Server:
       - AmazonS3
       Via:
-      - 1.1 88b63cb2f8aab28c7291262ffc15282f.cloudfront.net (CloudFront)
+      - 1.1 c2756f406c0dc2bb176f6e2181d7607e.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - 78H1QSEltPAK3xrKDOTN5hGAfc-TxPDuUFTeDVR98gKXSA2Ghn_LiA==
+      - _809LGWqIgT3nRZlssTrj3faJ-pieDzKd1pIXiiGJOgO7VBquUyUog==
       X-Amz-Cf-Pop:
-      - IAD89-C1
+      - VIE50-C1
       X-Cache:
-      - Hit from cloudfront
+      - Miss from cloudfront
       x-amz-replication-status:
       - COMPLETED
       x-amz-version-id:
-      - zOCc8ujgfqK83SnQvzD1gK57thi41wdB
+      - mqWuRCF5yzdAU.xDZMdGap6_or4wJXu0
     status:
       code: 200
       message: OK

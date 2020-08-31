@@ -76,7 +76,7 @@ def list_connections():
     if len(sources) == 0:
         echo_error('No data connections have been found')
     else:
-        for source in client.get_sources(get_company_slug()):
+        for source in sources:
             echo_info(source['source_name'])
 
 
