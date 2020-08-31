@@ -35,10 +35,12 @@ identifiers:
 @pytest.mark.vcr
 def test_push_pull_e2e(monkeypatch):
     monkeypatch.chdir(Path('e2e') / 'scenarios' / 'pano-push-pull')
-    dataset_file: Path = Path('test_dataset') / PresetFileName.DATASET_YAML.value
-    model_file: Path = Path('test_dataset') / f'test_model{FileExtension.MODEL_YAML.value}'
+    dataset_dir = Path('test_dataset')
+    dataset_file: Path = dataset_dir / PresetFileName.DATASET_YAML.value
+    model_file: Path = dataset_dir / f'test_model{FileExtension.MODEL_YAML.value}'
 
     # Create dataset and model to push
+    dataset_dir.mkdir()
     dataset_file.write_text(TEST_DATASET)
     model_file.write_text(TEST_MODEL)
 
