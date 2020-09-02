@@ -40,7 +40,7 @@ def test_push_pull_e2e(monkeypatch):
     model_file: Path = dataset_dir / f'test_model{FileExtension.MODEL_YAML.value}'
 
     # Create dataset and model to push
-    dataset_dir.mkdir()
+    dataset_dir.mkdir(exist_ok=True)
     dataset_file.write_text(TEST_DATASET)
     model_file.write_text(TEST_MODEL)
 
