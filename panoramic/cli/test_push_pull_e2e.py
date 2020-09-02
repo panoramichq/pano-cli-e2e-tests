@@ -46,7 +46,7 @@ def test_push_pull_e2e(monkeypatch):
 
     # Push dataset and model
     runner = CliRunner()
-    result = runner.invoke(cli, ['push'])
+    result = runner.invoke(cli, ['push', '-y'])
 
     # Check push was successful
     assert result.exit_code == 0
@@ -56,7 +56,7 @@ def test_push_pull_e2e(monkeypatch):
     model_file.unlink()
 
     # Pull dataset and model
-    result = runner.invoke(cli, ['pull'])
+    result = runner.invoke(cli, ['pull', '-y'])
 
     # Check pull was successful
     assert dataset_file.exists()
@@ -67,7 +67,7 @@ def test_push_pull_e2e(monkeypatch):
     model_file.unlink()
 
     # Push deleted dataset and model
-    result = runner.invoke(cli, ['push'])
+    result = runner.invoke(cli, ['push', '-y'])
 
     # Check push was successful
     assert result.exit_code == 0
