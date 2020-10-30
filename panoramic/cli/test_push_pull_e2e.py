@@ -5,7 +5,7 @@ import pytest
 from click.testing import CliRunner
 
 from panoramic.cli import cli
-from panoramic.cli.paths import FileExtension, PresetFileName
+from panoramic.cli.paths import FileExtension, PresetFileName, Paths
 
 TEST_DATASET = """
 dataset_slug: test_dataset
@@ -31,6 +31,24 @@ identifiers:
   - name
 """
 
+TEST_COMPANY_FIELD = """
+api_version: v1
+slug: company_test_field
+display_name: Company test field
+group: Custom
+field_type: dimension
+data_type: text
+"""
+
+TEST_DATASET_FIELD = """
+api_version: v1
+slug: dataset_test_field
+display_name: Dataset test field
+group: Custom
+field_type: metric
+data_type: text
+"""
+
 
 @pytest.mark.vcr
 def test_push_pull_e2e(monkeypatch):
@@ -39,10 +57,19 @@ def test_push_pull_e2e(monkeypatch):
     dataset_file: Path = dataset_dir / PresetFileName.DATASET_YAML.value
     model_file: Path = dataset_dir / f'test_model{FileExtension.MODEL_YAML.value}'
 
+    company_fields_dir = Paths.fields_dir(Path.cwd())
+    company_field_file: Path = company_fields_dir / f'test_company_field{FileExtension.FIELD_YAML.value}'
+    company_field_file.write_text(TEST_COMPANY_FIELD)
+
     # Create dataset and model to push
     dataset_dir.mkdir(exist_ok=True)
     dataset_file.write_text(TEST_DATASET)
     model_file.write_text(TEST_MODEL)
+    dataset_fields_dir = Paths.fields_dir(dataset_dir)
+    dataset_fields_dir.mkdir(exist_ok=True)
+
+    dataset_field_file: Path = dataset_fields_dir / f'test_dataset_field{FileExtension.FIELD_YAML.value}'
+    dataset_field_file.write_text(TEST_DATASET_FIELD)
 
     # Push dataset and model
     runner = CliRunner()
@@ -61,10 +88,14 @@ def test_push_pull_e2e(monkeypatch):
     # Check pull was successful
     assert dataset_file.exists()
     assert model_file.exists()
+    assert dataset_field_file.exists()
+    assert company_field_file.exists()
 
     # Delete local dataset and model files
     dataset_file.unlink()
     model_file.unlink()
+    company_field_file.unlink()
+    dataset_field_file.unlink()
 
     # Push deleted dataset and model
     result = runner.invoke(cli, ['push', '-y'])
