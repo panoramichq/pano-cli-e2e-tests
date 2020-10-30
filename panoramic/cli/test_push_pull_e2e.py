@@ -57,18 +57,21 @@ def test_push_pull_e2e(monkeypatch):
     dataset_file: Path = dataset_dir / PresetFileName.DATASET_YAML.value
     model_file: Path = dataset_dir / f'test_model{FileExtension.MODEL_YAML.value}'
 
+    # Create dataset scoped field
     company_fields_dir = Paths.fields_dir(Path.cwd())
-    company_field_file: Path = company_fields_dir / f'test_company_field{FileExtension.FIELD_YAML.value}'
+    company_fields_dir.mkdir(exist_ok=True)
+    company_field_file: Path = company_fields_dir / f'company_test_field{FileExtension.FIELD_YAML.value}'
     company_field_file.write_text(TEST_COMPANY_FIELD)
 
     # Create dataset and model to push
     dataset_dir.mkdir(exist_ok=True)
     dataset_file.write_text(TEST_DATASET)
     model_file.write_text(TEST_MODEL)
+    # Create dataset scoped field
     dataset_fields_dir = Paths.fields_dir(dataset_dir)
     dataset_fields_dir.mkdir(exist_ok=True)
 
-    dataset_field_file: Path = dataset_fields_dir / f'test_dataset_field{FileExtension.FIELD_YAML.value}'
+    dataset_field_file: Path = dataset_fields_dir / f'dataset_test_field{FileExtension.FIELD_YAML.value}'
     dataset_field_file.write_text(TEST_DATASET_FIELD)
 
     # Push dataset and model
@@ -81,6 +84,8 @@ def test_push_pull_e2e(monkeypatch):
     # Delete local files so they can be re-created with pull
     dataset_file.unlink()
     model_file.unlink()
+    company_field_file.unlink()
+    dataset_field_file.unlink()
 
     # Pull dataset and model
     result = runner.invoke(cli, ['pull', '-y'])
