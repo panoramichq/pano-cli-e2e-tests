@@ -17,8 +17,7 @@ api_version: v1
 model_name: test_model
 data_source: pano_snowflake_66.snowflake_sample_data.tpch_sf1.nation
 fields:
-  - data_type: CHARACTER VARYING
-    field_map:
+  - field_map:
       - name
     data_reference: '"N_NAME"'
 joins:
