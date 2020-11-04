@@ -18,14 +18,14 @@ model_name: test_model
 data_source: pano_snowflake_66.snowflake_sample_data.tpch_sf1.nation
 fields:
   - field_map:
-      - name
+      - dataset_test_field
     data_reference: '"N_NAME"'
 joins:
   - to_model: other_model
     relationship: many_to_one
     join_type: left
     fields:
-      - name
+      - dataset_test_field
 identifiers:
   - name
 """
@@ -56,7 +56,7 @@ def test_push_pull_e2e(monkeypatch):
     dataset_file: Path = dataset_dir / PresetFileName.DATASET_YAML.value
     model_file: Path = dataset_dir / f'test_model{FileExtension.MODEL_YAML.value}'
 
-    # Create dataset scoped field
+    # Create company scoped field
     company_fields_dir = Paths.fields_dir(Path.cwd())
     company_fields_dir.mkdir(exist_ok=True)
     company_field_file: Path = company_fields_dir / f'company_test_field{FileExtension.FIELD_YAML.value}'
