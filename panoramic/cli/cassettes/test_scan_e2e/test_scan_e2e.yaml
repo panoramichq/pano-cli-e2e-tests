@@ -9,12 +9,12 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: GET
     uri: https://a1.panocdn.com/updates/pano-cli/versions.json
   response:
     body:
-      string: '{"latest_version": "0.9.0", "minimum_supported_version": "0.9.0"}'
+      string: '{"minimum_supported_version": "1.0.0", "latest_version": "1.2.0"}'
     headers:
       Accept-Ranges:
       - bytes
@@ -27,25 +27,25 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:13:31 GMT
+      - Wed, 04 Nov 2020 15:27:01 GMT
       ETag:
-      - '"8c5a0073438008aa2d82a4ee0ec798e5"'
+      - '"b567ca5ec4a1c3c27497963ad975f8f5"'
       Last-Modified:
-      - Tue, 18 Aug 2020 13:25:54 GMT
+      - Fri, 30 Oct 2020 21:22:49 GMT
       Server:
       - AmazonS3
       Via:
-      - 1.1 6c9f184c491eed5c51abd110e89bd97b.cloudfront.net (CloudFront)
+      - 1.1 c94378b36f8a40d65d0bb1c2edbb9c73.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - mCi_yL9X_W_giH0nXfbD7OZmuttGzpH74jEx3CBgp7R5RemcIHBkWg==
+      - 5BpWyrRzUYgrR_XF80OGCugfKlpk9VdNumjuU4r6Oa0i6srdUuTb-A==
       X-Amz-Cf-Pop:
-      - VIE50-C1
+      - IAD89-C2
       X-Cache:
       - RefreshHit from cloudfront
       x-amz-replication-status:
       - COMPLETED
       x-amz-version-id:
-      - mqWuRCF5yzdAU.xDZMdGap6_or4wJXu0
+      - 7gL4L94FhP5vViOT0_j0Ees.dSesIhqr
     status:
       code: 200
       message: OK
@@ -63,7 +63,7 @@ interactions:
       Content-Type:
       - application/x-www-form-urlencoded;charset=UTF-8
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: POST
     uri: https://id.panoramichq.com/oauth2/auscsj124wDoFObOJ4x6/v1/token
   response:
@@ -76,7 +76,7 @@ interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Mon, 31 Aug 2020 09:13:31 GMT
+      - Wed, 04 Nov 2020 15:27:02 GMT
       Keep-Alive:
       - timeout=5, max=100
       Server:
@@ -97,19 +97,19 @@ interactions:
       - no-cache
       set-cookie:
       - sid=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
-      - JSESSIONID=D9131E4CFFD3ABD341C3DCD996DF195F; Path=/; Secure; HttpOnly
+      - JSESSIONID=42485C248A586CDC5326EB7352731D3E; Path=/; Secure; HttpOnly
       x-content-type-options:
       - nosniff
       x-okta-request-id:
-      - X0y-OysZMZXxexEby5p7eAAAAoE
+      - X6LIRl3Bxq06390D4TX@RwAAABk
       x-rate-limit-limit:
-      - '600'
+      - '1200'
       x-rate-limit-remaining:
-      - '599'
+      - '1195'
       x-rate-limit-reset:
-      - '1598865271'
+      - '1604503636'
       x-xss-protection:
-      - 1; mode=block; report=https://okta.report-uri.com/r/d/xss/enforce
+      - '0'
     status:
       code: 200
       message: OK
@@ -125,12 +125,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: POST
     uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/pano_snowflake_66/tables?company_slug=panoramic-z5y1clyi&table_filter=SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.%25
   response:
     body:
-      string: '{"data":{"job_id":"20b340c1-8d34-b55d-8074-454ac9604e00"}}
+      string: '{"data":{"job_id":"205d37b5-9c71-1706-b91c-ae1627141c00"}}
 
         '
     headers:
@@ -141,7 +141,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:13:33 GMT
+      - Wed, 04 Nov 2020 15:27:05 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -149,9 +149,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '1'
       X-Kong-Upstream-Latency:
-      - '691'
+      - '1241'
       x-diesel-request-id:
-      - 418fdb4a-3257-4b7b-b8e1-a7cbca637eca
+      - afb28745-a7bd-4f4b-a209-ba7162f80cf7
     status:
       code: 200
       message: OK
@@ -165,9 +165,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: GET
-    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/20b340c1-8d34-b55d-8074-454ac9604e00
+    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/205d37b5-9c71-1706-b91c-ae1627141c00
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -181,7 +181,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:13:33 GMT
+      - Wed, 04 Nov 2020 15:27:06 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -189,9 +189,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '1'
       X-Kong-Upstream-Latency:
-      - '137'
+      - '584'
       x-diesel-request-id:
-      - 9e4401b2-7ae5-4384-abca-29c6e8536cc5
+      - 7ce21139-dd0b-4e6a-8e7c-0abf397fcf18
     status:
       code: 200
       message: OK
@@ -205,9 +205,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: GET
-    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/20b340c1-8d34-b55d-8074-454ac9604e00/results?offset=0&limit=500
+    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/205d37b5-9c71-1706-b91c-ae1627141c00/results?offset=0&limit=500
   response:
     body:
       string: '{"data":[{"data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER","model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer"},{"data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem"},{"data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.NATION","model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.nation"},{"data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS","model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders"},{"data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PART","model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part"},{"data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PARTSUPP","model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.partsupp"},{"data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.REGION","model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.region"},{"data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.SUPPLIER","model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.supplier"}]}
@@ -221,17 +221,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:13:33 GMT
+      - Wed, 04 Nov 2020 15:27:07 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '0'
+      - '1'
       X-Kong-Upstream-Latency:
-      - '145'
+      - '601'
       x-diesel-request-id:
-      - 2350d824-249a-4344-b463-5a63f282fee8
+      - 601a06d4-3663-4fbe-8868-84864448efbc
     status:
       code: 200
       message: OK
@@ -249,7 +249,7 @@ interactions:
       Content-Type:
       - application/x-www-form-urlencoded;charset=UTF-8
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: POST
     uri: https://id.panoramichq.com/oauth2/auscsj124wDoFObOJ4x6/v1/token
   response:
@@ -262,7 +262,7 @@ interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Mon, 31 Aug 2020 09:13:35 GMT
+      - Wed, 04 Nov 2020 15:27:08 GMT
       Keep-Alive:
       - timeout=5, max=100
       Server:
@@ -283,19 +283,19 @@ interactions:
       - no-cache
       set-cookie:
       - sid=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
-      - JSESSIONID=188735FC7C6027EA3F160CC24788D4DB; Path=/; Secure; HttpOnly
+      - JSESSIONID=D08D51494E654646C0B4318298193EB6; Path=/; Secure; HttpOnly
       x-content-type-options:
       - nosniff
       x-okta-request-id:
-      - X0y-PsMX184d6H1@IxVFFgAAAls
+      - X6LITHbfF5ubjxvlxh40DgAAAZ8
       x-rate-limit-limit:
-      - '600'
+      - '1200'
       x-rate-limit-remaining:
-      - '598'
+      - '1194'
       x-rate-limit-reset:
-      - '1598865271'
+      - '1604503636'
       x-xss-protection:
-      - 1; mode=block; report=https://okta.report-uri.com/r/d/xss/enforce
+      - '0'
     status:
       code: 200
       message: OK
@@ -311,12 +311,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: POST
     uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/pano_snowflake_66/refresh?table_name=SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER&company_slug=panoramic-z5y1clyi
   response:
     body:
-      string: '{"data":{"job_id":"20b340be-8e94-5f2d-6c9f-211999e4bd00"}}
+      string: '{"data":{"job_id":"205d37b0-ba30-b7f3-fa35-9071c8340300"}}
 
         '
     headers:
@@ -327,17 +327,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:13:36 GMT
+      - Wed, 04 Nov 2020 15:27:10 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '1'
+      - '0'
       X-Kong-Upstream-Latency:
-      - '352'
+      - '886'
       x-diesel-request-id:
-      - ed78bdf5-64fd-41af-8657-64f36977a391
+      - aa05bd85-7729-4738-b7bb-4e0792a911a0
     status:
       code: 200
       message: OK
@@ -351,9 +351,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: GET
-    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/20b340be-8e94-5f2d-6c9f-211999e4bd00
+    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/205d37b0-ba30-b7f3-fa35-9071c8340300
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -367,7 +367,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:13:38 GMT
+      - Wed, 04 Nov 2020 15:27:13 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -375,9 +375,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '31'
+      - '257'
       x-diesel-request-id:
-      - e7a1a67b-e134-4850-b06c-2d356330f3f6
+      - b93f38a3-2e80-495c-8dcc-43c71a5c930c
     status:
       code: 200
       message: OK
@@ -393,12 +393,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: POST
     uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/pano_snowflake_66/columns?company_slug=panoramic-z5y1clyi&table_filter=SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER
   response:
     body:
-      string: '{"data":{"job_id":"20b340bb-e3ef-db2e-833b-991388a7db00"}}
+      string: '{"data":{"job_id":"205d37ae-3f99-35b9-8a87-6807dd6ea400"}}
 
         '
     headers:
@@ -409,17 +409,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:13:39 GMT
+      - Wed, 04 Nov 2020 15:27:13 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '0'
+      - '1'
       X-Kong-Upstream-Latency:
-      - '546'
+      - '275'
       x-diesel-request-id:
-      - 34e961f1-96ba-4439-953c-ba1f68cd8820
+      - cdb24fd7-7b03-4ec2-b9a9-4113ba0a5ac8
     status:
       code: 200
       message: OK
@@ -433,9 +433,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: GET
-    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/20b340bb-e3ef-db2e-833b-991388a7db00
+    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/205d37ae-3f99-35b9-8a87-6807dd6ea400
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -449,17 +449,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:13:40 GMT
+      - Wed, 04 Nov 2020 15:27:14 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '0'
+      - '1'
       X-Kong-Upstream-Latency:
-      - '35'
+      - '236'
       x-diesel-request-id:
-      - d3075eb2-e943-4e5b-8575-3fbef57c452c
+      - 1152e70a-70a9-4ef4-b7ec-1dca270ecc33
     status:
       code: 200
       message: OK
@@ -473,28 +473,28 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: GET
-    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/20b340bb-e3ef-db2e-833b-991388a7db00/results?offset=0&limit=500
+    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/205d37ae-3f99-35b9-8a87-6807dd6ea400/results?offset=0&limit=500
   response:
     body:
-      string: '{"data":[{"data_reference":"\"C_CUSTKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER","data_type":"DECIMAL","field_map":["c_custkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer.c_custkey"},{"data_reference":"\"C_NAME\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER","data_type":"CHARACTER
-        VARYING","field_map":["c_name"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer.c_name"},{"data_reference":"\"C_ADDRESS\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER","data_type":"CHARACTER
-        VARYING","field_map":["c_address"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer.c_address"},{"data_reference":"\"C_NATIONKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER","data_type":"DECIMAL","field_map":["c_nationkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer.c_nationkey"},{"data_reference":"\"C_PHONE\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER","data_type":"CHARACTER
-        VARYING","field_map":["c_phone"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer.c_phone"},{"data_reference":"\"C_ACCTBAL\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER","data_type":"DECIMAL","field_map":["c_acctbal"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer.c_acctbal"},{"data_reference":"\"C_MKTSEGMENT\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER","data_type":"CHARACTER
-        VARYING","field_map":["c_mktsegment"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer.c_mktsegment"},{"data_reference":"\"C_COMMENT\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER","data_type":"CHARACTER
-        VARYING","field_map":["c_comment"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer.c_comment"}]}
+      string: '{"data":[{"aggregation_type":"sum","data_reference":"\"C_CUSTKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER","data_type":"DECIMAL","field_map":["c_custkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer","taxon_type":"metric","validation_type":"numeric"},{"data_reference":"\"C_NAME\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER","data_type":"CHARACTER
+        VARYING","field_map":["c_name"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer","taxon_type":"dimension","validation_type":"text"},{"data_reference":"\"C_ADDRESS\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER","data_type":"CHARACTER
+        VARYING","field_map":["c_address"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer","taxon_type":"dimension","validation_type":"text"},{"aggregation_type":"sum","data_reference":"\"C_NATIONKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER","data_type":"DECIMAL","field_map":["c_nationkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer","taxon_type":"metric","validation_type":"numeric"},{"data_reference":"\"C_PHONE\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER","data_type":"CHARACTER
+        VARYING","field_map":["c_phone"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer","taxon_type":"dimension","validation_type":"text"},{"aggregation_type":"sum","data_reference":"\"C_ACCTBAL\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER","data_type":"DECIMAL","field_map":["c_acctbal"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer","taxon_type":"metric","validation_type":"numeric"},{"data_reference":"\"C_MKTSEGMENT\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER","data_type":"CHARACTER
+        VARYING","field_map":["c_mktsegment"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer","taxon_type":"dimension","validation_type":"text"},{"data_reference":"\"C_COMMENT\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER","data_type":"CHARACTER
+        VARYING","field_map":["c_comment"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer","taxon_type":"dimension","validation_type":"text"}]}
 
         '
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '2509'
+      - '2376'
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:13:40 GMT
+      - Wed, 04 Nov 2020 15:27:14 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -502,9 +502,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '40'
+      - '263'
       x-diesel-request-id:
-      - dcf19db6-fc86-4950-a3a3-e21012e3571f
+      - 95170fed-0c4b-430c-a905-300e2d5574cd
     status:
       code: 200
       message: OK
@@ -520,12 +520,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: POST
     uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/pano_snowflake_66/refresh?table_name=SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM&company_slug=panoramic-z5y1clyi
   response:
     body:
-      string: '{"data":{"job_id":"20b340b9-ca19-9436-2f6c-596e9b2caa00"}}
+      string: '{"data":{"job_id":"205d37aa-9103-c790-1ad3-d7c15bdb0d00"}}
 
         '
     headers:
@@ -536,7 +536,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:13:41 GMT
+      - Wed, 04 Nov 2020 15:27:16 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -544,9 +544,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '279'
+      - '1027'
       x-diesel-request-id:
-      - fc57de30-38f1-4e0a-b0cc-96f3a5c7780d
+      - 260e25b8-a7ce-4d20-8d89-a879aef7d23f
     status:
       code: 200
       message: OK
@@ -560,9 +560,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: GET
-    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/20b340b9-ca19-9436-2f6c-596e9b2caa00
+    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/205d37aa-9103-c790-1ad3-d7c15bdb0d00
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -576,7 +576,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:13:42 GMT
+      - Wed, 04 Nov 2020 15:27:18 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -584,9 +584,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '31'
+      - '240'
       x-diesel-request-id:
-      - b0195471-ec20-4ebc-b29b-3043ecc1d0b4
+      - 655c9d2b-498e-4291-8255-413b2ec4d8d7
     status:
       code: 200
       message: OK
@@ -602,12 +602,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: POST
     uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/pano_snowflake_66/columns?company_slug=panoramic-z5y1clyi&table_filter=SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM
   response:
     body:
-      string: '{"data":{"job_id":"20b340b7-8c1c-ca01-fd73-b871d486a100"}}
+      string: '{"data":{"job_id":"205d37a9-4173-a7dd-7e97-868fb8ea0600"}}
 
         '
     headers:
@@ -618,17 +618,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:13:43 GMT
+      - Wed, 04 Nov 2020 15:27:18 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '1'
+      - '0'
       X-Kong-Upstream-Latency:
-      - '41'
+      - '274'
       x-diesel-request-id:
-      - 39ac6410-730c-4738-bed4-d517fcbab0f8
+      - ebc90f13-9f5e-4d94-a95b-563dd2601b92
     status:
       code: 200
       message: OK
@@ -642,9 +642,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: GET
-    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/20b340b7-8c1c-ca01-fd73-b871d486a100
+    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/205d37a9-4173-a7dd-7e97-868fb8ea0600
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -658,7 +658,52 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:13:43 GMT
+      - Wed, 04 Nov 2020 15:27:20 GMT
+      Via:
+      - kong/2.0.3
+      X-Amzn-Trace-Id:
+      - None
+      X-Kong-Proxy-Latency:
+      - '0'
+      X-Kong-Upstream-Latency:
+      - '267'
+      x-diesel-request-id:
+      - 198ad57a-e30d-4343-bd66-eda34b273ac2
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - pano-cli/1.2.0
+    method: GET
+    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/205d37a9-4173-a7dd-7e97-868fb8ea0600/results?offset=0&limit=500
+  response:
+    body:
+      string: '{"data":[{"aggregation_type":"sum","data_reference":"\"L_ORDERKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"DECIMAL","field_map":["l_orderkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","taxon_type":"metric","validation_type":"numeric"},{"aggregation_type":"sum","data_reference":"\"L_PARTKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"DECIMAL","field_map":["l_partkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","taxon_type":"metric","validation_type":"numeric"},{"aggregation_type":"sum","data_reference":"\"L_SUPPKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"DECIMAL","field_map":["l_suppkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","taxon_type":"metric","validation_type":"numeric"},{"aggregation_type":"sum","data_reference":"\"L_LINENUMBER\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"DECIMAL","field_map":["l_linenumber"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","taxon_type":"metric","validation_type":"numeric"},{"aggregation_type":"sum","data_reference":"\"L_QUANTITY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"DECIMAL","field_map":["l_quantity"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","taxon_type":"metric","validation_type":"numeric"},{"aggregation_type":"sum","data_reference":"\"L_EXTENDEDPRICE\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"DECIMAL","field_map":["l_extendedprice"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","taxon_type":"metric","validation_type":"numeric"},{"aggregation_type":"sum","data_reference":"\"L_DISCOUNT\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"DECIMAL","field_map":["l_discount"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","taxon_type":"metric","validation_type":"numeric"},{"aggregation_type":"sum","data_reference":"\"L_TAX\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"DECIMAL","field_map":["l_tax"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","taxon_type":"metric","validation_type":"numeric"},{"data_reference":"\"L_RETURNFLAG\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"CHARACTER
+        VARYING","field_map":["l_returnflag"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","taxon_type":"dimension","validation_type":"text"},{"data_reference":"\"L_LINESTATUS\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"CHARACTER
+        VARYING","field_map":["l_linestatus"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","taxon_type":"dimension","validation_type":"text"},{"data_reference":"\"L_SHIPDATE\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"DATE","field_map":["l_shipdate"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","taxon_type":"dimension","validation_type":"datetime"},{"data_reference":"\"L_COMMITDATE\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"DATE","field_map":["l_commitdate"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","taxon_type":"dimension","validation_type":"datetime"},{"data_reference":"\"L_RECEIPTDATE\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"DATE","field_map":["l_receiptdate"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","taxon_type":"dimension","validation_type":"datetime"},{"data_reference":"\"L_SHIPINSTRUCT\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"CHARACTER
+        VARYING","field_map":["l_shipinstruct"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","taxon_type":"dimension","validation_type":"text"},{"data_reference":"\"L_SHIPMODE\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"CHARACTER
+        VARYING","field_map":["l_shipmode"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","taxon_type":"dimension","validation_type":"text"},{"data_reference":"\"L_COMMENT\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"CHARACTER
+        VARYING","field_map":["l_comment"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","taxon_type":"dimension","validation_type":"text"}]}
+
+        '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '4800'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 04 Nov 2020 15:27:21 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -666,54 +711,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '1'
       X-Kong-Upstream-Latency:
-      - '33'
+      - '260'
       x-diesel-request-id:
-      - 8220c48e-412d-43db-b12a-1bdc349b6614
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.9.0
-    method: GET
-    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/20b340b7-8c1c-ca01-fd73-b871d486a100/results?offset=0&limit=500
-  response:
-    body:
-      string: '{"data":[{"data_reference":"\"L_ORDERKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"DECIMAL","field_map":["l_orderkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem.l_orderkey"},{"data_reference":"\"L_PARTKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"DECIMAL","field_map":["l_partkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem.l_partkey"},{"data_reference":"\"L_SUPPKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"DECIMAL","field_map":["l_suppkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem.l_suppkey"},{"data_reference":"\"L_LINENUMBER\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"DECIMAL","field_map":["l_linenumber"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem.l_linenumber"},{"data_reference":"\"L_QUANTITY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"DECIMAL","field_map":["l_quantity"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem.l_quantity"},{"data_reference":"\"L_EXTENDEDPRICE\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"DECIMAL","field_map":["l_extendedprice"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem.l_extendedprice"},{"data_reference":"\"L_DISCOUNT\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"DECIMAL","field_map":["l_discount"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem.l_discount"},{"data_reference":"\"L_TAX\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"DECIMAL","field_map":["l_tax"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem.l_tax"},{"data_reference":"\"L_RETURNFLAG\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"CHARACTER
-        VARYING","field_map":["l_returnflag"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem.l_returnflag"},{"data_reference":"\"L_LINESTATUS\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"CHARACTER
-        VARYING","field_map":["l_linestatus"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem.l_linestatus"},{"data_reference":"\"L_SHIPDATE\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"DATE","field_map":["l_shipdate"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem.l_shipdate"},{"data_reference":"\"L_COMMITDATE\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"DATE","field_map":["l_commitdate"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem.l_commitdate"},{"data_reference":"\"L_RECEIPTDATE\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"DATE","field_map":["l_receiptdate"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem.l_receiptdate"},{"data_reference":"\"L_SHIPINSTRUCT\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"CHARACTER
-        VARYING","field_map":["l_shipinstruct"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem.l_shipinstruct"},{"data_reference":"\"L_SHIPMODE\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"CHARACTER
-        VARYING","field_map":["l_shipmode"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem.l_shipmode"},{"data_reference":"\"L_COMMENT\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM","data_type":"CHARACTER
-        VARYING","field_map":["l_comment"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.lineitem.l_comment"}]}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '5032'
-      Content-Type:
-      - application/json
-      Date:
-      - Mon, 31 Aug 2020 09:13:43 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '45'
-      x-diesel-request-id:
-      - c6a34a6e-b030-44a3-9008-41362cf595a8
+      - ebe3c037-2400-4eaa-9fd2-ad9979c3a872
     status:
       code: 200
       message: OK
@@ -729,12 +729,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: POST
     uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/pano_snowflake_66/refresh?table_name=SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.NATION&company_slug=panoramic-z5y1clyi
   response:
     body:
-      string: '{"data":{"job_id":"20b340b7-589b-7602-7c92-d2136f26ae00"}}
+      string: '{"data":{"job_id":"205d37a6-6a86-a5bf-ff5f-ba6226106000"}}
 
         '
     headers:
@@ -745,7 +745,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:13:44 GMT
+      - Wed, 04 Nov 2020 15:27:21 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -753,9 +753,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '1'
       X-Kong-Upstream-Latency:
-      - '449'
+      - '516'
       x-diesel-request-id:
-      - 8fd94aa3-ad4f-417d-b1ad-6de2d7594aa7
+      - f3d5cc9d-6f59-4647-bb3d-6a229b8de062
     status:
       code: 200
       message: OK
@@ -769,9 +769,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: GET
-    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/20b340b7-589b-7602-7c92-d2136f26ae00
+    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/205d37a6-6a86-a5bf-ff5f-ba6226106000
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -785,17 +785,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:13:45 GMT
+      - Wed, 04 Nov 2020 15:27:23 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '0'
+      - '1'
       X-Kong-Upstream-Latency:
-      - '34'
+      - '246'
       x-diesel-request-id:
-      - e2949f4a-731f-47d6-bafe-0218d675e184
+      - cc905b25-ec86-4527-8165-e6f935a30744
     status:
       code: 200
       message: OK
@@ -811,12 +811,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: POST
     uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/pano_snowflake_66/columns?company_slug=panoramic-z5y1clyi&table_filter=SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.NATION
   response:
     body:
-      string: '{"data":{"job_id":"20b340b5-49d5-d4b0-a172-3da77a511c00"}}
+      string: '{"data":{"job_id":"205d37a2-86fc-0fcc-8240-0c5a4b5c8700"}}
 
         '
     headers:
@@ -827,17 +827,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:13:46 GMT
+      - Wed, 04 Nov 2020 15:27:24 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '0'
+      - '1'
       X-Kong-Upstream-Latency:
-      - '40'
+      - '535'
       x-diesel-request-id:
-      - 3ffde361-edfa-465e-bac1-6b37f07f25f4
+      - c393d3a2-c734-4946-9227-13297c2e9f49
     status:
       code: 200
       message: OK
@@ -851,9 +851,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: GET
-    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/20b340b5-49d5-d4b0-a172-3da77a511c00
+    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/205d37a2-86fc-0fcc-8240-0c5a4b5c8700
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -867,7 +867,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:13:47 GMT
+      - Wed, 04 Nov 2020 15:27:25 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -875,9 +875,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '38'
+      - '252'
       x-diesel-request-id:
-      - c1a6f258-df23-443c-8b04-d986d7d79d16
+      - abb437ac-8aae-46f0-ad43-6217a49125cf
     status:
       code: 200
       message: OK
@@ -891,25 +891,25 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: GET
-    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/20b340b5-49d5-d4b0-a172-3da77a511c00/results?offset=0&limit=500
+    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/205d37a2-86fc-0fcc-8240-0c5a4b5c8700/results?offset=0&limit=500
   response:
     body:
-      string: '{"data":[{"data_reference":"\"N_NATIONKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.NATION","data_type":"DECIMAL","field_map":["n_nationkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.nation","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.nation.n_nationkey"},{"data_reference":"\"N_NAME\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.NATION","data_type":"CHARACTER
-        VARYING","field_map":["n_name"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.nation","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.nation.n_name"},{"data_reference":"\"N_REGIONKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.NATION","data_type":"DECIMAL","field_map":["n_regionkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.nation","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.nation.n_regionkey"},{"data_reference":"\"N_COMMENT\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.NATION","data_type":"CHARACTER
-        VARYING","field_map":["n_comment"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.nation","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.nation.n_comment"}]}
+      string: '{"data":[{"aggregation_type":"sum","data_reference":"\"N_NATIONKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.NATION","data_type":"DECIMAL","field_map":["n_nationkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.nation","taxon_type":"metric","validation_type":"numeric"},{"data_reference":"\"N_NAME\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.NATION","data_type":"CHARACTER
+        VARYING","field_map":["n_name"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.nation","taxon_type":"dimension","validation_type":"text"},{"aggregation_type":"sum","data_reference":"\"N_REGIONKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.NATION","data_type":"DECIMAL","field_map":["n_regionkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.nation","taxon_type":"metric","validation_type":"numeric"},{"data_reference":"\"N_COMMENT\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.NATION","data_type":"CHARACTER
+        VARYING","field_map":["n_comment"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.nation","taxon_type":"dimension","validation_type":"text"}]}
 
         '
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '1234'
+      - '1187'
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:13:48 GMT
+      - Wed, 04 Nov 2020 15:27:25 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -917,9 +917,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '1'
       X-Kong-Upstream-Latency:
-      - '38'
+      - '244'
       x-diesel-request-id:
-      - 80e02d3d-d6be-49a5-bb39-0465d84d30e0
+      - 5cbbe531-8651-4a50-aa7b-a4e9d4782d75
     status:
       code: 200
       message: OK
@@ -935,12 +935,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: POST
     uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/pano_snowflake_66/refresh?table_name=SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS&company_slug=panoramic-z5y1clyi
   response:
     body:
-      string: '{"data":{"job_id":"20b340b2-ec52-5493-13ed-e4a748795f00"}}
+      string: '{"data":{"job_id":"205d37a0-9c0f-5338-0819-0da8189ab400"}}
 
         '
     headers:
@@ -951,17 +951,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:13:48 GMT
+      - Wed, 04 Nov 2020 15:27:26 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '1'
+      - '0'
       X-Kong-Upstream-Latency:
-      - '42'
+      - '269'
       x-diesel-request-id:
-      - 764ab5f7-041b-4004-b78e-1ea9806edcdd
+      - b612a1fd-55bf-4234-9bf5-e9dbdbdecb00
     status:
       code: 200
       message: OK
@@ -975,9 +975,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: GET
-    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/20b340b2-ec52-5493-13ed-e4a748795f00
+    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/205d37a0-9c0f-5338-0819-0da8189ab400
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -991,17 +991,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:13:49 GMT
+      - Wed, 04 Nov 2020 15:27:28 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '0'
+      - '1'
       X-Kong-Upstream-Latency:
-      - '33'
+      - '554'
       x-diesel-request-id:
-      - ca3f436a-1a56-4810-a35d-79b7822d7d65
+      - dc604df7-94e9-43ad-adbf-076c211b5863
     status:
       code: 200
       message: OK
@@ -1017,12 +1017,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: POST
     uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/pano_snowflake_66/columns?company_slug=panoramic-z5y1clyi&table_filter=SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS
   response:
     body:
-      string: '{"data":{"job_id":"20b340b1-1f4a-e48c-caa6-ea883856ab00"}}
+      string: '{"data":{"job_id":"205d379f-44f3-0985-24ee-7babf245ea00"}}
 
         '
     headers:
@@ -1033,17 +1033,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:13:50 GMT
+      - Wed, 04 Nov 2020 15:27:28 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '1'
+      - '0'
       X-Kong-Upstream-Latency:
-      - '38'
+      - '281'
       x-diesel-request-id:
-      - b331be38-1a00-4469-a35c-823f4f89388c
+      - 49c864a7-2be5-46fb-afa5-9d00d601020f
     status:
       code: 200
       message: OK
@@ -1057,9 +1057,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: GET
-    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/20b340b1-1f4a-e48c-caa6-ea883856ab00
+    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/205d379f-44f3-0985-24ee-7babf245ea00
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -1073,17 +1073,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:13:50 GMT
+      - Wed, 04 Nov 2020 15:27:30 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '0'
+      - '1'
       X-Kong-Upstream-Latency:
-      - '32'
+      - '277'
       x-diesel-request-id:
-      - 9825c833-b946-4b6f-bcf7-2df7630fdc6b
+      - db28e507-1556-4d21-803e-cf3b21916231
     status:
       code: 200
       message: OK
@@ -1097,37 +1097,37 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: GET
-    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/20b340b1-1f4a-e48c-caa6-ea883856ab00/results?offset=0&limit=500
+    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/205d379f-44f3-0985-24ee-7babf245ea00/results?offset=0&limit=500
   response:
     body:
-      string: '{"data":[{"data_reference":"\"O_ORDERKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS","data_type":"DECIMAL","field_map":["o_orderkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders.o_orderkey"},{"data_reference":"\"O_CUSTKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS","data_type":"DECIMAL","field_map":["o_custkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders.o_custkey"},{"data_reference":"\"O_ORDERSTATUS\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS","data_type":"CHARACTER
-        VARYING","field_map":["o_orderstatus"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders.o_orderstatus"},{"data_reference":"\"O_TOTALPRICE\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS","data_type":"DECIMAL","field_map":["o_totalprice"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders.o_totalprice"},{"data_reference":"\"O_ORDERDATE\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS","data_type":"DATE","field_map":["o_orderdate"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders.o_orderdate"},{"data_reference":"\"O_ORDERPRIORITY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS","data_type":"CHARACTER
-        VARYING","field_map":["o_orderpriority"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders.o_orderpriority"},{"data_reference":"\"O_CLERK\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS","data_type":"CHARACTER
-        VARYING","field_map":["o_clerk"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders.o_clerk"},{"data_reference":"\"O_SHIPPRIORITY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS","data_type":"DECIMAL","field_map":["o_shippriority"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders.o_shippriority"},{"data_reference":"\"O_COMMENT\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS","data_type":"CHARACTER
-        VARYING","field_map":["o_comment"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders.o_comment"}]}
+      string: '{"data":[{"aggregation_type":"sum","data_reference":"\"O_ORDERKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS","data_type":"DECIMAL","field_map":["o_orderkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders","taxon_type":"metric","validation_type":"numeric"},{"aggregation_type":"sum","data_reference":"\"O_CUSTKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS","data_type":"DECIMAL","field_map":["o_custkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders","taxon_type":"metric","validation_type":"numeric"},{"data_reference":"\"O_ORDERSTATUS\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS","data_type":"CHARACTER
+        VARYING","field_map":["o_orderstatus"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders","taxon_type":"dimension","validation_type":"text"},{"aggregation_type":"sum","data_reference":"\"O_TOTALPRICE\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS","data_type":"DECIMAL","field_map":["o_totalprice"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders","taxon_type":"metric","validation_type":"numeric"},{"data_reference":"\"O_ORDERDATE\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS","data_type":"DATE","field_map":["o_orderdate"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders","taxon_type":"dimension","validation_type":"datetime"},{"data_reference":"\"O_ORDERPRIORITY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS","data_type":"CHARACTER
+        VARYING","field_map":["o_orderpriority"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders","taxon_type":"dimension","validation_type":"text"},{"data_reference":"\"O_CLERK\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS","data_type":"CHARACTER
+        VARYING","field_map":["o_clerk"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders","taxon_type":"dimension","validation_type":"text"},{"aggregation_type":"sum","data_reference":"\"O_SHIPPRIORITY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS","data_type":"DECIMAL","field_map":["o_shippriority"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders","taxon_type":"metric","validation_type":"numeric"},{"data_reference":"\"O_COMMENT\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS","data_type":"CHARACTER
+        VARYING","field_map":["o_comment"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.orders","taxon_type":"dimension","validation_type":"text"}]}
 
         '
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '2805'
+      - '2674'
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:13:50 GMT
+      - Wed, 04 Nov 2020 15:27:31 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '0'
+      - '1'
       X-Kong-Upstream-Latency:
-      - '39'
+      - '237'
       x-diesel-request-id:
-      - 4ba91caf-fdf3-46a8-a447-e0e26b14e863
+      - 02f5201e-e3d7-4392-ae8a-6cdb1b47d6b8
     status:
       code: 200
       message: OK
@@ -1143,12 +1143,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: POST
     uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/pano_snowflake_66/refresh?table_name=SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PART&company_slug=panoramic-z5y1clyi
   response:
     body:
-      string: '{"data":{"job_id":"20b340b0-78ed-77b3-a3b4-fd1f91f35300"}}
+      string: '{"data":{"job_id":"205d379b-8d4f-a2ec-078a-2c9b32700b00"}}
 
         '
     headers:
@@ -1159,17 +1159,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:13:51 GMT
+      - Wed, 04 Nov 2020 15:27:31 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '1'
+      - '0'
       X-Kong-Upstream-Latency:
-      - '381'
+      - '280'
       x-diesel-request-id:
-      - c76b44b9-9f17-43b6-be26-f25a7c774e6c
+      - 1c99db8d-19e1-45a5-9eb8-779c9c2b2b96
     status:
       code: 200
       message: OK
@@ -1183,9 +1183,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: GET
-    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/20b340b0-78ed-77b3-a3b4-fd1f91f35300
+    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/205d379b-8d4f-a2ec-078a-2c9b32700b00
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -1199,7 +1199,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:13:53 GMT
+      - Wed, 04 Nov 2020 15:27:33 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -1207,9 +1207,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '1'
       X-Kong-Upstream-Latency:
-      - '31'
+      - '252'
       x-diesel-request-id:
-      - cf1d0bbf-e57c-43c8-a773-c05ce192bc1c
+      - 30fbed4c-767e-48e5-9196-656add95189b
     status:
       code: 200
       message: OK
@@ -1225,12 +1225,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: POST
     uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/pano_snowflake_66/columns?company_slug=panoramic-z5y1clyi&table_filter=SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PART
   response:
     body:
-      string: '{"data":{"job_id":"20b340a8-a03b-a0be-d83b-b2b3f3219500"}}
+      string: '{"data":{"job_id":"205d3799-6999-04c7-ca87-e3af76568800"}}
 
         '
     headers:
@@ -1241,17 +1241,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:14:01 GMT
+      - Wed, 04 Nov 2020 15:27:34 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '0'
+      - '1'
       X-Kong-Upstream-Latency:
-      - '8061'
+      - '277'
       x-diesel-request-id:
-      - 477320a2-2eb8-49e4-87b1-4c05272bfd7b
+      - bcbd69e5-d91b-46de-826e-d28ef246dbf9
     status:
       code: 200
       message: OK
@@ -1265,9 +1265,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: GET
-    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/20b340a8-a03b-a0be-d83b-b2b3f3219500
+    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/205d3799-6999-04c7-ca87-e3af76568800
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -1281,17 +1281,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:14:04 GMT
+      - Wed, 04 Nov 2020 15:27:36 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '1'
+      - '0'
       X-Kong-Upstream-Latency:
-      - '2812'
+      - '255'
       x-diesel-request-id:
-      - cad90f12-44dc-47bb-a468-5a9bd34c8881
+      - 72326cbb-8141-409a-b316-b5c4c1f759ec
     status:
       code: 200
       message: OK
@@ -1305,39 +1305,39 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: GET
-    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/20b340a8-a03b-a0be-d83b-b2b3f3219500/results?offset=0&limit=500
+    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/205d3799-6999-04c7-ca87-e3af76568800/results?offset=0&limit=500
   response:
     body:
-      string: '{"data":[{"data_reference":"\"P_PARTKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PART","data_type":"DECIMAL","field_map":["p_partkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part.p_partkey"},{"data_reference":"\"P_NAME\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PART","data_type":"CHARACTER
-        VARYING","field_map":["p_name"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part.p_name"},{"data_reference":"\"P_MFGR\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PART","data_type":"CHARACTER
-        VARYING","field_map":["p_mfgr"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part.p_mfgr"},{"data_reference":"\"P_BRAND\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PART","data_type":"CHARACTER
-        VARYING","field_map":["p_brand"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part.p_brand"},{"data_reference":"\"P_TYPE\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PART","data_type":"CHARACTER
-        VARYING","field_map":["p_type"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part.p_type"},{"data_reference":"\"P_SIZE\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PART","data_type":"DECIMAL","field_map":["p_size"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part.p_size"},{"data_reference":"\"P_CONTAINER\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PART","data_type":"CHARACTER
-        VARYING","field_map":["p_container"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part.p_container"},{"data_reference":"\"P_RETAILPRICE\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PART","data_type":"DECIMAL","field_map":["p_retailprice"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part.p_retailprice"},{"data_reference":"\"P_COMMENT\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PART","data_type":"CHARACTER
-        VARYING","field_map":["p_comment"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part.p_comment"}]}
+      string: '{"data":[{"aggregation_type":"sum","data_reference":"\"P_PARTKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PART","data_type":"DECIMAL","field_map":["p_partkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part","taxon_type":"metric","validation_type":"numeric"},{"data_reference":"\"P_NAME\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PART","data_type":"CHARACTER
+        VARYING","field_map":["p_name"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part","taxon_type":"dimension","validation_type":"text"},{"data_reference":"\"P_MFGR\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PART","data_type":"CHARACTER
+        VARYING","field_map":["p_mfgr"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part","taxon_type":"dimension","validation_type":"text"},{"data_reference":"\"P_BRAND\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PART","data_type":"CHARACTER
+        VARYING","field_map":["p_brand"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part","taxon_type":"dimension","validation_type":"text"},{"data_reference":"\"P_TYPE\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PART","data_type":"CHARACTER
+        VARYING","field_map":["p_type"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part","taxon_type":"dimension","validation_type":"text"},{"aggregation_type":"sum","data_reference":"\"P_SIZE\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PART","data_type":"DECIMAL","field_map":["p_size"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part","taxon_type":"metric","validation_type":"numeric"},{"data_reference":"\"P_CONTAINER\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PART","data_type":"CHARACTER
+        VARYING","field_map":["p_container"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part","taxon_type":"dimension","validation_type":"text"},{"aggregation_type":"sum","data_reference":"\"P_RETAILPRICE\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PART","data_type":"DECIMAL","field_map":["p_retailprice"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part","taxon_type":"metric","validation_type":"numeric"},{"data_reference":"\"P_COMMENT\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PART","data_type":"CHARACTER
+        VARYING","field_map":["p_comment"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.part","taxon_type":"dimension","validation_type":"text"}]}
 
         '
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '2693'
+      - '2578'
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:14:05 GMT
+      - Wed, 04 Nov 2020 15:27:36 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '1'
+      - '0'
       X-Kong-Upstream-Latency:
-      - '39'
+      - '251'
       x-diesel-request-id:
-      - 4c17cfab-2923-4161-893a-a8aa92b43920
+      - 4277dbb0-1b11-4f76-9637-bfab5f9e1f4a
     status:
       code: 200
       message: OK
@@ -1353,12 +1353,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: POST
     uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/pano_snowflake_66/refresh?table_name=SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PARTSUPP&company_slug=panoramic-z5y1clyi
   response:
     body:
-      string: '{"data":{"job_id":"20b340a1-a5fa-f1dc-60f7-f3e596c3a800"}}
+      string: '{"data":{"job_id":"205d3796-4569-2e2d-7c5a-08a86f29ac00"}}
 
         '
     headers:
@@ -1369,7 +1369,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:14:05 GMT
+      - Wed, 04 Nov 2020 15:27:37 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -1377,9 +1377,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '1'
       X-Kong-Upstream-Latency:
-      - '35'
+      - '319'
       x-diesel-request-id:
-      - 5fa95be9-d7e4-4159-9b86-ae7a9d08ee6a
+      - c7a2a87c-d96f-4241-9bc4-7df8d55ea8f3
     status:
       code: 200
       message: OK
@@ -1393,9 +1393,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: GET
-    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/20b340a1-a5fa-f1dc-60f7-f3e596c3a800
+    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/205d3796-4569-2e2d-7c5a-08a86f29ac00
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -1409,7 +1409,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:14:07 GMT
+      - Wed, 04 Nov 2020 15:27:38 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -1417,9 +1417,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '1'
       X-Kong-Upstream-Latency:
-      - '31'
+      - '257'
       x-diesel-request-id:
-      - 68b55383-28f9-4738-a79b-bfaa6bc95a9c
+      - 707b89b8-62db-4d55-bd30-d25f10d6793a
     status:
       code: 200
       message: OK
@@ -1435,12 +1435,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: POST
     uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/pano_snowflake_66/columns?company_slug=panoramic-z5y1clyi&table_filter=SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PARTSUPP
   response:
     body:
-      string: '{"data":{"job_id":"20b3409f-b2eb-2726-aa2a-497dd3320700"}}
+      string: '{"data":{"job_id":"205d3795-36bc-9ffc-bb34-1c0beafb0d00"}}
 
         '
     headers:
@@ -1451,17 +1451,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:14:07 GMT
+      - Wed, 04 Nov 2020 15:27:38 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '0'
+      - '1'
       X-Kong-Upstream-Latency:
-      - '39'
+      - '264'
       x-diesel-request-id:
-      - ddbc23a4-4820-4f35-8e68-12e4a6770dab
+      - b974ee29-9d0f-40cb-a575-1a602ac8e5fe
     status:
       code: 200
       message: OK
@@ -1475,9 +1475,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: GET
-    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/20b3409f-b2eb-2726-aa2a-497dd3320700
+    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/205d3795-36bc-9ffc-bb34-1c0beafb0d00
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -1491,17 +1491,17 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:14:07 GMT
+      - Wed, 04 Nov 2020 15:27:39 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '0'
+      - '1'
       X-Kong-Upstream-Latency:
-      - '34'
+      - '250'
       x-diesel-request-id:
-      - 91cd2f55-aae5-4673-b04d-9f807a222a5c
+      - 8c9e4b90-3501-43af-97b6-c299124fca53
     status:
       code: 200
       message: OK
@@ -1515,34 +1515,34 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: GET
-    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/20b3409f-b2eb-2726-aa2a-497dd3320700/results?offset=0&limit=500
+    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/205d3795-36bc-9ffc-bb34-1c0beafb0d00/results?offset=0&limit=500
   response:
     body:
-      string: '{"data":[{"data_reference":"\"PS_PARTKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PARTSUPP","data_type":"DECIMAL","field_map":["ps_partkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.partsupp","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.partsupp.ps_partkey"},{"data_reference":"\"PS_SUPPKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PARTSUPP","data_type":"DECIMAL","field_map":["ps_suppkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.partsupp","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.partsupp.ps_suppkey"},{"data_reference":"\"PS_AVAILQTY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PARTSUPP","data_type":"DECIMAL","field_map":["ps_availqty"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.partsupp","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.partsupp.ps_availqty"},{"data_reference":"\"PS_SUPPLYCOST\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PARTSUPP","data_type":"DECIMAL","field_map":["ps_supplycost"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.partsupp","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.partsupp.ps_supplycost"},{"data_reference":"\"PS_COMMENT\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PARTSUPP","data_type":"CHARACTER
-        VARYING","field_map":["ps_comment"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.partsupp","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.partsupp.ps_comment"}]}
+      string: '{"data":[{"aggregation_type":"sum","data_reference":"\"PS_PARTKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PARTSUPP","data_type":"DECIMAL","field_map":["ps_partkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.partsupp","taxon_type":"metric","validation_type":"numeric"},{"aggregation_type":"sum","data_reference":"\"PS_SUPPKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PARTSUPP","data_type":"DECIMAL","field_map":["ps_suppkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.partsupp","taxon_type":"metric","validation_type":"numeric"},{"aggregation_type":"sum","data_reference":"\"PS_AVAILQTY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PARTSUPP","data_type":"DECIMAL","field_map":["ps_availqty"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.partsupp","taxon_type":"metric","validation_type":"numeric"},{"aggregation_type":"sum","data_reference":"\"PS_SUPPLYCOST\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PARTSUPP","data_type":"DECIMAL","field_map":["ps_supplycost"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.partsupp","taxon_type":"metric","validation_type":"numeric"},{"data_reference":"\"PS_COMMENT\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PARTSUPP","data_type":"CHARACTER
+        VARYING","field_map":["ps_comment"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.partsupp","taxon_type":"dimension","validation_type":"text"}]}
 
         '
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '1578'
+      - '1539'
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:14:07 GMT
+      - Wed, 04 Nov 2020 15:27:39 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
       - None
       X-Kong-Proxy-Latency:
-      - '0'
+      - '1'
       X-Kong-Upstream-Latency:
-      - '39'
+      - '233'
       x-diesel-request-id:
-      - 2d409734-b35c-4119-b973-20ca651c4d8c
+      - 99e28d0e-6c12-4c04-ad19-7a904564f330
     status:
       code: 200
       message: OK
@@ -1558,12 +1558,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: POST
     uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/pano_snowflake_66/refresh?table_name=SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.REGION&company_slug=panoramic-z5y1clyi
   response:
     body:
-      string: '{"data":{"job_id":"20b3409f-405c-5673-cd43-787d283cad00"}}
+      string: '{"data":{"job_id":"205d3792-ffcc-3dd5-6caf-c910fccf2300"}}
 
         '
     headers:
@@ -1574,7 +1574,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:14:08 GMT
+      - Wed, 04 Nov 2020 15:27:40 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -1582,9 +1582,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '1'
       X-Kong-Upstream-Latency:
-      - '41'
+      - '277'
       x-diesel-request-id:
-      - 0907fd23-9c5d-404a-8142-5c91040d296a
+      - a7047536-cfcb-4a7d-be43-d76a90356df4
     status:
       code: 200
       message: OK
@@ -1598,9 +1598,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: GET
-    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/20b3409f-405c-5673-cd43-787d283cad00
+    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/205d3792-ffcc-3dd5-6caf-c910fccf2300
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -1614,7 +1614,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:14:09 GMT
+      - Wed, 04 Nov 2020 15:27:42 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -1622,9 +1622,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '1'
       X-Kong-Upstream-Latency:
-      - '36'
+      - '253'
       x-diesel-request-id:
-      - 15979591-acfa-4f64-8e75-4a30eb17030d
+      - c777f5db-8191-4616-a9ae-afe76ec95685
     status:
       code: 200
       message: OK
@@ -1640,12 +1640,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: POST
     uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/pano_snowflake_66/columns?company_slug=panoramic-z5y1clyi&table_filter=SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.REGION
   response:
     body:
-      string: '{"data":{"job_id":"20b3409c-81b1-ef5f-a40e-8176ea86a100"}}
+      string: '{"data":{"job_id":"205d3790-c055-710c-23f4-c6ef62c2f900"}}
 
         '
     headers:
@@ -1656,7 +1656,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:14:10 GMT
+      - Wed, 04 Nov 2020 15:27:42 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -1664,9 +1664,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '35'
+      - '274'
       x-diesel-request-id:
-      - 8034b408-6de6-45ad-b333-af27303c22f6
+      - 046f70eb-db78-4e2b-9e62-d310c03f88d7
     status:
       code: 200
       message: OK
@@ -1680,9 +1680,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: GET
-    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/20b3409c-81b1-ef5f-a40e-8176ea86a100
+    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/205d3790-c055-710c-23f4-c6ef62c2f900
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -1696,7 +1696,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:14:10 GMT
+      - Wed, 04 Nov 2020 15:27:44 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -1704,9 +1704,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '33'
+      - '227'
       x-diesel-request-id:
-      - abef42fb-fc21-4136-9d4f-4b0ccad77384
+      - a585ddab-8fb0-418b-a8f6-fd3f5c8d4b64
     status:
       code: 200
       message: OK
@@ -1720,25 +1720,25 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: GET
-    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/20b3409c-81b1-ef5f-a40e-8176ea86a100/results?offset=0&limit=500
+    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/205d3790-c055-710c-23f4-c6ef62c2f900/results?offset=0&limit=500
   response:
     body:
-      string: '{"data":[{"data_reference":"\"R_REGIONKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.REGION","data_type":"DECIMAL","field_map":["r_regionkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.region","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.region.r_regionkey"},{"data_reference":"\"R_NAME\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.REGION","data_type":"CHARACTER
-        VARYING","field_map":["r_name"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.region","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.region.r_name"},{"data_reference":"\"R_COMMENT\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.REGION","data_type":"CHARACTER
-        VARYING","field_map":["r_comment"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.region","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.region.r_comment"}]}
+      string: '{"data":[{"aggregation_type":"sum","data_reference":"\"R_REGIONKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.REGION","data_type":"DECIMAL","field_map":["r_regionkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.region","taxon_type":"metric","validation_type":"numeric"},{"data_reference":"\"R_NAME\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.REGION","data_type":"CHARACTER
+        VARYING","field_map":["r_name"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.region","taxon_type":"dimension","validation_type":"text"},{"data_reference":"\"R_COMMENT\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.REGION","data_type":"CHARACTER
+        VARYING","field_map":["r_comment"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.region","taxon_type":"dimension","validation_type":"text"}]}
 
         '
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '928'
+      - '882'
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:14:11 GMT
+      - Wed, 04 Nov 2020 15:27:45 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -1746,9 +1746,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '1'
       X-Kong-Upstream-Latency:
-      - '37'
+      - '262'
       x-diesel-request-id:
-      - 3d77de70-1125-4d9e-86ba-b5939ba00cbb
+      - 039119f0-c475-4acb-b9e0-31437fd1b0cf
     status:
       code: 200
       message: OK
@@ -1764,12 +1764,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: POST
     uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/pano_snowflake_66/refresh?table_name=SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.SUPPLIER&company_slug=panoramic-z5y1clyi
   response:
     body:
-      string: '{"data":{"job_id":"20b3409c-2598-7da4-8009-9817401faf00"}}
+      string: '{"data":{"job_id":"205d378e-3f08-28ce-1337-6445fc7d4300"}}
 
         '
     headers:
@@ -1780,7 +1780,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:14:11 GMT
+      - Wed, 04 Nov 2020 15:27:45 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -1788,9 +1788,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '39'
+      - '300'
       x-diesel-request-id:
-      - 9e754a06-8a9d-4fb2-bed0-c4baeb1d0490
+      - b3868fdd-102b-4c4b-99f7-7c6b09ee5af0
     status:
       code: 200
       message: OK
@@ -1804,9 +1804,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: GET
-    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/20b3409c-2598-7da4-8009-9817401faf00
+    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/205d378e-3f08-28ce-1337-6445fc7d4300
   response:
     body:
       string: '{"data":{"job_status":"COMPLETED"}}
@@ -1820,7 +1820,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:14:13 GMT
+      - Wed, 04 Nov 2020 15:27:47 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -1828,9 +1828,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '32'
+      - '250'
       x-diesel-request-id:
-      - a36fe624-ca5d-4c1f-a050-920a92a5b097
+      - 71492c8a-59c8-4ddb-94e9-065ea93a7efd
     status:
       code: 200
       message: OK
@@ -1846,12 +1846,12 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: POST
     uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/pano_snowflake_66/columns?company_slug=panoramic-z5y1clyi&table_filter=SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.SUPPLIER
   response:
     body:
-      string: '{"data":{"job_id":"20b34099-fc18-e314-6910-7505b970e400"}}
+      string: '{"data":{"job_id":"205d378a-a0b9-b838-9e31-75a191e01800"}}
 
         '
     headers:
@@ -1862,7 +1862,47 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:14:13 GMT
+      - Wed, 04 Nov 2020 15:27:48 GMT
+      Via:
+      - kong/2.0.3
+      X-Amzn-Trace-Id:
+      - None
+      X-Kong-Proxy-Latency:
+      - '0'
+      X-Kong-Upstream-Latency:
+      - '319'
+      x-diesel-request-id:
+      - 77634a64-f36c-448a-897b-e67347e74190
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - pano-cli/1.2.0
+    method: GET
+    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/205d378a-a0b9-b838-9e31-75a191e01800
+  response:
+    body:
+      string: '{"data":{"job_status":"COMPLETED"}}
+
+        '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '36'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 04 Nov 2020 15:27:50 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -1870,9 +1910,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '1'
       X-Kong-Upstream-Latency:
-      - '45'
+      - '243'
       x-diesel-request-id:
-      - 2f9705c2-6b94-45e3-8505-4c9792528b12
+      - 0be2b9d9-c4a6-48c3-ae40-9f5df7b8d6f8
     status:
       code: 200
       message: OK
@@ -1886,23 +1926,27 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pano-cli/0.9.0
+      - pano-cli/1.2.0
     method: GET
-    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/20b34099-fc18-e314-6910-7505b970e400
+    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/205d378a-a0b9-b838-9e31-75a191e01800/results?offset=0&limit=500
   response:
     body:
-      string: '{"data":{"job_status":"COMPLETED"}}
+      string: '{"data":[{"aggregation_type":"sum","data_reference":"\"S_SUPPKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.SUPPLIER","data_type":"DECIMAL","field_map":["s_suppkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.supplier","taxon_type":"metric","validation_type":"numeric"},{"data_reference":"\"S_NAME\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.SUPPLIER","data_type":"CHARACTER
+        VARYING","field_map":["s_name"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.supplier","taxon_type":"dimension","validation_type":"text"},{"data_reference":"\"S_ADDRESS\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.SUPPLIER","data_type":"CHARACTER
+        VARYING","field_map":["s_address"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.supplier","taxon_type":"dimension","validation_type":"text"},{"aggregation_type":"sum","data_reference":"\"S_NATIONKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.SUPPLIER","data_type":"DECIMAL","field_map":["s_nationkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.supplier","taxon_type":"metric","validation_type":"numeric"},{"data_reference":"\"S_PHONE\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.SUPPLIER","data_type":"CHARACTER
+        VARYING","field_map":["s_phone"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.supplier","taxon_type":"dimension","validation_type":"text"},{"aggregation_type":"sum","data_reference":"\"S_ACCTBAL\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.SUPPLIER","data_type":"DECIMAL","field_map":["s_acctbal"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.supplier","taxon_type":"metric","validation_type":"numeric"},{"data_reference":"\"S_COMMENT\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.SUPPLIER","data_type":"CHARACTER
+        VARYING","field_map":["s_comment"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.supplier","taxon_type":"dimension","validation_type":"text"}]}
 
         '
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '36'
+      - '2080'
       Content-Type:
       - application/json
       Date:
-      - Mon, 31 Aug 2020 09:14:15 GMT
+      - Wed, 04 Nov 2020 15:27:50 GMT
       Via:
       - kong/2.0.3
       X-Amzn-Trace-Id:
@@ -1910,53 +1954,9 @@ interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '34'
+      - '246'
       x-diesel-request-id:
-      - acdfe5b5-277e-481d-a079-f8a66db34295
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - pano-cli/0.9.0
-    method: GET
-    uri: https://diesel.panoramicapi.com/api/v1/federated/metadata/job/20b34099-fc18-e314-6910-7505b970e400/results?offset=0&limit=500
-  response:
-    body:
-      string: '{"data":[{"data_reference":"\"S_SUPPKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.SUPPLIER","data_type":"DECIMAL","field_map":["s_suppkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.supplier","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.supplier.s_suppkey"},{"data_reference":"\"S_NAME\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.SUPPLIER","data_type":"CHARACTER
-        VARYING","field_map":["s_name"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.supplier","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.supplier.s_name"},{"data_reference":"\"S_ADDRESS\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.SUPPLIER","data_type":"CHARACTER
-        VARYING","field_map":["s_address"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.supplier","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.supplier.s_address"},{"data_reference":"\"S_NATIONKEY\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.SUPPLIER","data_type":"DECIMAL","field_map":["s_nationkey"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.supplier","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.supplier.s_nationkey"},{"data_reference":"\"S_PHONE\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.SUPPLIER","data_type":"CHARACTER
-        VARYING","field_map":["s_phone"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.supplier","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.supplier.s_phone"},{"data_reference":"\"S_ACCTBAL\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.SUPPLIER","data_type":"DECIMAL","field_map":["s_acctbal"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.supplier","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.supplier.s_acctbal"},{"data_reference":"\"S_COMMENT\"","data_source":"pano_snowflake_66.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.SUPPLIER","data_type":"CHARACTER
-        VARYING","field_map":["s_comment"],"model_name":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.supplier","uid":"pano_snowflake_66.snowflake_sample_data.tpch_sf1.supplier.s_comment"}]}
-
-        '
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '2184'
-      Content-Type:
-      - application/json
-      Date:
-      - Mon, 31 Aug 2020 09:14:15 GMT
-      Via:
-      - kong/2.0.3
-      X-Amzn-Trace-Id:
-      - None
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '37'
-      x-diesel-request-id:
-      - 6726e587-5222-4ef8-bde2-6bcff03de93b
+      - 36e015bd-a8f1-4a9c-83a2-d6d131755d00
     status:
       code: 200
       message: OK

@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 from unittest.mock import patch
 
@@ -13,13 +14,27 @@ def handle_scanned_dir(monkeypatch):
     test_dir = Path('e2e') / 'scenarios' / 'pano-scan'
     monkeypatch.chdir(test_dir)
 
-    # Clean scanned directory
+    # Clean scanned fields directory
+    if Paths.scanned_fields_dir().exists():
+        for f in Paths.scanned_fields_dir().glob('*'):
+            f.unlink()
+
+        os.rmdir(Paths.scanned_fields_dir())
+
+    # Clean scanned models directory
     for f in Paths.scanned_dir().glob('*'):
         f.unlink()
 
     yield
 
-    # Clean scanned directory
+    # Clean scanned fields directory
+    if Paths.scanned_fields_dir().exists():
+        for f in Paths.scanned_fields_dir().glob('*'):
+            f.unlink()
+
+        os.rmdir(Paths.scanned_fields_dir())
+
+    # Clean scanned models directory
     for f in Paths.scanned_dir().glob('*'):
         f.unlink()
 
@@ -58,7 +73,11 @@ def test_scan_e2e():
         'pano_snowflake_66.snowflake_sample_data.tpch_sf1.region.model.yaml',
         'pano_snowflake_66.snowflake_sample_data.tpch_sf1.part.model.yaml',
         'pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer.model.yaml',
+        'fields',
     }
+    assert Paths.scanned_fields_dir().exists()
+    field_files = list(Paths.scanned_fields_dir().glob('*'))
+    assert len(field_files) > 0
 
 
 @pytest.mark.vcr
@@ -88,7 +107,11 @@ def test_scan_id_generator_e2e():
         'pano_snowflake_66.snowflake_sample_data.tpch_sf1.region.model.yaml',
         'pano_snowflake_66.snowflake_sample_data.tpch_sf1.part.model.yaml',
         'pano_snowflake_66.snowflake_sample_data.tpch_sf1.customer.model.yaml',
+        'fields',
     }
+    assert Paths.scanned_fields_dir().exists()
+    field_files = list(Paths.scanned_fields_dir().glob('*'))
+    assert len(field_files) > 0
 
 
 @pytest.mark.vcr
