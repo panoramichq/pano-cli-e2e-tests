@@ -24,7 +24,7 @@ def test_connections_e2e(monkeypatch, tmpdir):
             'localhost',
             '--port',
             '5432',
-            '--database-name',
+            '--database',
             'my_db',
             '--password-stdin',
             '--no-test',
@@ -33,34 +33,37 @@ def test_connections_e2e(monkeypatch, tmpdir):
     )
 
     assert result.exit_code == 0, result.output
-    with Paths.config_file().open() as f:
-        assert yaml.safe_load(f.read()) == {
+    connections_json = {
             'connections': {
                 'my-connection': {
                     'type': 'postgres',
                     'user': 'my-user',
                     'host': 'localhost',
-                    'port': '5432',
-                    'database_name': 'my_db',
+                    'port': 5432,
+                    'database': 'my_db',
                     'password': 'my-password',
                 },
             },
         }
+    with Paths.config_file().open() as f:
+        assert yaml.safe_load(f.read()) == connections_json
 
     # List
-    result = runner.invoke(cli, ['connection', 'list'])
+    result = runner.invoke(cli, ['connection', 'list', '--show-password'])
     assert result.exit_code == 0, result.output
-    assert result.output == 'my-connection: postgres://my-user:*****@localhost:5432/my_db\n'
+    assert result.output == yaml.dump(connections_json['connections']) + "\n"
 
     # Update
-    result = runner.invoke(cli, ['connection', 'update', 'my-connection', '--database-name', 'my-new-db',
+    result = runner.invoke(cli, ['connection', 'update', 'my-connection', '--database', 'my-new-db',
                                  '--no-test'])
     assert result.exit_code == 0, result.output
 
     # List
     result = runner.invoke(cli, ['connection', 'list'])
     assert result.exit_code == 0, result.output
-    assert result.output == 'my-connection: postgres://my-user:*****@localhost:5432/my-new-db\n'
+    connections_json['connections']['my-connection']['password'] = '*****'
+    connections_json['connections']['my-connection']['database'] = 'my-new-db'
+    assert result.output == yaml.dump(connections_json['connections']) + "\n"
 
     # Update
     result = runner.invoke(cli, ['connection', 'remove', 'my-connection'])
