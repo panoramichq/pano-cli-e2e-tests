@@ -11,7 +11,10 @@ def test_connections_e2e(monkeypatch, tmpdir):
     monkeypatch.setenv('HOME', str(tmpdir))
     runner = CliRunner()
 
-    # Create
+    # Create config
+    runner.invoke(cli, ['configure'], input='test-client-id\ntest-client-secret')
+
+    # Create connection
     result = runner.invoke(
         cli,
         [
@@ -34,6 +37,10 @@ def test_connections_e2e(monkeypatch, tmpdir):
 
     assert result.exit_code == 0, result.output
     connections_json = {
+            'auth': {
+                'client_id': 'test-client-id',
+                'client_secret': 'test-client-secret',
+            },
             'connections': {
                 'my-connection': {
                     'type': 'postgres',
@@ -80,6 +87,10 @@ def test_connections_list_fail_e2e(monkeypatch, tmpdir):
     monkeypatch.setenv('HOME', str(tmpdir))
     runner = CliRunner()
 
+    # Create config
+    runner.invoke(cli, ['configure'], input='test-client-id\ntest-client-secret')
+
+    # List connections
     result = runner.invoke(cli, ['connection', 'list'])
     assert result.exit_code == 0, result.output
     assert result.stdout.startswith('No connections found.\nUse "pano connection create" to create')
@@ -90,6 +101,10 @@ def test_connections_update_fail_e2e(monkeypatch, tmpdir):
     monkeypatch.setenv('HOME', str(tmpdir))
     runner = CliRunner()
 
+    # Create config
+    runner.invoke(cli, ['configure'], input='test-client-id\ntest-client-secret')
+
+    # Update connection
     result = runner.invoke(cli, ['connection', 'update', 'my-connection'])
     assert result.exit_code == 1, result.output
-    assert result.stdout.startswith('Error: Connection with name "my-connection" not found.\n')
+    assert result.stdout.endswith('Error: Connection with name "my-connection" was not found.\n')
