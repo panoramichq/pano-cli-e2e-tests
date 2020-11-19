@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import pytest
 import yaml
 from click.testing import CliRunner
@@ -8,7 +10,7 @@ from panoramic.cli.paths import Paths
 
 @pytest.mark.vcr
 def test_connections_e2e(monkeypatch, tmpdir):
-    monkeypatch.setenv('HOME', str(tmpdir))
+    monkeypatch.setattr(Path, 'home', lambda: Path(tmpdir))
     runner = CliRunner()
 
     # Create config
@@ -84,7 +86,7 @@ def test_connections_e2e(monkeypatch, tmpdir):
 
 @pytest.mark.vcr
 def test_connections_list_fail_e2e(monkeypatch, tmpdir):
-    monkeypatch.setenv('HOME', str(tmpdir))
+    monkeypatch.setattr(Path, 'home', lambda: Path(tmpdir))
     runner = CliRunner()
 
     # Create config
@@ -98,7 +100,7 @@ def test_connections_list_fail_e2e(monkeypatch, tmpdir):
 
 @pytest.mark.vcr
 def test_connections_update_fail_e2e(monkeypatch, tmpdir):
-    monkeypatch.setenv('HOME', str(tmpdir))
+    monkeypatch.setattr(Path, 'home', lambda: Path(tmpdir))
     runner = CliRunner()
 
     # Create config
