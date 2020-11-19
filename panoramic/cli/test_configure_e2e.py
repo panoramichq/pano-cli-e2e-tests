@@ -11,7 +11,7 @@ from panoramic.cli.paths import Paths
 
 @pytest.mark.vcr
 def test_configure_e2e(monkeypatch, tmpdir):
-    monkeypatch.setattr(Path, 'home', lambda: str(tmpdir))
+    monkeypatch.setattr(Path, 'home', lambda: tmpdir)
     runner = CliRunner()
 
     result = runner.invoke(cli, ['configure'], input='test-client-id\ntest-client-secret')
@@ -29,7 +29,7 @@ def test_configure_e2e(monkeypatch, tmpdir):
 @pytest.mark.vcr
 @patch('panoramic.cli.command.configure')
 def test_configure_error_e2e(mock_configure, monkeypatch, tmpdir):
-    monkeypatch.setattr(Path, 'home', lambda: str(tmpdir))
+    monkeypatch.setattr(Path, 'home', lambda: tmpdir)
     runner = CliRunner()
 
     mock_configure.side_effect = Exception('Test Exception')
