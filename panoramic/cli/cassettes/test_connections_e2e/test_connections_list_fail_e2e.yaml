@@ -1,0 +1,312 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - pano-cli/1.3.1
+    method: GET
+    uri: https://a1.panocdn.com/updates/pano-cli/versions.json
+  response:
+    body:
+      string: '{"minimum_supported_version": "1.3.1", "latest_version": "1.3.1"}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Cache-Control:
+      - max-age=60
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '65'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 11 Nov 2020 10:50:53 GMT
+      ETag:
+      - '"d84a49f45e220e509908ec6c077dcafe"'
+      Last-Modified:
+      - Wed, 11 Nov 2020 09:48:09 GMT
+      Server:
+      - AmazonS3
+      Via:
+      - 1.1 e06a155936c216d176543a7a25710ed0.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - D6ZzkA7b8mJQWkd_udPXeSpSJ5eOG3ZCnSXIMb5bXPetw3OZeJ9PRQ==
+      X-Amz-Cf-Pop:
+      - IAD89-C2
+      X-Cache:
+      - RefreshHit from cloudfront
+      x-amz-replication-status:
+      - COMPLETED
+      x-amz-version-id:
+      - tuhgSX5kD1h44Lorvh.lO0e4LvtjDn4Z
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - pano-cli/1.3.1
+    method: GET
+    uri: https://a1.panocdn.com/updates/pano-cli/versions.json
+  response:
+    body:
+      string: '{"minimum_supported_version": "1.3.1", "latest_version": "1.3.1"}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '2'
+      Cache-Control:
+      - max-age=60
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '65'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 11 Nov 2020 10:53:25 GMT
+      ETag:
+      - '"d84a49f45e220e509908ec6c077dcafe"'
+      Last-Modified:
+      - Wed, 11 Nov 2020 09:48:09 GMT
+      Server:
+      - AmazonS3
+      Via:
+      - 1.1 8ba3a4becb51f8eb807e5e3697846e1a.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - N1FNeT3JUU72FH0v81Rb7y9KpqgJnOYjpwiRPv6TAQ1Gd4_4eUMPNQ==
+      X-Amz-Cf-Pop:
+      - IAD89-C2
+      X-Cache:
+      - Hit from cloudfront
+      x-amz-replication-status:
+      - COMPLETED
+      x-amz-version-id:
+      - tuhgSX5kD1h44Lorvh.lO0e4LvtjDn4Z
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - pano-cli/1.3.1
+    method: GET
+    uri: https://a1.panocdn.com/updates/pano-cli/versions.json
+  response:
+    body:
+      string: '{"minimum_supported_version": "1.3.1", "latest_version": "1.3.1"}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '6'
+      Cache-Control:
+      - max-age=60
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '65'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 11 Nov 2020 10:55:03 GMT
+      ETag:
+      - '"d84a49f45e220e509908ec6c077dcafe"'
+      Last-Modified:
+      - Wed, 11 Nov 2020 09:48:09 GMT
+      Server:
+      - AmazonS3
+      Via:
+      - 1.1 4f9e9e3e8a2a5cea2848aac8473267f2.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - Lutjpv6uS3iurjwj56wKvwWZB0vL8mOVOJM_1b-ZJGKoPnbQ_Sr_zg==
+      X-Amz-Cf-Pop:
+      - IAD89-C2
+      X-Cache:
+      - Hit from cloudfront
+      x-amz-replication-status:
+      - COMPLETED
+      x-amz-version-id:
+      - tuhgSX5kD1h44Lorvh.lO0e4LvtjDn4Z
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - pano-cli/1.3.1
+    method: GET
+    uri: https://a1.panocdn.com/updates/pano-cli/versions.json
+  response:
+    body:
+      string: '{"minimum_supported_version": "1.3.1", "latest_version": "1.3.1"}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '59'
+      Cache-Control:
+      - max-age=60
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '65'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 11 Nov 2020 10:55:03 GMT
+      ETag:
+      - '"d84a49f45e220e509908ec6c077dcafe"'
+      Last-Modified:
+      - Wed, 11 Nov 2020 09:48:09 GMT
+      Server:
+      - AmazonS3
+      Via:
+      - 1.1 03c6bb07a0ba5f6bce71fe21ae4e3d78.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - hSmebVlCUehUsZuefBbeA7cTyzCKsqVzqD0V5TIvtPwZ2ZUhmR-Shg==
+      X-Amz-Cf-Pop:
+      - IAD89-C2
+      X-Cache:
+      - Hit from cloudfront
+      x-amz-replication-status:
+      - COMPLETED
+      x-amz-version-id:
+      - tuhgSX5kD1h44Lorvh.lO0e4LvtjDn4Z
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - pano-cli/1.3.1
+    method: GET
+    uri: https://a1.panocdn.com/updates/pano-cli/versions.json
+  response:
+    body:
+      string: '{"minimum_supported_version": "1.3.1", "latest_version": "1.3.1"}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '12'
+      Cache-Control:
+      - max-age=60
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '65'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 11 Nov 2020 10:56:03 GMT
+      ETag:
+      - '"d84a49f45e220e509908ec6c077dcafe"'
+      Last-Modified:
+      - Wed, 11 Nov 2020 09:48:09 GMT
+      Server:
+      - AmazonS3
+      Via:
+      - 1.1 aa0ac259128059e949248e63a3b6767e.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - SGaJrEAdl8bPvDyuqLfjjVx6m2aZ3BVc2KrwFIz8AZ57dGJzgDi26g==
+      X-Amz-Cf-Pop:
+      - IAD89-C2
+      X-Cache:
+      - Hit from cloudfront
+      x-amz-replication-status:
+      - COMPLETED
+      x-amz-version-id:
+      - tuhgSX5kD1h44Lorvh.lO0e4LvtjDn4Z
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - pano-cli/1.3.1
+    method: GET
+    uri: https://a1.panocdn.com/updates/pano-cli/versions.json
+  response:
+    body:
+      string: '{"minimum_supported_version": "1.3.1", "latest_version": "1.3.1"}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '40'
+      Cache-Control:
+      - max-age=60
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '65'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 11 Nov 2020 10:56:03 GMT
+      ETag:
+      - '"d84a49f45e220e509908ec6c077dcafe"'
+      Last-Modified:
+      - Wed, 11 Nov 2020 09:48:09 GMT
+      Server:
+      - AmazonS3
+      Via:
+      - 1.1 427271f19372c1be0d143a1d4c76a128.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - 4iIOqch7kterXotow4x5zzwcd6C6_MQKn9lhrb-Qb81_Ndd_kQcgsw==
+      X-Amz-Cf-Pop:
+      - IAD89-C2
+      X-Cache:
+      - Hit from cloudfront
+      x-amz-replication-status:
+      - COMPLETED
+      x-amz-version-id:
+      - tuhgSX5kD1h44Lorvh.lO0e4LvtjDn4Z
+    status:
+      code: 200
+      message: OK
+version: 1

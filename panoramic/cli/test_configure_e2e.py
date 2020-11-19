@@ -18,8 +18,10 @@ def test_configure_e2e(monkeypatch, tmpdir):
     assert result.exit_code == 0
     with Paths.config_file().open() as f:
         assert yaml.safe_load(f.read()) == {
-            'client_id': 'test-client-id',
-            'client_secret': 'test-client-secret',
+            'auth': {
+                'client_id': 'test-client-id',
+                'client_secret': 'test-client-secret',
+            },
         }
 
 
