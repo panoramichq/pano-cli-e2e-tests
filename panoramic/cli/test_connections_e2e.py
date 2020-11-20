@@ -22,7 +22,9 @@ def test_connections_e2e(monkeypatch, tmpdir):
         [
             'connection',
             'create',
-            'my-connection', '--type', 'postgres',
+            'my-connection',
+            '--type',
+            'postgres',
             '--user',
             'my-user',
             '--host',
@@ -39,21 +41,21 @@ def test_connections_e2e(monkeypatch, tmpdir):
 
     assert result.exit_code == 0, result.output
     connections_json = {
-            'auth': {
-                'client_id': 'test-client-id',
-                'client_secret': 'test-client-secret',
+        'auth': {
+            'client_id': 'test-client-id',
+            'client_secret': 'test-client-secret',
+        },
+        'connections': {
+            'my-connection': {
+                'type': 'postgres',
+                'user': 'my-user',
+                'host': 'localhost',
+                'port': 5432,
+                'database': 'my_db',
+                'password': 'my-password',
             },
-            'connections': {
-                'my-connection': {
-                    'type': 'postgres',
-                    'user': 'my-user',
-                    'host': 'localhost',
-                    'port': 5432,
-                    'database': 'my_db',
-                    'password': 'my-password',
-                },
-            },
-        }
+        },
+    }
     with Paths.config_file().open() as f:
         assert yaml.safe_load(f.read()) == connections_json
 
@@ -63,8 +65,7 @@ def test_connections_e2e(monkeypatch, tmpdir):
     assert result.output == yaml.dump(connections_json['connections']) + "\n"
 
     # Update
-    result = runner.invoke(cli, ['connection', 'update', 'my-connection', '--database', 'my-new-db',
-                                 '--no-test'])
+    result = runner.invoke(cli, ['connection', 'update', 'my-connection', '--database', 'my-new-db', '--no-test'])
     assert result.exit_code == 0, result.output
 
     # List

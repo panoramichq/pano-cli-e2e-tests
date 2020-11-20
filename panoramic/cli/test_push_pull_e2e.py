@@ -15,7 +15,7 @@ display_name: Test Dataset
 TEST_MODEL = """
 api_version: v1
 model_name: test_model
-data_source: pano_snowflake_66.snowflake_sample_data.tpch_sf1.nation
+data_source: pano_snowflake_panoramic_cli_e_2_e_c_2_m_6_qp_4_u.snowflake_sample_data.tpch_sf1.nation
 fields:
   - field_map:
       - dataset_test_field
@@ -27,19 +27,24 @@ joins:
     fields:
       - dataset_test_field
 identifiers:
-  - name
+  - dataset_test_field
 """
 
 TEST_COMPANY_FIELD = """
+aggregation:
+  type: group_by
 api_version: v1
 slug: company_test_field
 display_name: Company test field
 group: Custom
+calculation: 2 + 2
 field_type: dimension
 data_type: text
 """
 
 TEST_DATASET_FIELD = """
+aggregation:
+  type: sum
 api_version: v1
 slug: dataset_test_field
 display_name: Dataset test field
