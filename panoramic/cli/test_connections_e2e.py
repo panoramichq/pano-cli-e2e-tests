@@ -14,7 +14,7 @@ def test_connections_e2e(monkeypatch, tmpdir):
     runner = CliRunner()
 
     # Create config
-    runner.invoke(cli, ['configure'], input='test-client-id\ntest-client-secret')
+    runner.invoke(cli, ['configure'], input='test-client-id\ntest-client-secret\nn')
 
     # Create connection
     result = runner.invoke(
@@ -41,6 +41,9 @@ def test_connections_e2e(monkeypatch, tmpdir):
 
     assert result.exit_code == 0, result.output
     connections_json = {
+        'analytics': {
+            'enabled': False,
+        },
         'auth': {
             'client_id': 'test-client-id',
             'client_secret': 'test-client-secret',
@@ -91,7 +94,7 @@ def test_connections_list_fail_e2e(monkeypatch, tmpdir):
     runner = CliRunner()
 
     # Create config
-    runner.invoke(cli, ['configure'], input='test-client-id\ntest-client-secret')
+    runner.invoke(cli, ['configure'], input='test-client-id\ntest-client-secret\nn')
 
     # List connections
     result = runner.invoke(cli, ['connection', 'list'])
@@ -105,7 +108,7 @@ def test_connections_update_fail_e2e(monkeypatch, tmpdir):
     runner = CliRunner()
 
     # Create config
-    runner.invoke(cli, ['configure'], input='test-client-id\ntest-client-secret')
+    runner.invoke(cli, ['configure'], input='test-client-id\ntest-client-secret\nn')
 
     # Update connection
     result = runner.invoke(cli, ['connection', 'update', 'my-connection'])

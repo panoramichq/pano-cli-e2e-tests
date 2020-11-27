@@ -14,11 +14,14 @@ def test_configure_e2e(monkeypatch, tmpdir):
     monkeypatch.setattr(Path, 'home', lambda: Path(tmpdir))
     runner = CliRunner()
 
-    result = runner.invoke(cli, ['configure'], input='test-client-id\ntest-client-secret')
+    result = runner.invoke(cli, ['configure'], input='test-client-id\ntest-client-secret\nn')
 
     assert result.exit_code == 0, result.output
     with Paths.config_file().open() as f:
         assert yaml.safe_load(f.read()) == {
+            'analytics': {
+                'enabled': False,
+            },
             'auth': {
                 'client_id': 'test-client-id',
                 'client_secret': 'test-client-secret',
