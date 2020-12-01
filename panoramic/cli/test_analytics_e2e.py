@@ -9,6 +9,7 @@ from click.testing import CliRunner
 from panoramic.cli import cli
 from panoramic.cli.paths import Paths
 from panoramic.cli import analytics
+from panoramic.cli import command
 
 
 @pytest.mark.vcr
@@ -20,7 +21,10 @@ def test_analytics_e2e(monkeypatch, tmpdir):
 
     monkeypatch.setattr(Path, 'home', lambda: Path(tmpdir))
     monkeypatch.setattr(analytics, '_flush', flush_mock)
+    # Enable writing of events
     monkeypatch.setattr(analytics, 'config_is_enabled', lambda: True)
+    # Enabled prompt
+    monkeypatch.setattr(command, 'analytics_is_enabled', lambda: True)
     runner = CliRunner()
 
     result = runner.invoke(cli, ['configure'], input='test-client-id\ntest-client-secret\ny')
