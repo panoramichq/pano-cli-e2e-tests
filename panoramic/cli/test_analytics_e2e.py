@@ -24,7 +24,7 @@ def test_analytics_e2e(monkeypatch, tmpdir):
     # Enable writing of events
     monkeypatch.setattr(analytics, 'config_is_enabled', lambda: True)
     # Enabled prompt
-    monkeypatch.setattr(command, 'analytics_is_enabled', lambda: True)
+    monkeypatch.setattr(command, 'analytics_module_is_enabled', lambda: True)
     runner = CliRunner()
 
     result = runner.invoke(cli, ['configure'], input='test-client-id\ntest-client-secret\ny')
