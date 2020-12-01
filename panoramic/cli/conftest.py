@@ -1,4 +1,5 @@
 import json
+import os
 
 import pytest
 from panoramic.cli.config.auth import get_client_id, get_client_secret
@@ -17,6 +18,7 @@ def clear_context_cache():
     get_client_id.cache_clear()
     get_client_secret.cache_clear()
     get_company_slug.cache_clear()
+    os.environ.setdefault('PANO_ANALYTICS_ENABLED', 'false')
 
 
 def scrub_access_token(response):
