@@ -67,7 +67,9 @@ def test_analytics_e2e(monkeypatch, tmpdir):
     assert len(analytics._read_events()) == 1
 
     for i in range(analytics.MINIMAL_FLUSH_EVENTS):
-        result = runner.invoke(cli, ['connection', 'update', 'my-connection', '--database', f'my-new-db-{i}', '--no-test'])
+        result = runner.invoke(
+            cli, ['connection', 'update', 'my-connection', '--database', f'my-new-db-{i}', '--no-test']
+        )
         assert result.exit_code == 0, result.output
 
     assert flushed is True
