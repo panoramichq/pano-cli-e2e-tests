@@ -79,7 +79,6 @@ def test_analytics_e2e(monkeypatch, tmpdir):
         lines = list(f.readlines())
         data = json.loads(lines[0])
         assert data['name'] == 'connection create'
-        assert data['user_id'] == 'test-client-id'
         for line in lines[1:]:
             data = json.loads(line)
             assert data['name'] == 'connection update'
